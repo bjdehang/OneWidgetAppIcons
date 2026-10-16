@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "styles": [
+    {
+      "id": "flat",
+      "name": "Flat",
+      "status": "planned",
+      "description": "Flat-color icon collection; no published images yet."
+    }
+  ]
+}

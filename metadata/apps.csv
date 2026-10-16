@@ -1,0 +1,1001 @@
+id,name,developer,appleAppStoreId,appleBundleId,androidPackageName,harmonyBundleName,marketCount
+app-6448311069,ChatGPT,"OpenAI OpCo, LLC",6448311069,com.openai.chat,,,29
+app-6477489729,Google Gemini,Google,6477489729,com.google.gemini,,,30
+app-6473753684,Claude by Anthropic,Anthropic PBC,6473753684,com.anthropic.claude,,,29
+app-1500855883,CapCut: Photo & Video Editor,Bytedance Pte. Ltd,1500855883,com.lemon.lvoverseas,,,29
+app-422689480,Gmail - Email by Google,Google,422689480,com.google.Gmail,,,30
+app-284815942,Google,Google,284815942,com.google.GoogleMobile,,,30
+app-6446901002,Threads,"Instagram, Inc.",6446901002,com.burbn.barcelona,,,30
+app-585027354,Google Maps,Google,585027354,com.google.Maps,,,29
+app-310633997,WhatsApp Messenger,WhatsApp Inc.,310633997,net.whatsapp.WhatsApp,,,29
+app-535886823,Google Chrome,Google,535886823,com.google.chrome.ios,,,29
+app-6670430706,DramaWave - Dramas & Reels,SKYWORK AI PTE LTD,6670430706,com.dramabuzz.app,,,26
+app-1113153706,Microsoft Teams,Microsoft Corporation,1113153706,com.microsoft.skype.teams,,,27
+app-686449807,Telegram Messenger,Telegram FZ-LLC,686449807,ph.telegra.Telegraph,,,29
+app-284882215,Facebook,"Meta Platforms, Inc.",284882215,com.facebook.Facebook,,,28
+app-389801252,Instagram,"Instagram, Inc.",389801252,com.burbn.instagram,,,29
+app-544007664,YouTube,Google,544007664,com.google.ios.youtube,,,26
+app-324684580,Spotify: Music and Podcasts,Spotify,324684580,com.spotify.client,,,29
+app-983156458,Microsoft Authenticator,Microsoft Corporation,983156458,com.microsoft.azureauthenticator,,,20
+app-1641486558,Temu: Shop Like a Billionaire,Temu,1641486558,com.einnovation.temu,,,23
+app-835599320,"TikTok - Videos, Shop & LIVE",TikTok Ltd.,835599320,com.zhiliaoapp.musically,,,19
+app-368677368,"Uber - Rides, Eats, Hotels","Uber Technologies, Inc.",368677368,com.ubercab.UberClient,,,23
+app-1558240027,Meta AI,"Meta Platforms, Inc.",1558240027,com.facebook.stellaapp,,,21
+app-1223471316,"Shop: Track, Pay, Discover",Shopify Inc.,1223471316,com.jadedlabs.arrive,,,12
+app-507874739,Google Drive,Google,507874739,com.google.Drive,,,26
+app-447188370,Snapchat,"Snap, Inc.",447188370,com.toyopagroup.picaboo,,,24
+app-333903271,X,X Corp.,333903271,com.atebits.Tweetie2,,,23
+app-632064380,Vinted: Pre-loved marketplace,Vinted Limited,632064380,lt.manodrabuziai.fr,,,10
+app-429047995,Pinterest,"Pinterest, Inc.",429047995,pinterest,,,22
+app-570060128,多邻国Duolingo英语日语法语,Duolingo,570060128,com.duolingo.DuolingoMobile,,,19
+app-546505307,Zoom Workplace,"Zoom Communications, Inc.",546505307,us.zoom.videomeetings,,,21
+app-897446215,Canva AI Photo & Video Editor,Canva,897446215,com.canva.canvaeditor,,,22
+app-541164041,Microsoft Copilot,Microsoft Corporation,541164041,com.microsoft.officemobile,,,16
+app-1446075923,Disney+,Disney,1446075923,com.disney.disneyplus,,,12
+app-6738967378,Edits: Video Editor,"Instagram, Inc.",6738967378,com.burbn.basel,,,16
+app-297606951,Amazon Shopping,AMZN Mobile LLC,297606951,com.amazon.Amazon,,,11
+app-878577184,SHEIN - Shopping Online,ROADGET BUSINESS PTE. LTD.,878577184,zzkko.com.ZZKKO,,,14
+app-1630403500,APTV,"Suzhou Xiying Guangnian Technology Co., Ltd",1630403500,com.kimen.aptvpro,,,14
+app-6758667154,VibeShort: AI Short Dramas,AGILE QUADRANT MEDIA LIMITED,6758667154,com.vibeshort.visualnovel.ios,,,14
+app-6754134922,PineDrama - Short Dramas,TikTok Ltd.,6754134922,com.ss.iphone.ttmd.video,,,7
+app-1386412985,WhatsApp Business,WhatsApp Inc.,1386412985,net.whatsapp.WhatsAppSMB,,,12
+app-6768593043,BlinkDrama - Short Dramas,Atlas Ventures Culture & Technology Limited,6768593043,com.blink.drama.ios,,,10
+app-681752345,Trip.com-航空券･ホテルの予約はトリップドットコムで,Trip.com Travel Singapore Pte. Ltd.,681752345,com.ctrip.EBooking,,,10
+app-932493382,Revolut — Mobile Finance,Revolut Ltd,932493382,com.revolut.revolut,,,11
+app-842842640,Google Docs,Google,842842640,com.google.Docs,,,14
+app-288429040,LinkedIn: Community & Network,LinkedIn Corporation,288429040,com.linkedin.LinkedIn,,,17
+app-545519333,Amazon Prime Video,AMZN Mobile LLC,545519333,com.amazon.aiv.AIVApp,,,14
+app-6761538521,StoryReel: Drama Shorts & TV,Equinox Enterprises‌ Technology Limited,6761538521,com.storyreel.tv.ios,,,14
+app-388497605,Google Authenticator,Google,388497605,com.google.Authenticator,,,18
+app-951937596,Microsoft Outlook,Microsoft Corporation,951937596,com.microsoft.Office.Outlook,,,15
+app-1238611143,Lidl Plus,Lidl Digital International GmbH & Co. KG,1238611143,com.lidl.eci.lidl.plus,,,8
+app-309735670,Indeed Job Search,Indeed Inc.,309735670,com.indeed.JobSearch,,,13
+app-6451407032,红果短剧 - 海量热门短剧随心看,"Beijing Bimo Liuxiang Technology Co., Ltd.",6451407032,com.phoenix.video,,,5
+app-675033630,Bolt: Request a Ride,BOLT TECHNOLOGY OU,675033630,ee.mtakso.client,,,11
+app-842849113,Google Sheets,Google,842849113,com.google.Sheets,,,16
+app-6504849169,NetShort - 인기 드라마 및 TV 프로그램,NETSTORY PTE. LTD.,6504849169,com.netshort.abroad,,,11
+app-586447913,Microsoft Word,Microsoft Corporation,586447913,com.microsoft.Office.Word,,,11
+app-1636235979,ReelShort - 드라마 & TV 실시간,NewLeaf Publishing,1636235979,com.newleaf.app.ios.vic,,,9
+app-1488269261,"Whatnot: Shop, Sell, Connect",Whatnot Inc.,1488269261,com.whatnot,,,6
+app-1044283059,拼多多 - 多多买菜，百亿补贴,上海寻梦信息技术有限公司,1044283059,com.xunmeng.pinduoduo,,,5
+app-388627783,扫描全能王-手机扫描仪 & PDF图片转文字,"INTSIG Information Co., Ltd",388627783,com.intsig.CamScannerLite,,,10
+app-1217507712,맥도날드,McDonald's Global Markets LLC,1217507712,com.mcdonalds.mobileapp,,,12
+app-1060683933,Too Good To Go: End Food Waste,Too Good To Go,1060683933,com.moonsted.TGTG,,,10
+app-647268330,"Grab: Food Delivery, Taxi Ride",Grab.com,647268330,com.grabtaxi.iphone,,,8
+app-500003565,"Ticketmaster－Buy, Sell Tickets",Ticketmaster,500003565,com.ticketmaster.ios.TicketmasterApp,,,7
+app-1235601864,TikTok ティックトック,TikTok Ltd.,1235601864,com.ss.iphone.ugc.Ame,,,9
+app-6451431247,Dola: Smart AI Assistant,SPRING(SG)PTE.LTD.,6451431247,com.bot.cici,,,7
+app-6670324846,Grok AI,X Corp.,6670324846,ai.x.GrokApp,,,14
+app-6480136315,"Suno - AI Songs, Music, Lyrics","Suno, Inc.",6480136315,ai.suno.ios,,,12
+app-363590051,Netflix,"Netflix, Inc.",363590051,com.netflix.Netflix,,,15
+app-962194608,Google Photos: Backup & Edit,Google,962194608,com.google.photos,,,12
+app-387682726,淘宝-万能的淘宝！,浙江淘宝网络有限公司,387682726,com.taobao.taobao4iphone,,,6
+app-426826309,"Strava : course, vélo, rando","Strava, Inc.",426826309,com.strava.stravaride,,,10
+app-283646709,"PayPal - Pay, Send, Save","PayPal, Inc.",283646709,com.yourcompany.PPClient,,,9
+app-1370293473,VPN - Super Unlimited Proxy ™,Mobile Jump Pte Ltd,1370293473,mobi.mobilejump.freevpn,,,8
+app-333206289,支付宝-你的AI生活伙伴,"Alipay (Hangzhou) Technology Co., Ltd.",333206289,com.alipay.iphoneclient,,,6
+app-454638411,Messenger,"Meta Platforms, Inc.",454638411,com.facebook.Messenger,,,9
+app-6447582581,Netflix Game Controller,"Netflix, Inc.",6447582581,com.netflix.ssicapp,,,6
+app-323229106,Waze Navigation & Live Traffic,Waze Inc.,323229106,com.waze.iphone,,,10
+app-461703208,"高德地图-高德打车,导航公交地铁出行",AutoNavi Information Technology Co. Ltd.,461703208,com.autonavi.amap,,,4
+app-401626263,Airbnb,"Airbnb, Inc.",401626263,com.airbnb.app,,,10
+app-367003839,Booking.com Travel Deals,Booking.com,367003839,com.booking.BookingApp,,,10
+app-6471519217,Bump（旧Zenly）,amo,6471519217,co.amo.ios.location,,,5
+app-6448849666,Bible Chat: Daily Devotional,Book Vitals Inc.,6448849666,com.basmo.BibleChat,,,5
+app-384830320,Life360: Family Safety & GPS,Life360,384830320,com.life360.safetymap,,,6
+app-6760173601,Muse from Meta,"Meta Platforms, Inc.",6760173601,com.facebook.hatch,,,2
+app-780125801,inDrive - Viajes y Envíos,SUOL INNOVATIONS LTD,780125801,ru.inDriver-ru,,,5
+app-335187483,Amazon Shopping,Amazon,335187483,com.amazon.AmazonUK,,,5
+app-6459478672,豆包 - 生活工作 AI 助手,"Beijing Chuntian Zhiyun Technology Co., Ltd.",6459478672,com.bot.doubao,,,2
+app-6445905219,DramaBox - 영화와 숏폼 드라마,STORYMATRIX PTE. LTD.,6445905219,com.storymatrix.drama,,,12
+app-924620788,Google Classroom,Google,924620788,com.google.Classroom,,,7
+app-414478124,微信,WeChat,414478124,com.tencent.xin,,,5
+app-504270602,Ryanair,Ryanair Ltd.,504270602,com.ryanair.cheapflights,,,5
+app-510909506,闲鱼 - 上闲鱼，赚一笔 !,浙江阿里巴巴闲鱼网络科技有限公司,510909506,com.taobao.fleamarket,,,2
+app-719972451,"DoorDash: Food, Grocery, More","DoorDash, Inc.",719972451,doordash.DoorDashConsumer,,,3
+app-448142450,Truecaller: Premium Caller ID,True Software Scandinavia AB,448142450,com.truesoftware.TrueCallerOther,,,5
+app-436672029,AliExpress - Shopping App,Alibaba,436672029,com.alibaba.iAliexpress,,,7
+app-985746746,"Discord - Talk, Play, Hang Out",Discord Inc.,985746746,com.hammerandchisel.discord,,,10
+app-513829338,大麦 - 电影、演出、体育购票平台,"Beijing Damai Cultural Media Development Co., Ltd.",513829338,cn.damai.iphone,,,2
+app-6446202561,KICK - Live Streaming,Kick Streaming,6446202561,com.kick.mobile,,,3
+app-416048305,美图秀秀:视频/图片/Live人像精修工具,"Meitu Technology Co., Ltd.",416048305,com.meitu.mtxx,,,6
+app-1115120118,Klarna: Smarter everyday money,Klarna Bank AB,1115120118,com.klarna.app,,,6
+app-1058959277,Uber Eats（ウーバーイーツ) 出前/フードデリバリー,"Uber Technologies, Inc.",1058959277,com.ubercab.UberEats,,,9
+app-1142110895,抖音,"Beijing Douyin Technology Co., Ltd.",1142110895,com.ss.iphone.ugc.Aweme,,,2
+app-6466733523,千问 - 阿里AI助手,"Shanghai Zhixin Puhui Technology Co., Ltd.",6466733523,com.aliyun.ios.tongyi,,,2
+app-1673567402,Freecash - Get Paid Real Money,Freecash - Get Paid Real Money,1673567402,de.rewards.app,,,7
+app-414245413,京东-又好又便宜,"Beijing Jingdong Century Trading Co., Ltd.",414245413,com.360buy.jdmobile,,,3
+app-1048912974,IQAir AirVisual | Air Quality,IQAir AG,1048912974,com.airvisual.airvisual,,,3
+app-423084029,美团-问美团，都安排,美团,423084029,com.meituan.imeituan,,,3
+app-1096918571,Google Meet,Google,1096918571,com.google.Tachyon,,,5
+app-1064216828,Reddit,"REDDIT, INC.",1064216828,com.reddit.Reddit,,,6
+app-6444912481,UK ETA,Home Office,6444912481,uk.gov.HomeOffice.ho3,,,5
+app-449594317,EasyPark parken - Park App,Easy Park AS,449594317,net.easypark.app,,,4
+app-518684914,Depop - Buy & Sell Clothes,Depop Ltd,518684914,com.garageitaly.garage,,,2
+app-1662451643,Keeta - Delivery de comida,Kangaroo Limited,1662451643,com.sankuai.sailor.ifooddelivery,,,4
+app-925339063,Doctolib - Die Gesundheits-App,Doctolib,925339063,fr.doctolib.www,,,3
+app-6761374913,WorkBuddy - AI 办公我帮你,Tencent Technology (Shanghai) Company Limited,6761374913,com.tencent.workbuddy.app,,,2
+app-6772791762,CashFlicks,"Shanghai Bitui Technology Co., Ltd.",6772791762,com.freetools.freereels,,,3
+app-1485191072,抖音商城-下单返积分、退货包运费,"Beijing Douyin Technology Co., Ltd.",1485191072,com.ss.iphone.ugc.Live.lite,,,1
+app-1269038866,"noon Shopping, Food, Grocery",noon E Commerce,1269038866,com.noon.buyerapp,,,3
+app-6745890963,红果漫剧 - 热门精彩漫剧,"Hainan Yuyue Technology Co., Ltd.",6745890963,com.kylin.readnew,,,1
+app-6741796873,TikTok Pro - Events,TikTok Ltd.,6741796873,com.ss.iphone.ugc.tiktok.pro,,,1
+app-463624852,Mercado Livre: Fazer Compritta,MercadoLibre,463624852,com.3mosquitos.MercadoLibre,,,2
+app-564818797,铁路12306,中国铁道科学研究院集团有限公司,564818797,cn.12306.rails12306,,,2
+app-6787909790,PDF ProX: PDF Reader & Editor,ROOSTERX GLOBAL COMPANY LIMITED,6787909790,com.roosterx.pdfreader.pdfeditor,,,3
+app-922103212,McDonald's,McDonald's USA,922103212,com.mcdonalds.gma,,,1
+app-1048518592,UC Browser,UCWEB SINGAPORE PTE. LTD.,1048518592,com.uc.iphone.browser.international,,,2
+app-1605585211,汽水音乐 - 随时听好歌,"Beijing Douyin Technology Co., Ltd.",1605585211,com.soda.music,,,1
+app-1488854568,学信网,中国高等教育学生信息网(学信网),1488854568,cn.com.chsi.chsiapp,,,1
+app-925436649,Mercado Pago: banco digital,MercadoLibre,925436649,com.mercadopago.MercadoPago,,,2
+app-6443405421,Mnet Plus,"CJ ENM Co., Ltd.",6443405421,world.mnetplus.rtc,,,3
+app-1288723196,Microsoft Edge,Microsoft Corporation,1288723196,com.microsoft.msedge,,,6
+app-1588080869,国家网络身份认证,中华人民共和国公安部,1588080869,cn.cyberIdentity.certification,,,1
+app-741292507,小红书 - 你的生活兴趣社区,Xingin,741292507,com.xingin.discover,,,3
+app-6468941332,电子税务局,State Administration of Taxation,6468941332,cn.gov.chinatax.gt4.app,,,1
+app-600273928,云闪付-银行业统一移动支付App,中国银联,600273928,com.unionpay.chsp,,,2
+app-1632713844,Kalshi: Trade Football & more,KalshiEX LLC,1632713844,com.kalshi.mobile,,,1
+app-1362398401,"DiDi: Viajes, Comida y Pagos",DiDi,1362398401,com.didi.global.passenger,,,3
+app-6762010774,CrownCards - Trading Cards,CrownCards,6762010774,io.crowncards.app,,,2
+app-6756863766,抖省省 - 抖音官方团购平台,"Beijing Douyin Technology Co., Ltd.",6756863766,com.ss.iphone.ugc.lifeservices,,,1
+app-1531860284,Action,Action Service & Distributie BV.,1531860284,com.action.consumerapp,,,3
+app-465958311,idealista,"Idealista, S.A.",465958311,com.idealista.idealistaios,,,2
+app-6758344200,追番社-热门AI短剧抢先看,"Tianjin Umar Technology Co., Ltd.",6758344200,com.youmai.fan,,,1
+app-1039727169,交管12123,公安部交通管理科学研究所,1039727169,com.tmri.12123,,,1
+app-1619030760,"zeta: AI Chat, Story, Play","Scatter Lab, Inc.",1619030760,com.scatterlab.messenger,,,2
+app-583700738,中国移动（手机营业厅）,中移在线,583700738,cn.10086.app,,,2
+app-585629514,Zalando Mode & Fashion online,Zalando SE,585629514,de.zalando.iphone,,,5
+app-758103884,foodpanda: Food & Groceries,Foodpanda,758103884,com.global.foodpanda.ios,,,3
+app-6749427319,Viettel Tammi,Viettel Telecom,6749427319,com.viettel.ttcntt.viettelapp,,,2
+app-1458072671,剪映 - 抖音官方AI创作神器,深圳市脸萌科技有限公司,1458072671,com.lemon.lv,,,1
+app-6787443044,Engine Sim - Sound Simulator,Sena Takasawa,6787443044,Sena.enjine-sim,,,2
+app-874139669,Signal – Sicherer Messenger,"Signal Messenger, LLC",874139669,org.whispersystems.signal,,,5
+app-6745274862,DealSeek: Coupons & Discounts,DealSeek LLC,6745274862,com.dealseekorg.dealseek,,,2
+app-1436002627,个人所得税,State Administration of Taxation,1436002627,cn.gov.tax.its,,,1
+app-407558537,Capital One Mobile,Capital One,407558537,com.capitalone.enterprisemobilebanking,,,1
+app-515651240,中国农业银行,中国农业银行,515651240,com.bankabc.iphonerelease,,,1
+app-1087897068,企业微信,Tencent Technology (Shenzhen) Company Limited,1087897068,com.tencent.ww,,,1
+app-547166701,百度网盘,"Beijing Duyou Science and Technology Co.,Ltd.",547166701,com.baidu.netdisk,,,2
+app-1517062289,bilibili-追番追劇彈幕,BILIBILI SINGAPORE PTE. LTD.,1517062289,com.bilibili.inter,,,2
+app-1160172628,夸克-AI旗舰应用,广州市动悦信息技术有限公司,1160172628,com.quark.browser,,,1
+app-814456780,"Nubank: Conta, Cartão e mais",NU PAGAMENTOS S/A INSTITUICAO DE PAGAMENTO,814456780,com.nu.iphone,,,2
+app-423514795,中国工商银行,Industrial and Commercial Bank of China,423514795,com.icbc.iphoneclient,,,1
+app-1319071502,今日水印相机-时间地点经纬度打卡拍照,北京小嘿科技有限责任公司,1319071502,com.xhey.XCamera,,,1
+app-1437787639,InPost Mobile,InPost,1437787639,pl.inpost.inpostmobile,,,2
+app-6752922875,Tabelog－日本餐廳探索、訂位與評價全方位平台,"Kakaku.com, Inc.",6752922875,com.kakaku.tabelog.tourists,,,2
+app-554499054,滴滴-打车骑车顺风车火车票租车代驾送货,滴滴出行(北京)网络平台技术有限公司,554499054,com.xiaojukeji.didi,,,3
+app-6753982990,AI Maker: Photo Video Filters,Hungry Birds,6753982990,ai.photo.generator.video.maker.animation.art.editor.filter.image.3d.ia.foto,,,2
+app-599852710,WPS Office - 智能AI办公助手,金山办公软件,599852710,com.kingsoft.www.office.wpsoffice,,,1
+app-887314963,BOSS直聘-招聘求职找工作招人,北京华品博睿网络技术有限公司,887314963,com.hpbr.bosszhipin,,,1
+app-1370217070,AIVI - Online Fashion Store,6thStreet.com,1370217070,com.appareluae.6thStreet,,,2
+app-311867728,"네이버지도 - 장소의 발견과 예약, 내비게이션",NAVER Corp.,311867728,com.nhncorp.NaverMap,,,4
+app-1289057196,SCRL: Photo Collage Maker,Appostrophe AB,1289057196,com.dopedevelopment.Panels,,,5
+app-1399907836,Hacoo - Discovering &Inspiring,Hacoo Tech,1399907836,com.sara.ios,,,2
+app-6737597349,DeepSeek - AI 智能助手,杭州深度求索人工智能基础技术研究有限公司,6737597349,com.deepseek.chat,,,2
+app-451001072,"talabat: Food, grocery & more",Talabat General Trading and Contracting Company,451001072,com.6alabat.cuisineApp,,,2
+app-391965015,中国建设银行,中国建设银行,391965015,com.ccb.ccbDemo,,,1
+app-1670047297,Luckin Coffee,LUCKIN COFFEE (SGP) PTE. LTD.,1670047297,com.luckin.client.i,,,2
+app-1594288016,Wink: Video Enhancer & Editor,"Meitu Technology Co., Ltd.",1594288016,com.meitu.wink,,,5
+app-473225145,QQ邮箱,Tencent Technology (Shenzhen) Company Limited,473225145,com.tencent.qqmail,,,1
+app-6783366739,내가 당신을 사랑할 때 보이는 순간들: 빈티지 카메라앱,ironpig Inc.,6783366739,io.ironpig.lovemoment,,,2
+app-6793054307,Movie Box : Movies & TV Series,Rayyan Ansari,6793054307,com.mova.na,,,2
+app-338137227,Walmart: Shopping & Savings,Walmart,338137227,com.walmart.electronics,,,1
+app-961850126,Klook: Travel & Activities,Klook Travel Technology Limited,961850126,com.klook.klook,,,4
+app-6755671397,Atlas Capture,Atlas Capture LLC,6755671397,com.carbonbased.atlas,,,2
+app-6739276631,AI Catch(AI 캐치): AI 영상 생성기,Prominent Fortune PTE. LTD,6739276631,com.Prominent.AICatch,,,3
+app-934459219,JioHotstar,JIOSTAR INDIA PRIVATE LIMITED,934459219,in.startv.hotstar,,,2
+app-723961236,Booksy para clientes,Booksy,723961236,com.sensi.BooksyCUST,,,2
+app-1484048379,腾讯会议-多人实时视频会议软件,Tencent Technology (Shanghai) Company Limited,1484048379,com.tencent.meeting,,,1
+app-6781998623,101cam - 필름 & 디지털 카메라,SNOW Corporation,6781998623,com.snowcorp.101cam,,,2
+app-1010631459,Getcontact: Spam Caller ID,GETVERIFY LDA,1010631459,com.kontakt.getcontact,,,2
+app-507097717,阿里巴巴(1688)-货源批发采购进货市场,杭州阿里巴巴广告有限公司,507097717,com.alibaba.wireless,,,3
+app-1503466530,"迅雷-高速传输,网盘,4K原画",深圳市迅雷网络技术有限公司,1503466530,com.xunlei.mvideo,,,1
+app-6746049430,"FOX One: Live News, Sports, TV","Fox Digital Services, LLC",6746049430,com.fox.foxone,,,1
+app-6743516502,Pure Tuber: Music & Video,Rangga Lamareta Caine Saputri,6743516502,pulse.groove.eq.fx.ios,,,2
+app-6794501026,Grok Bot,X Corp.,6794501026,co.anysphere.sand,,,2
+app-351091731,大众点评 - 吃喝玩乐指南,Hanhai Information Technology (Shanghai) Co.Ltd,351091731,com.dianping.dpscope,,,3
+app-6468945008,heytea,HEYTEA,6468945008,com.heytea.overseago,,,2
+app-440676901,Agoda: Cheap Flights & Hotels,Agoda.com,440676901,com.agoda.consumer,,,3
+app-6446425595,Green SM: Electric Mobility,GSM GREEN AND SMART MOBILITY JOINT STOCK COMPANY,6446425595,com.gsm.customer,,,2
+app-529379082,Lyft,"Lyft, Inc.",529379082,com.zimride.instant,,,2
+app-1002355194,转转-二手官方验,"Zhuanzhuan Co.,Ltd.",1002355194,com.wuba.zhuanzhuan,,,1
+app-1365309175,Turbo VPN Private Browser,INNOVATIVE CONNECTING PTE.LIMITED,1365309175,com.allconnected.turbovpn,,,3
+app-1448831879,点淘-淘宝直播官方APP,"Zhejiang Diantao HaoWu Network Co., Ltd.",1448831879,com.taobao.live,,,1
+app-6749287561,Shopee Seller Center,SHOPEE INTERNATIONAL X PRIVATE LIMITED,6749287561,com.beeasy.seller,,,2
+app-711923939,Cash App,"Block, Inc.",711923939,com.squareup.cash,,,1
+app-6800211040,CarTV - M3U IPTV Player & Cast,Lyntra Technology Ltd,6800211040,com.lyntra.player,,,3
+app-1012871328,得物 - 得到美好事物,"Shanghai Dewu Information Group Co., Ltd.",1012871328,com.siwuai.duapp,,,1
+app-6794034714,Reverse Voice: AI Changer,Duc Duong Tran,6794034714,com.gbreverse.voice.challenge,,,2
+app-6443686328,Link zu Windows,Microsoft Corporation,6443686328,com.microsoft.LinkToWindows,,,7
+app-6446071834,Timemark: Photo Proof for Work,OCEAN GALAXY PTE. LTD.,6446071834,com.oceangalaxy.camera,,,2
+app-1528022364,"Tabby: Send, spend and save",Tabby FZ LLC,1528022364,app.tabby.client,,,2
+app-586871187,UC浏览器-随心搜·畅快看,UCWeb Mobile Private Limited,586871187,com.ucweb.iphone.lowversion,,,1
+app-1089294040,Capital One Shopping: Save Now,"Wikibuy, LLC",1089294040,com.wikibuy.prod.main,,,1
+app-1422471180,Dazz Cam - Vintage Camera,DAZZ PTE. LTD.,1422471180,dazz.camera.vintagecamera,,,2
+app-1437005085,Proton VPN: Privé et Rapide,Proton AG,1437005085,ch.protonmail.vpn,,,3
+app-524362642,Trendyol: Online Shopping,trendyol.com,524362642,trendyol.com.trendyol,,,2
+app-350962117,微博,SINA Corporation,350962117,com.sina.weibo,,,1
+app-1509453185,TeraBox: 1TB 클라우드 저장소 & AI 공간,FLEXTECH INC.,1509453185,com.dubox.drive,,,2
+app-444934666,QQ,Tencent Technology (Shenzhen) Company Limited,444934666,com.tencent.mqq,,,1
+app-1533512531,Tamara | Own your Dream,Tamara FZE,1533512531,co.tamara,,,2
+app-6502439682,CHAGEE,TEA EXPLORER PTE. LTD.,6502439682,com.chagee.application,,,2
+app-351727428,Venmo,Venmo,351727428,net.kortina.labs.Venmo,,,1
+app-399608199,中国银行,中国银行股份有限公司,399608199,com.boc.BOCMBCI,,,1
+app-6478287397,Learna AI: Aprender Inglés,DEEP FLOW SOFTWARE SERVICES,6478287397,com.codeway.aitutor,,,3
+app-1462636376,C&A Mode Online Shop,C&A Mode GmbH & Co. KG,1462636376,com.canda.shopapp,,,2
+app-930368978,钉钉,"DingTalk Technology Co., Ltd.",930368978,com.laiwang.DingTalk,,,1
+app-503451073,Alibaba.com B2B Trade App,ALIBABA.COM GLOBAL SUPPLIER SERVICES PTE. LTD.,503451073,com.alibaba.sourcing,,,6
+app-1487584854,ZUS Coffee,Zuspresso Sdn Bhd,1487584854,com.zuspresso.zuscoffee,,,2
+app-535509415,Costco,Costco Wholesale Corporation,535509415,com.costco.costco,,,2
+app-469964520,Lloyds Mobile Banking,Lloyds Banking Group,469964520,com.lloydstsb.LloydsTSB,,,1
+app-1119404646,7plus,Seven Network (Operations) Ltd.,1119404646,com.swm.live,,,1
+app-1485424267,CAIXA Tem,Caixa Econômica Federal,1485424267,br.gov.caixa.tem,,,1
+app-1514331336,ทางรัฐ,DIGITAL GOVERNMENT DEVELOPMENT AGENCY (PUBLIC ORGANIZATION),1514331336,th.or.dga.citizen-portal,,,1
+app-1515923348,Pantamera,Returpack IT,1515923348,com.returpack.minpant,,,1
+app-1612679889,miSCS,Gobierno de Canarias,1612679889,org.gobiernodecanarias.scs.miscs,,,1
+app-1644664646,A101: Tek Uygulama,YENİ MAĞAZACILIK ANONİM ŞİRKETİ,1644664646,com.a101kapida.ios,,,1
+app-6743190232,"하나은행, 새로워진 하나원큐를 경험해 보세요",Hana Bank,6743190232,com.hanabank.oqf,,,1
+app-6760759365,Oolka AI: Credit Score & Loans,Oolka,6760759365,app.oolka.com,,,1
+app-6775523275,Elezaby ™,ElEzaby Pharmacy,6775523275,com.elezaby,,,1
+app-6786614255,Integreet,Integreet (PTY) Ltd,6786614255,com.integreet.app,,,1
+app-6814945846,Nhas City Chicken,Nhas Food Tech,6814945846,com.app.nhascitychicken,,,1
+app-736536022,哔哩哔哩-弹幕番剧直播高清视频,bilibili,736536022,tv.danmaku.bilianime,,,1
+app-1484296272,Knowunity | Tutor escolar IA,Knowunity GmbH,1484296272,de.knowunity.app,,,3
+app-465032804,The Lott,Tatts Group,465032804,com.tattsbet.tattsbet,,,1
+app-1339613469,mObywatel,Ministerstwo Cyfryzacji,1339613469,pl.nask.mObywatel,,,1
+app-1592249158,MariBank PH (SeaBank),"MariBank Philippines, Inc.",1592249158,ph.seabank.seabank,,,1
+app-6468981790,Bring,Posten,6468981790,no.bring.sporing,,,1
+app-6497068994,ShopeePay,ShopeePay Malaysia Sdn Bhd,6497068994,com.shopeepay.my,,,1
+app-6587576438,setlog,new chat,6587576438,com.newchat.hai,,,1
+app-6587583486,Wepink App,Wepink,6587583486,com.wepink.mobile,,,1
+app-6737119425,GOV.UK One Login,Government Digital Service,6737119425,uk.gov.onelogin,,,1
+app-6737608605,AOK Ident,AOK Mein Leben GbR,6737608605,de.aok.aokident.prod,,,1
+app-6738063154,네이버플러스 스토어,NAVER Corp.,6738063154,com.nhncorp.NaverShopping,,,1
+app-6752485055,DARB - Urban mobility,Q Mobility,6752485055,com.qmobility.darbx,,,1
+app-6752989877,Health GO 健康夠,"Bureau Health Promotion, Depart of Health R.O.C.",6752989877,io.h2u.fitfoodlog,,,1
+app-6757136196,iCPV TTHC,Vietnam Posts and Telecommunications Group,6757136196,com.vnpt.dvc.icpvthhc,,,1
+app-6799608948,عقار إكزت - Aqar Exit,Mahmoud Mohamed,6799608948,com.aqarexit.app,,,1
+app-436731843,NOL : 야놀자와 인터파크의 새로운 이름,"YANOLJA CO.,LTD",436731843,com.yanolja.motel,,,1
+app-679805463,AXS Tickets,AXS,679805463,com.axs.AXSMobile,,,1
+app-742044692,Flipkart - Online Shopping App,Flipkart Internet Private Limited,742044692,com.appflipkart.flipkart,,,1
+app-1435289143,MyDigital ID,MIMOS Berhad,1435289143,my.mimos.signetclient.MiSignet,,,1
+app-1463776084,OPay-Beyond Banking,OPay Digital Services Pte.Ltd.,1463776084,com.opay.pay,,,1
+app-1504644677,CieID,Istituto Poligrafico e Zecca dello Stato Spa,1504644677,it.ipzs.cieID,,,1
+app-6447682225,eGovPH,DICT eGovernment,6447682225,com.dict.oueg.egovph,,,1
+app-6805348001,My SIMBA,SIMBA TELECOM PTE. LTD.,6805348001,sg.simba.selfcare,,,1
+app-6808060141,Vox Translate - Docs,"Fuzhou Qingyue Network Technology Co., Ltd.",6808060141,com.qingyueinn.voxtranslate,,,1
+app-785385147,Lazada 10.10 Sale,Lazada Group GmbH,785385147,com.LazadaSEA.Lazada,,,3
+app-842624380,Cl@ve,Agencia Tributaria,842624380,es.aeat.pin24h,,,1
+app-1198464606,"Rapido: Bike-Taxi, Auto & Cabs",Roppen Transportation Services Private Limited,1198464606,bike.rapido.customer,,,1
+app-1331065474,Nect Wallet,Nect,1331065474,com.nect.app.prod,,,1
+app-1491121903,"Malaa: Track, Save & Invest",Mala'a For Information Technology Company,1491121903,tech.malaa.personal,,,1
+app-1533612248,ThaID,dopa-bora,1533612248,th.go.dopa.bora.dims.ddopa,,,1
+app-1574726940,Hệ thống Thông tin Tuyên giáo,TTXVN,1574726940,vn.vnanet.bantg,,,1
+app-1591214233,InPost UK,InPost UK Ltd,1591214233,uk.co.inpost.inpostmobile,,,1
+app-6446321594,"GoPay: Transfer, Payment, QRIS",PT. GOTO GOJEK TOKOPEDIA TBK,6446321594,com.go-jek.gopay,,,1
+app-6452756675,Moniepoint Personal Banking,Moniepoint,6452756675,com.teamapt.customers.moniepoint,,,1
+app-6477915139,Osmows,The Order House Inc.,6477915139,com.orderhouse.orderhouse,,,1
+app-6503263049,ING Banking - Do Your Thing,ING Bank (Australia) Limited,6503263049,au.com.ing.oneapp.banking,,,1
+app-6744158894,MASS,Enerji Piyasaları İşletme A.Ş.,6744158894,tr.com.massportal,,,1
+app-1548857482,"BiliBili -HD Anime, Videos",BALABOOM PTE LTD,1548857482,com.bstar.intl,,,2
+app-444435182,myENV,National Environment Agency,444435182,myNEA,,,1
+app-936150402,Jumbo,Jumbo Supermarkten,936150402,com.jumbo.app,,,1
+app-1116091166,Meine Allianz,Allianz Deutschland AG,1116091166,de.allianz.MeineAllianz,,,1
+app-1194351058,Hi-Life VIP,Hi-Life,1194351058,com.hilife.vipapp,,,1
+app-1476359069,マイナアプリ（旧マイナポータルアプリ）,デジタル庁,1476359069,jp.go.cao.mpa.iOS,,,1
+app-1590998870,香港e-道,Hong Kong Immigration Department,1590998870,hk.gov.immd.contactless,,,1
+app-6448944056,Identitas Kependudukan Digital,DIREKTORAT JENDERAL KEPENDUDUKAN DAN PENCATATAN SIPIL,6448944056,gov.dukcapil.mobile-id,,,1
+app-6449721772,Certificado digital FNMT,FABRICA NACIONAL DE MONEDA Y TIMBRE,6449721772,es.fnmtrcm.ceres.certificadoDigitalFNMT,,,1
+app-6463204586,barq,Barraq Finance Company,6463204586,sa.com.barraq,,,1
+app-6475181815,VNeTraffic,GLOBAL TECHNOLOGY - TELECOMMUNICATIONS CORPORATION,6475181815,com.ots.global.vneTrafic,,,1
+app-6757158188,Pepco: deals and vouchers,PEPCO POLAND SP Z O.O.,6757158188,eu.pepco.app,,,1
+app-6762959682,ZETA Emulator: PS2 3DS Wii PSP,retro emu,6762959682,app.zemu.zeta,,,1
+app-1500526240,醒图 - 全能修图神器,深圳市脸萌科技有限公司,1500526240,com.xt.retouch,,,1
+app-329315203,Post & DHL,Deutsche Post AG,329315203,de.deutschepost.dhl,,,1
+app-959841443,Shopee Indonesia,"SHOPEE INTERNATIONAL INDONESIA, PT",959841443,com.beeasy.shopee.id,,,1
+app-960335206,Blinkit: Groceries & more,BLINK COMMERCE PRIVATE LIMITED,960335206,com.grofers.consumer,,,1
+app-1506827551,gov.br,Servicos e Informacoes do Brasil,1506827551,br.gov.meugovbr,,,1
+app-1557426960,mojeIKP - log in to health,Centrum e-Zdrowia,1557426960,pl.gov.cez.mojeikp,,,1
+app-1573773139,Le Champion,Stichting Sportevenementen Le Champion,1573773139,com.lechampion.series,,,1
+app-1590142959,France Identité,Gouvernement Francais,1590142959,fr.gouv.france-identite,,,1
+app-6463031298,Trendyol Go: Food & Groceries,TYG TURKEY ELEKTRONIK TICARET HIZMETLERI VE YATIRIMLARI ANONIM SIRKETI,6463031298,com.trendyol.go,,,1
+app-6780850057,"Laya - 聲連世界, 遇見知己","Transparency-One, Inc.",6780850057,com.cycle.social.app,,,1
+app-6798938676,후라이드참잘하는집,WMPO Inc.,6798938676,com.wmpoplus.hoocham,,,1
+app-735701965,Lalamove - Fast & Affordable,Lalamove Media Limited,735701965,com.easyvan.user,,,2
+app-951812684,Glovo: Comida a domicilio,Glovoapp 23 SL,951812684,com.glovo.glovo,,,3
+app-375695000,McDonald's Canada,McDonald's Restaurants of Canada Limited,375695000,ca.mcdonalds.McDonalds,,,1
+app-481035064,Hepsiburada: Online Shopping,Hepsiburada,481035064,com.pozitron.hepsiburada,,,1
+app-908669202,ShopeePay: No.1 Mobile Wallet,MONEE PAYMENT HOLDING PRIVATE LIMITED,908669202,com.beeasy.beepay,,,1
+app-938033081,myGov,Services Australia,938033081,com.humanservices.myGov,,,1
+app-1054316563,85的神GodTaxi - HK香港Call的士出行App,God Taxi App Ltd,1054316563,com.madmadgroup.godtaxi,,,1
+app-1457958492,Meesho: Online Shopping,Meesho Inc.,1457958492,com.meesho.Meesho,,,1
+app-1463054197,miDGT,DGT-GI,1463054197,com.dgt.midgt,,,1
+app-1589255019,Mon espace santé,l'Assurance Maladie,1589255019,fr.assurancemaladie.monespacesante,,,1
+app-1637067963,GoTyme Bank | Philippines,GoTyme Bank Corporation,1637067963,ph.com.gotyme,,,1
+app-6743859258,Postcode Loterij,Postcode Loterij N.V.,6743859258,info.postcodelottery.npl,,,1
+app-6752971179,GoTyme Bank ZA (TymeBank),Tyme Bank Ltd,6752971179,za.co.gotyme,,,1
+app-6756355873,KICKS,Matas A/S,6756355873,kicks.app,,,1
+app-518966501,天猫 - 好品牌，好价格，上天猫,浙江天猫网络有限公司,518966501,com.taobao.tmall,,,1
+app-1625279562,"CouponBirds: Deals, Gutscheine",CouponBirds Inc,1625279562,com.couponbirds.smartcoupon,,,2
+app-505488770,Impots.gouv,Direction générale des Finances publiques,505488770,fr.gouv.finances.Impots-gouv,,,1
+app-663816616,Haze@SG,Hosay Studios,663816616,com.hosay.hazesg,,,1
+app-959841854,Shopee PH: 10.10 Sale,SHOPEE PHILIPPINES INC.,959841854,com.beeasy.shopee.ph,,,1
+app-1277406216,PK雙饗卡-必勝客x肯德基KFC 行動會員卡,"Jardine Food Services(Taiwan) Co., Ltd.",1277406216,tw.com.pkcard,,,1
+app-1501681835,IO,PagoPA S.p.A.,1501681835,it.pagopa.app.io,,,1
+app-1525477806,SeaBank,PT.Bank Seabank Indonesia,1525477806,id.co.bankbkemobile.digitalbank,,,1
+app-1535733802,Thanh niên Việt Nam,Trung uong Doan TNCS Ho Chi Minh,1535733802,com.vnptmedia.tnvn,,,1
+app-1592108795,InstaPay Egypt,EBC,1592108795,com.egyptianbanks.instapay,,,1
+app-6480176219,積金易 (eMPF),eMPF Platform Company Limited,6480176219,hk.org.empf,,,1
+app-6754709202,Q | كيو,MOHAMMED BIN HALABI,6754709202,sa.qeu.app,,,1
+app-579985456,maxim — order taxi & delivery,PT. SITO,579985456,com.taxsee.Taxsee,,,2
+app-490813624,CAIXA,Caixa Econômica Federal,490813624,br.gov.caixa.CAIXA,,,1
+app-573144133,포켓CU,"BGFretail Co., Ltd.",573144133,com.bgfcucard.cumembership,,,1
+app-959841453,Shopee 10.10 ทั้งลด ทั้งแถม,SHOPEE THAILAND COMPANY LIMITED,959841453,com.beeasy.shopee.th,,,1
+app-1217842108,Capitec Bank,Capitec Bank Limited,1217842108,capitec.acuity.mobile.prod,,,1
+app-1237601115,Mobile JKN,BPJS Kesehatan,1237601115,app.bpjs.mobile,,,1
+app-1436690023,KFC Malaysia,QSR Brands (M) Holdings Berhad,1436690023,com.kfc.malaysia,,,1
+app-1458351041,Carte Vitale,GIE SESAM Vitale,1458351041,fr.sesamvitale.cartevitale.app,,,1
+app-1478350915,"Amazon India Shop, Pay, miniTV",AMZN Mobile LLC,1478350915,com.amazon.AmazonIN,,,1
+app-1553931951,iBoxen,iBoxen Infrastruktur Sverige AB,1553931951,com.iboxen.consumer,,,1
+app-1589750682,eTax Mobile,"IT Department, General Department of Taxation of Viet Nam",1589750682,com.etax.icanhan1,,,1
+app-373034841,Yemeksepeti: Food & Grocery,YEMEK SEPETI ELEKTRONIK ILETISIM PERAKENDE GIDA LOJISTIK ANONIM SIRKETI,373034841,yemeksepeti.com.valensas,,,1
+app-1004966456,Absher | أبشر,NATIONAL INFORMATION CENTER,1004966456,gov.moi.absher,,,1
+app-1205514003,LiveTrail,LiveTrail SARL,1205514003,net.livetrail.livetrail,,,1
+app-1237674663,OLG Lottery & Online Casino,Ontario Lottery and Gaming Corporation,1237674663,com.olg.lottery,,,1
+app-1437123008,DANA Dompet Digital Indonesia,"ESPAY DEBIT INDONESIA KOE, PT",1437123008,id.dana.app,,,1
+app-1479656820,"PalmPay - Transfers, Bills",Palmpay Limited,1479656820,com.transsnet.newpalmpay,,,1
+app-1496925861,ゆうちょ通帳アプリ-銀行 アプリ,"Japan Post Bank Co., Ltd.",1496925861,jp.japanpost.jp-bank.bankbookapp,,,1
+app-1569382782,Walley,Norion Bank AB,1569382782,com.walleypay.app,,,1
+app-6736659138,Diagnostyka,Diagnostyka Digital Hub,6736659138,pl.diagnostyka.app,,,1
+app-6748918399,toing - Food Delivery,BUNDL TECHNOLOGIES PRIVATE LIMITED,6748918399,bundl.toing,,,1
+app-6812782641,Hello Nails,Hello Nails,6812782641,com.hellonails.app,,,1
+app-1017492454,YouTube Music：音楽、ポッドキャスト,Google,1017492454,com.google.ios.youtubemusic,,,5
+app-380897313,Australia Post,Australia Post,380897313,com.auspost.mobile,,,1
+app-426644449,"우리동네GS (GS25, GS더프레시, 와인25플러스)","GS Retail Co., Ltd.",426644449,com.gsretail.gscvs,,,1
+app-781421802,Poste Italiane,Poste Italiane Spa,781421802,it.poste.spim,,,1
+app-907394059,Myntra - Fashion Shopping App,myntra.com,907394059,com.myntra.Myntra,,,1
+app-976505454,e-Devlet,T.C. CUMHURBAŞKANLIĞI SİBER GÜVENLİK BAŞKANLIĞI,976505454,tr.gov.turkiye.eDevKapisi,,,1
+app-1156417365,Ziggo GO,Liberty Global Technology Services B.V.,1156417365,com.upc.horizon.GO.ziggogo,,,1
+app-1582750372,VNeID,Trung tâm dữ liệu quốc gia về dân cư,1582750372,vn.com.vneid,,,1
+app-1633060599,"Mondial Relay, suivi de colis",Mondial Relay,1633060599,com.mondialrelay.mobile,,,1
+app-1660766684,Mój DHL,DHL eCommerce (Poland) sp. z o.o.,1660766684,pl.dhl.DHLtracker,,,1
+app-6815521125,Wiggle Together,Xiangyu Ren,6815521125,com.hyperblob.wiggletogether,,,1
+app-977946724,学习通,"Beijing Chaoxing Digital Library Information Technology Co., Ltd.",977946724,com.ssreader.ChaoXingStudy,,,1
+app-397585390,Migros: Food & Groceries,MigrosOne,397585390,tr.com.sanalmarket.MigrosSanalMarketMobil,,,1
+app-663885752,TrueMoney - Pay & Earn Coins,True Money Company Limited,663885752,com.tdcm.truemoneywallet,,,1
+app-948660805,AusweisApp Bund,Governikus Service GmbH,948660805,com.governikus.ausweisapp2,,,1
+app-1112407590,Zalopay-Thanh toán & Tài chính,ZION JOINT STOCK COMPANY,1112407590,vn.com.vng.zalopay,,,1
+app-1563102530,M3デジカルスマート診察券,"DigiKar, Inc",1563102530,jp.digikar.smart.app,,,1
+app-1593210812,DPD Mobile,DPD Polska Sp. z o.o.,1593210812,pl.dpdpolska.dpd,,,1
+app-1660153573,KWSP i-Akaun,Kumpulan Wang Simpanan Pekerja (KWSP),1660153573,com.kwsp.mip,,,1
+app-6553966660,실손24,Korean Insurance Development Institute Inc.,6553966660,kr.or.silson.iOSKACR,,,1
+app-6758284503,Prudential Singapore,Prudential Assurance Company Singapore (Pte) Limited,6758284503,com.prudential.pruservices.pacs,,,1
+app-6796647852,Boon - önskelista & presenter,Schibsted Media AS,6796647852,no.schibsted.boon,,,1
+app-959841113,Shopee 10.10 Brands Festival,SHOPEE MOBILE MALAYSIA SDN. BHD.,959841113,com.beeasy.shopee.my,,,1
+app-1053752571,EatClub - Restaurant Deals,EATCLUB PTY LTD,1053752571,dinnerdeal.ios.customer,,,1
+app-1234494259,Cepte Şok,Şok Marketler Tic. A.Ş.,1234494259,com.positive.ceptesok,,,1
+app-1388411277,NHS App,NHS Digital,1388411277,com.nhs.online,,,1
+app-6443932656,Plata,"Banco Plata, S.A., Institucion de Banca Multiple",6443932656,dif.tech.bank,,,1
+app-6450181256,SSO+,Social Security Office,6450181256,com.sso.ssoplus,,,1
+app-6737593007,OKash: Safe and reliable loan,OPAY MICROFINANCE BANK LIMITED,6737593007,com.brmfbank.okash,,,1
+app-6738909628,ZigZag: navigatore ZTL,The Stolen Spot S.R.L.,6738909628,com.thestolenspot.lookpark,,,1
+app-6754793134,EVN CSKH,VIETNAM ELECTRICITY,6754793134,com.cskh.evn.vn,,,1
+app-6759354705,Loksy Find Maps,Parmar Sujitkumar,6759354705,com.travelplannerloksy.cburak,,,1
+app-6743828427,蚂蚁阿福-蚂蚁旗下AI健康助手,"Ant Yikang (Guangzhou) Information Technology Co., Ltd.",6743828427,com.antgroup.aijk.iphone,,,1
+app-374824226,BBVA México,"BBVA Bancomer, S.A.",374824226,com.bancomer.bbva.bancomermovil,,,1
+app-980446169,e-Nabız,T.C. Saglik Bakanligi,980446169,tr.gov.saglik.enabiz,,,1
+app-1034200875,HealthHub SG,Synapxe Pte Ltd,1034200875,sg.gov.hpb.healthhub,,,1
+app-1100564842,AEON Pay-スマホ決済でWAON POINTがたまる,"AEON Financial Service Co., Ltd.",1100564842,jp.co.aeon.credit.ios.wallet,,,1
+app-1191681741,集保e手掌握(集保e存摺/手機存摺),臺灣集中保管結算所,1191681741,tw.com.tdcc.epassbook,,,1
+app-1435168829,Royal Mail,Royal Mail Group Ltd,1435168829,com.royalmail.app.ios,,,1
+app-1530944632,Mijn DHL,DHL eCommerce (Netherlands) B.V.,1530944632,com.dhlparcel.nl,,,1
+app-1603403354,GoMoWorld: Travel eSIM,eircom Limited,1603403354,ie.eir.gomoworld,,,1
+app-6769155299,Fantasy SHL,Svenska Hockeyligan,6769155299,se.pregamesports.fantasyshl,,,1
+app-396871673,PostNord - Spåra dina paket,PostNord Group AB,396871673,se.posten.SparaForsandelse,,,1
+app-514561561,HMRC,HMRC,514561561,uk.gov.hmrc.TaxCalc,,,1
+app-620447173,Compte ameli,l'Assurance Maladie,620447173,fr.mobi.moncompte.ameli,,,1
+app-921765888,Audiomack - Play Music Offline,"Audiomack, Inc.",921765888,com.audiomack.iphone,,,1
+app-959841449,10.10 Shopee Thương Hiệu,SHOPEE COMPANY LIMITED,959841449,com.beeasy.shopee.vn,,,1
+app-1134784923,快喵VPN加速器 - 高速 安全 無限流量VPN,Secure Network,1134784923,com.vpn.cat,,,1
+app-1397699449,myID - Australian Government,Australian Taxation Office,1397699449,au.gov.ato.ausid.ios,,,1
+app-1481812175,Shopee: Compre de Tudo Online,SHPS I Private Limited,1481812175,com.beeasy.shopee.br,,,1
+app-1599450372,대한민국 모바일 신분증,행정안전부,1599450372,kr.go.mobileid,,,1
+app-1620153149,Ninja - نينجا,TECH-ADVANCE FOR INFORMATION TECHNOLOGY CO,1620153149,com.ananinja.app,,,1
+app-6667104573,ジハンピ,SUNTORY BEVERAGE SOLUTION LIMITED,6667104573,jp.jihan-pi,,,1
+app-6760684866,UVACO葡眾,葡眾企業股份有限公司,6760684866,tw.com.uvaco.app,,,1
+app-1668228991,Dave’s Hot Chicken®,Dave's Hot Chicken,1668228991,com.daveshotchicken.prod.iosapp,,,1
+app-406952562,entradas.com - Compra entradas,ENTRADAS EVENTIM S.A.U,406952562,com.entradas.ios,,,1
+app-520020791,GCash,"MYNT, INC.",520020791,com.globetel.gcash,,,1
+app-732775964,しまむらパーク,しまむら,732775964,jp.gr.shimamura.app,,,1
+app-1064009280,MioDottore: Prenota una visita,ZnanyLekarz Sp. z o. o.,1064009280,it.docplanner,,,1
+app-1521647264,VssID,INFORMATION TECHNOLOGY CENTRE - VIETNAM SOCIAL SECURITY,1521647264,vn.gov.vss,,,1
+app-1613539452,Tawakkalna,NATIONAL INFORMATION CENTER,1613539452,sa.gov.nic.tawakkalnaservices,,,1
+app-6499507336,元大行動銀行 Yuanta Commercial Bank,元大商業銀行,6499507336,com.yuantabank.bankinginyour.superapp.personal,,,1
+app-6759037657,BA-Secure,Bundesagentur für Arbeit,6759037657,de.arbeitsagentur.authenticator,,,1
+app-6776606276,閃的 Sim Taxi - HK Call 的士 App,Board Station Limited,6776606276,com.simtaxi.client,,,1
+app-612261027,Wise - Global Money,Wise Payments Ltd,612261027,com.transferwise.Transferwise,,,2
+app-6478804084,ReelBox,"Guangxi Xianban Network Technology Co., LTD",6478804084,com.xianban.jinmiao,,,3
+app-1410703839,Trade Republic: Broker & Bank,Trade Republic Bank GmbH,1410703839,de.traderepublic.app,,,2
+app-357484932,신한 슈퍼SOL - 신한 유니버셜 금융 앱,SHINHAN BANK,357484932,com.shinhan.sbank,,,1
+app-553663691,"99: Corridas, Food, Pay",99 TECNOLOGIA LTDA,553663691,com.99taxis,,,1
+app-1441948105,1177,Inera AB,1441948105,se.inera.InvanarApp1177,,,1
+app-1444267322,"żappka: zakupy, promocje Żabka",ZABKA POLSKA SP Z O O,1444267322,pl.zabka.apb2c,,,1
+app-1454483188,Saturn Calendar,Saturn Technologies Inc.,1454483188,com.dcdwebdesign.saturn,,,1
+app-1545069171,JPJeQ,Jabatan Pengangkutan Jalan Malaysia,1545069171,my.gov.jpj.queue,,,1
+app-1552990335,かんたんnetprint－セブン‐イレブンでかんたん印刷,FUJIFILM Business Innovation Corp.,1552990335,com.fujifilm.fb.netprint.kantan,,,1
+app-6455990519,ShopeePay – Dompet Serba Bisa,PT. AIRPAY INTERNATIONAL INDONESIA,6455990519,com.shopeepay.id,,,1
+app-6468647440,Yango Play－series and movies,Funtech Loyalty Card Services LLC,6468647440,com.yango.joy,,,1
+app-392899425,招商银行,招商银行,392899425,com.cmbchina.MPBBank,,,1
+app-1111876388,T-Life,T-Mobile,1111876388,com.tmobile.tuesdays,,,1
+app-370362301,NS,NS Reizigers B.V.,370362301,com.ns.reisplannerxtra,,,1
+app-514262377,7-Eleven TH,CP ALL Plc.,514262377,com.tdcm.7eleventh,,,1
+app-563488727,S-pushTAN,Star Finanz GmbH,563488727,de.starfinanz.pushTanApp,,,1
+app-595292048,Guzman y Gomez (GYG) Mexican,Guzman y Gomez (GYG) Mexican Taqueria,595292048,com.gruden.gygmicros,,,1
+app-1295257499,Carteira de Trabalho Digital,Servicos e Informacoes do Brasil,1295257499,br.gov.dataprev.ectps,,,1
+app-6451037644,マツキヨココカラ公式アプリ,株式会社マツキヨココカラ&カンパニー,6451037644,jp.co.matsukiyococokara.app,,,1
+app-6474293063,uniperks: student discounts,UniPerks P.S.A,6474293063,com.uniperks.uniperks,,,1
+app-6477598076,MiDNI,Dirección General de la Policía,6477598076,es.gob.interior.policia.midni,,,1
+app-6738042163,Bought: Supersnabb secondhand,Bought Oy,6738042163,com.boughtoy.boughtapp,,,1
+app-6756442328,"Instants, una app de Instagram","Instagram, Inc.",6756442328,com.burbn.moonshot,,,1
+app-6795655019,Mondial de l'Auto 2026,HOPSCOTCH CONGRES,6795655019,paris.mondial.app,,,1
+app-947925763,Polarsteps,Polarsteps B.V.,947925763,com.polarsteps.Polarsteps,,,2
+app-496189385,Vodafone & Ziggo,Vodafone Libertel B.V.,496189385,nl.vodafone.mc,,,1
+app-959840394,Shopee 10.10 Brands Sale,SHOPEE SINGAPORE PRIVATE LIMITED,959840394,com.beeasy.shopee.sg,,,1
+app-1548623362,Techcombank Mobile,VIETNAM TECHNOLOGICAL AND COMMERCIAL JOINT STOCK BANK,1548623362,vn.com.techcombank.bb.app,,,1
+app-1586839342,Biedronka – promocje i rabaty,Jeronimo Martins Polska S.A.,1586839342,pl.jmpolska.clos0.mojabiedronka,,,1
+app-1598909871,نفاذ | NAFATH,NATIONAL INFORMATION CENTER,1598909871,sa.gov.nic.myid,,,1
+app-1624496280,bash™,The Foschini Group Limited,1624496280,com.bash,,,1
+app-6444602589,모바일 건강보험증,국민건강보험공단,6444602589,kr.or.nhiq,,,1
+app-6743679292,Saracroche : bloqueur d'appels,Camille Bouvat,6743679292,com.cbouvat.saracroche,,,1
+app-6756647308,詐欺対策 by NTTタウンページ,NTT DIRECTORY SERVICES Co.,6756647308,jp.co.ntt-tp.sagitaisaku,,,1
+app-6761046326,萬家福 PROSPERiTY PLAZA,Uni-Prosperity Lifestyle Corp.,6761046326,com.uniprosperity.mobile.one,,,1
+app-382952264,MyChart,Epic,382952264,com.epic.mychart,,,1
+app-1472502819,快手极速版,华艺汇龙,1472502819,com.kuaishou.nebula,,,1
+app-1199780189,Lime - #RideGreen,Neutron Holdings. Inc.,1199780189,com.limebike,,,2
+app-305659772,Allegro,Allegro Sp. z o.o.,305659772,com.allegro.iphone,,,1
+app-991673877,"Maya – savings, loans, cards","Maya Philippines, Inc.",991673877,com.paymaya.ios,,,1
+app-1434857287,L’Identité Numérique La Poste,La Poste,1434857287,fr.laposte.monidentitenumerique,,,1
+app-1506929912,"InfinitePay Tap, Conta, Cartão","CloudWalk, Inc.",1506929912,io.cloudwalk.infinitepaydash,,,1
+app-1667558506,D360 Bank,D360 Bank,1667558506,d360.ios.app,,,1
+app-6535674290,The Coffee Bean & Tea Leaf™,The Coffee Bean & Tea Leaf,6535674290,com.thecoffeebeanandtealeaf.mycbtl,,,1
+app-6756063147,CardCosmic,"CardCosmic, Inc.",6756063147,com.cardcosmic.ios,,,1
+app-1001501844,Deliveroo: Food & Shopping,Deliveroo,1001501844,com.deliveroo.orderapp,,,2
+app-290033990,ホットペッパーグルメ,"Recruit Co.,Ltd.",290033990,jp.recruit.mtl.HotPepper,,,1
+app-396584034,Everland,Samsung Everland Co. Ltd.,396584034,com.everland.everlandguide,,,1
+app-437564823,Ana Vodafone,Vodafone International Services,437564823,com.emeint.engezly,,,1
+app-918751511,MoMo-Trợ Thủ Tài Chính với AI,M-SERVICE JSC,918751511,com.mservice.com.vn.MoMoTransfer,,,1
+app-1018175041,Picnic: Supermarkt & Recepten,Picnic,1018175041,nl.picnic.picnic-supermarkt,,,1
+app-1052238659,Monzo Bank - Mobile Banking,Monzo Bank Limited,1052238659,io.b2a.BankProd,,,1
+app-1459266578,صحتي | Sehhaty,Lean,1459266578,com.lean.tetamn,,,1
+app-1502673295,OPENTIX,National Performing Arts Center,1502673295,edu.ntch.oa.plus.ticket,,,1
+app-1605170923,GoWish,Onskeskyen ApS,1605170923,com.gowish.app,,,1
+app-6761963411,Nova Drama,Ihsan Ozturkmen,6761963411,app.tools.MovieChuang,,,1
+app-1435602536,多闪,"Beijing Douyin Technology Co., Ltd.",1435602536,my.maya.iphone,,,1
+app-342792281,Old Navy: Shop for New Clothes,Gap Inc.,342792281,com.gap.shopon,,,1
+app-885993234,Ziraat Mobil,T.C. Ziraat Bankası A.Ş.,885993234,com.ziraatbank.ZiraatMobile,,,1
+app-898129576,"Xender: Transfer, Share Files",Xender Team,898129576,cn.shanchuan.shanchuan,,,1
+app-1377158818,UAE PASS,Dubai eGovernment Department,1377158818,ae.uaepass.main,,,1
+app-1450459916,STARLUX,starlux-airlines,1450459916,com.starlux.cale,,,1
+app-1489403660,Everyday Rewards,Woolworths Group Limited,1489403660,com.woolworths.Rewards,,,1
+app-1554807824,네이버페이,Naver Financial Corporation,1554807824,com.naverfin.payapp,,,1
+app-6450259609,Notifica App,Ministerio de Asuntos Economicos y Transformacion Digital,6450259609,es.gob.dehu,,,1
+app-6473259774,Visma Authenticator,Visma,6473259774,com.visma.authenticator,,,1
+app-6744029871,Aadhaar,UIDAI,6744029871,in.gov.uidai.pehchaan,,,1
+app-6744676668,eCOSS,JABATAN DIGITAL NEGARA (JDN),6744676668,my.gov.onegovappstore.kpdn.eCOSS,,,1
+app-521117624,Garanti BBVA Mobile,T. Garanti Bankasi A.S.,521117624,com.garanti.cepsube,,,1
+app-863985368,My Lotteries: Verifica Vincite,Brightstar Lottery S.p.A.,863985368,it.lottomatica.lotto,,,1
+app-1047654086,Empik,Empik S.A,1047654086,com.empik.empikapp,,,1
+app-1170055821,"PhonePe UPI, Payment, Recharge",PHONEPE PRIVATE LIMITED,1170055821,com.phonepe.PhonePeApp,,,1
+app-1263036818,botim,Algento Cloud Computing Limited,1263036818,im.thebot,,,1
+app-1567026344,Coupang 酷澎購物-隔日到貨天天低價,Coupang Corp.,1567026344,com.coupang.lightspeed,,,1
+app-6782911844,EcoTrend 2.0,ista SE,6782911844,com.ista.ecotrend,,,1
+app-513836029,中国电信-全国统一官方服务平台,CHINA TELECOM Corporation Ltd.,513836029,CtClient,,,1
+app-1576646753,Sinsay - moda e shopping,LPP SA,1576646753,com.lppsa.app.sinsay,,,2
+app-1087780386,Kaufland: deine XTRA Vorteile,Schwarz Digits IT KG,1087780386,com.kaufland.iosapp,,,2
+app-1452164827,IKEA,Inter IKEA Systems B.V.,1452164827,com.ingka.ikea.app,,,2
+app-578186283,全民健保行動快易通 | 健康存摺,"National Health Insurance Administration, Ministry of Health and Welfare",578186283,tw.gov.nhi.NHIAppPhone,,,1
+app-1076238296,LINE MAN: Food Delivery & more,LINE MAN CORPORATION PTE. LTD.,1076238296,com.linecorp.linemanth,,,1
+app-1193357041,"Google Pay: UPI, Cards, Loans",Google,1193357041,com.google.paisa,,,1
+app-1205807363,MB Bank,MB Bank,1205807363,com.mbmobile,,,1
+app-1440241902,myBCA: New BCA Banking Apps,PT. Bank Central Asia Tbk,1440241902,com.bca.mybca.omni,,,1
+app-1562641276,セブン-イレブン マルチコピー,FUJIFILM Business Innovation Corp.,1562641276,com.fujifilm.fb.multicopy,,,1
+app-6448463619,نمبر بوك السعودية,Mohammed Alotaibi,6448463619,app.saudi.numberbook,,,1
+app-6482219793,CelcomDigi,CelcomDigi Telecommunications Sdn Bhd,6482219793,com.celcomdigi.selfcare,,,1
+app-6738896323,CGV,CJ CGV Co.ltd,6738896323,co.kr.cgv.cjcgv,,,1
+app-6802948067,PDF Reader Mate,"Fuzhou Yuxian Future Technology Co., Ltd",6802948067,com.futurenow.pdfapp,,,2
+app-389581236,Tesco Grocery & Clubcard,Tesco,389581236,com.tesco.grocery,,,1
+app-436753378,Krungthai NEXT,Krung Thai Bank,436753378,com.ktb.netbank,,,1
+app-692753615,Wallapop - Vende y compra,WALLAPOP SL,692753615,com.secondhanding.WallaPop,,,1
+app-757696633,HotDoc,HotDoc,757696633,au.com.hotdoc,,,1
+app-1208460960,DigiD,Rijksoverheid,1208460960,nl.rijksoverheid.digid.pub,,,1
+app-1398652658,Jフェス,rockin'on holdings inc.,1398652658,jp.fesapp,,,1
+app-1483423095,YouBike微笑單車 官方版,"YouBike Co., Ltd",1483423095,tw.com.youbike.plus,,,1
+app-1504038308,SportyBet: Sports Betting,Sporty Internet Group,1504038308,com.sportybet.SportyBet,,,1
+app-1515065344,智方便 iAM Smart,Digital Policy Office,1515065344,hk.gov.ogcio.iamsmart,,,1
+app-6738965857,Where is My Train - by Google,Google,6738965857,com.google.whereismytrain,,,1
+app-458318329,腾讯视频-沈腾携《现在就出发4》爆笑回归,Tencent Technology (Shenzhen) Company Limited,458318329,com.tencent.live4iphone,,,1
+app-394602822,True,TRUE CORPORATION PUBLIC COMPANY LIMITED,394602822,com.tdcm.iservice,,,1
+app-404844644,OTTO - Online Shopping & Möbel,Otto GmbH & Co. KGaA,404844644,de.otto.shop,,,1
+app-526829675,Minha Claro,Claro S A,526829675,com.novitech.clarocanalservicos,,,1
+app-531631058,Kruidvat app,Kruidvat Retail BV,531631058,nl.kruidvat.voordeelkaart,,,1
+app-664461825,Australian Taxation Office,Australian Taxation Office,664461825,au.gov.ato.ATOTax,,,1
+app-975273006,IMSS Digital,Instituto Mexicano del Seguro Social,975273006,gob.mx.imss.digital,,,1
+app-1254438272,buddy UniCredit,UniCredit,1254438272,eu.unicredit.internet.buddybank,,,1
+app-1344696702,Touch ‘n Go eWallet,TNG Digital Sdn Bhd,1344696702,my.com.tngdigital.wallet,,,1
+app-1454358771,MARTI: TAG & Scooter,MARTİ TEKNOLOJİ LİMİTED ŞİRKETİ,1454358771,com.martitech.martiscooter,,,1
+app-1586071844,Long Châu - Chuyên gia thuốc,FPT LONG CHAU PHARMA JOINT STOCK COMPANY,1586071844,vn.frt.longchau.client,,,1
+app-6450435935,郵便局公式アプリ - 荷物の配送状況の確認や再配達が簡単に,"Japan Post Co., Ltd.",6450435935,jp.jppost.pfapp,,,1
+app-6479990131,Fubon+ 台北富邦行動銀行,Taipei Fubon Bank,6479990131,com.fubon.aibank,,,1
+app-6744043800,롯데월드 어드벤처,"Hotel Lotte Co., Ltd",6744043800,com.lotteworld.ios.adventure,,,1
+app-6762754847,Peekabox: Food & groceries,Peekabox Tech Ltd,6762754847,com.peekabox.ios,,,1
+app-418535251,sahibinden #AlSatKiralaKesfet,sahibinden.com,418535251,com.sahibinden.sahibinden,,,1
+app-993135524,MyDyson™,Dyson Inc.,993135524,com.dyson.dysonlink,,,1
+app-1032301823,ShopeePay - Tài Chính Dễ Dàng,SHOPEEPAY JOINT STOCK COMPANY,1032301823,com.vietnamesports.toppay,,,1
+app-1374301965,UAEICP,Federal Authority for Identity and Citizenship,1374301965,com.echannels.MOISmartServices,,,1
+app-1462866416,行動自然人憑證,The Ministry of the Interior,1462866416,tw.gov.moi.tfido,,,1
+app-1577294865,Atome PH - Buy Now Pay Later,NEURONCREDIT FINANCING COMPANY INC.,1577294865,ph.atome.paylater,,,1
+app-6480469576,Wero,European Payments Initiative,6480469576,eu.epicompany.wero.wallet,,,1
+app-6738094967,Mateo Meny,Mateo Kostplattform AB,6738094967,com.mateo.menu,,,1
+app-6746711757,Raising Cane’s Middle East,M.H. Alshaya Co. W.L.L.,6746711757,com.rc.mena,,,1
+app-6755577400,Dual Camera: Shot Front & Back,Ha Do Thi Thu,6755577400,com.hado.dual-camera,,,1
+app-6752317272,系统电池分析-手机配置查询·电池健康分析,"Zhangsan Software Co., Ltd., Enshi Prefecture, Hubei Province",6752317272,com.zhang333.dd,,,1
+app-345297399,Services - TotalEnergies,TOTAL MARKETING SERVICES,345297399,com.total.total,,,1
+app-348712880,Amazon,Amazon,348712880,com.amazon.AmazonDE,,,1
+app-399758084,myAIS,Mimo Tech,399758084,com.ais.mimo.eservice,,,1
+app-434613896,Zomato: Food Delivery & Dining,Zomato Media Pvt. Ltd.,434613896,com.zomato.zomato,,,1
+app-606927881,Takealot - Mobile Shopping App,Takealot Online (Pty) Ltd,606927881,com.takealot.iphone,,,1
+app-1266591536,adidas：選購鞋款及服飾,adidas,1266591536,com.adidas.app,,,1
+app-1555943725,Mi carpeta Ciudadana,Ministerio de Asuntos Economicos y Transformacion Digital,1555943725,es.gob.carpeta,,,1
+app-1631129539,Svea Pay,Svea Ekonomi,1631129539,com.svea.payapp,,,1
+app-1641628055,NH올원뱅크(농협은행 대표 플랫폼),NH농협은행,1641628055,com.nonghyup.nhallonebank,,,1
+app-6444892846,Media Expert,TERG SA,6444892846,pl.mediaexpert.app,,,1
+app-6739450752,Telephony,National Telecom Regulatory Authority,6739450752,com.ntra.Telephony,,,1
+app-6740224837,"Joybuy-Don't just buy, Joybuy!",Joybuy,6740224837,com.joybuy.jd,,,1
+app-6748454264,MoMo PSB NG,MTN FINTECH(PTY) LTD,6748454264,com.mtngroupfintech.consumerapp,,,1
+app-6759427444,Tixel－Face Value Ticket Resale,Tixel PTY LTD,6759427444,com.tixel.app,,,1
+app-343555245,DB Navigator,Deutsche Bahn,343555245,com.deutschebahn.navigator,,,1
+app-361170631,K PLUS,KASIKORNBANK PUBLIC COMPANY LIMITED,361170631,com.kasikornbank.retail.mbanking.wap,,,1
+app-450775137,Subito.it - Vendi di tutto,Subito.it,450775137,com.subito.subito,,,1
+app-995280265,"getir: groceries, food&beyond",Getir,995280265,com.getir.ios,,,1
+app-1112935685,Tikkie,ABN AMRO Bank N.V.,1112935685,com.abnamro.tikkie,,,1
+app-1153448703,EXアプリ | JR東海公式,Central Japan Railway Company,1153448703,jp.co.jr-central.exreserve,,,1
+app-1275057217,CNH do Brasil,Servicos e Informacoes do Brasil,1275057217,br.gov.serpro.cnhe,,,1
+app-1320618078,DigiLocker,National e-Governance Division,1320618078,com.negd.digilocker,,,1
+app-6443837919,ICN SMARTPASS (인천공항 스마트패스),인천국제공항공사,6443837919,kr.airport.ios.smartpass,,,1
+app-6502044682,HOUSE - go for fashion!,LPP SA,6502044682,com.lppsa.app.house,,,1
+app-6754869141,Cashify-Fast and Safe Cash,SUNLOAN LENDING INVESTORS CORP.,6754869141,com.cashola.loan.cash.peso,,,1
+app-6751921248,Rips by Triumph,Triumph Arcade,6751921248,com.triumpharcade.tcg,,,1
+app-1666653815,HBO Max: Watch Movies & TV,"WarnerMedia Global Digital Services, LLC",1666653815,com.wbd.stream,,,2
+app-375279377,건강보험25시,국민건강보험공단,375279377,kr.or.nhic.www,,,1
+app-382617920,Rakuten Viber Messenger,Viber Media SARL.,382617920,com.viber,,,1
+app-454379421,Ticketek AU,Ticketek Pty Ltd,454379421,au.com.ticketek.odp,,,1
+app-543184334,Airtel App: Recharge & Bank,Bharti Airtel Ltd.,543184334,com.BhartiMobile.myairtel,,,1
+app-779715397,instdown,FAWAZ ALOTAIBI,779715397,com.fawazapp.instadown,,,1
+app-1038441027,FGTS,Caixa Econômica Federal,1038441027,br.gov.caixa.fgts.trabalhador,,,1
+app-1127781971,EZ WAY 易利委,Trade-Van Information Services Co.,1127781971,com.tradevan.ios.forms,,,1
+app-1219359184,GALERIA,GALERIA S.a r.l. & Co. KG,1219359184,de.karstadt.karstadtapp,,,1
+app-1354962285,APCOA FLOW,APCOA GmbH,1354962285,com.apcoa.apcoaparking,,,1
+app-1503251395,VPNIFY - Secure & Private VPN,Neonetworks solution ltd,1503251395,com.free.vpn.hotspot.secure.vpnify,,,1
+app-1598558834,Smartcash PSB,Airtel Africa,1598558834,com.africa.smartcash,,,1
+app-6657993734,Parkin,Parkin PJSC,6657993734,com.parkin.parkinapp,,,1
+app-6800989223,HotShort-Dramas&Reels,Naughty Corner Music Limited,6800989223,com.maze.tinyfishmaze,,,2
+app-320599923,Sparkasse Ihre mobile Filiale,Star Finanz GmbH,320599923,de.starfinanz.Finanzstatus,,,1
+app-425368900,BoursoBank,Boursorama,425368900,com.boursorama.boursoclient,,,1
+app-472650686,Yandex Go: Taxi Food Delivery,Mikromobilnost doo,472650686,ru.yandex.ytaxi,,,1
+app-531717763,"OLX.pl - Houses, Work, Job",Grupa OLX,531717763,pl.tablica,,,1
+app-627410001,Autofirma App,Ministerio de Asuntos Economicos y Transformacion Digital,627410001,es.gob.afirma.Cliente--firma,,,1
+app-810036078,PAYBACK - La tua carta fedeltà,PAYBACK GmbH,810036078,it.payback.client.iphone,,,1
+app-1524792474,Najiz | ناجز,MOJ,1524792474,com.moj.najiz,,,1
+app-1544702651,VodaPay,Vodacom,1544702651,za.co.vodacom.vodapay,,,1
+app-6447939054,Supernova AI Spoken English,L8 Cones Interactive Private Limited,6447939054,live.gosupernova.app,,,1
+app-6473057948,Internet & SmartHome+,TELUS Communications Inc.,6473057948,com.telus.smarthomeplus,,,1
+app-6479690917,Nokplus,lotteryplus,6479690917,com.organizelotteryplus.nokplus,,,1
+app-6503421271,Vigloo - 숏폼드라마,"Spoonlabs, Inc.",6503421271,com.vigloo,,,1
+app-6739188587,Rocket Now : 出前/フードデリバリー,CP One Japan G.K.,6739188587,com.cpone.customer,,,1
+app-370139302,QQ浏览器-腾讯AI浏览器,Tencent Technology (Shenzhen) Company Limited,370139302,com.tencent.mttlite,,,1
+app-561433133,VCB Digibank,Vietcombank JSC,561433133,com.vcb.VCB,,,1
+app-866147547,etisalat UAE,Emirates Telecommunications Corporation,866147547,com.etisalat.etisalatmobileapp,,,1
+app-944875099,Gojek,PT. GOTO GOJEK TOKOPEDIA TBK,944875099,com.go-jek.ios,,,1
+app-975089690,Woolworths,Woolworths Group Limited,975089690,com.woolworths.supers,,,1
+app-1074964262,MyJio: For Everything Jio,JIO PLATFORMS LIMITED,1074964262,com.jio.myjio,,,1
+app-1127881507,Dolap - İkinci El Alışveriş,trendyol.com,1127881507,com.dolap.ios,,,1
+app-1210638245,AlipayHK (支付寶香港),Alipay Payment Services (HK) Limited,1210638245,com.alipay.wallethk,,,1
+app-1403491709,Wealthsimple,Wealthsimple,1403491709,com.wealthsimple.trade,,,1
+app-1619362440,Renight: 起床・睡眠・鬧鐘・冥想・白噪音,Munice,1619362440,com.munice.MiracleNight,,,1
+app-6456485223,FairMoney: Loan App In Nigeria,FAIRMONEY MICROFINANCE BANK LIMITED,6456485223,io.fairmoney.app,,,1
+app-6466987025,DAISOアプリ,株式会社大創産業,6466987025,com.daisojapan,,,1
+app-6801092560,Bello: Nightlife & Friends,BOLTRIX TECHNOLOGY LTD,6801092560,com.app.bello.ios,,,1
+app-1542571008,Gauth: Amigo de Estudio de IA,GAUTHTECH PTE. LTD.,1542571008,com.gauthmath.intelligence,,,3
+app-379577046,모니모(삼성금융통합앱) 생명 화재 카드 증권,"Samsungcard Co., Ltd.",379577046,com.samsungCard.samsungCard,,,1
+app-382596778,Kleinanzeigen: Dein Marktplatz,Marktplaats BV,382596778,com.ebaykleinanzeigen.ebc,,,1
+app-450464147,TPBank Mobile,TienPhongBank,450464147,com.fpt.tpb.emobile,,,1
+app-549493839,Zangi - Private Messenger,"Secret Phone, Inc",549493839,com.interactive.zangi,,,1
+app-596011949,HungerStation - Food Delivery,HungerStation LLC,596011949,com.hungerstation.ios.hungerstationapp,,,1
+app-710386543,Pick n Pay asap + SmartShopper,Pick n Pay,710386543,za.co.pnp.picknpay,,,1
+app-882477693,U-NEXT - 映画やドラマ、アニメなどの動画が見放題,"U-NEXT Co.,Ltd.",882477693,jp.unext.mediaplayer,,,1
+app-6479888451,AadhaarFaceRD,UIDAI,6479888451,in.gov.uidai.facerd.iOS,,,1
+app-6772559415,pico cam｜動態島小相機,Soon Tiac Ching,6772559415,com.zuzu.peekapic,,,1
+app-6810663965,ShowMiRush,Riverblock International LLC,6810663965,com.show.minrush,,,2
+app-484527651,Île-de-France Mobilités,Ile de France Mobilites,484527651,com.vianavigo.iphone,,,1
+app-730814188,유니클로 UNIQLO - 쇼핑,"UNIQLO CO., LTD.",730814188,com.uniqlo.main.kr,,,1
+app-1324902182,เป๋าตัง,Krung Thai Bank,1324902182,com.ktb.customer.qr,,,1
+app-1383101059,順豐速運,顺丰,1383101059,com.sf-express.SuYunTongHMTO,,,1
+app-1580733496,Aimo – parkera & ladda,Aimo Park Finland Oy,1580733496,com.aimoone.app,,,1
+app-6447160980,TikTok Lite,TikTok Ltd.,6447160980,com.ss.iphone.ugc.tiktok.lite,,,1
+app-6464002625,ShortMax - Short Dramas & TV,SHORTTV LIMITED,6464002625,live.shorttv.ios,,,1
+app-6751881671,Etihad Rail: Buy Train Tickets,Etihad Rail PJSC,6751881671,com.etihadrail.app-prod-sds,,,1
+app-6775716318,WipeUp: Phone Storage Cleaner,Pal Patel,6775716318,com.wipeup,,,1
+app-1102452668,Serasa: Consulta CPF e Score,Serasa Experian,1102452668,br.com.serasaconsumidor.serasaapp,,,1
+app-1113037275,スターバックス ジャパン公式モバイルアプリ,Starbucks Coffee Company,1113037275,com.starbucks.jp,,,1
+app-6443821311,MyJPJ,Jabatan Pengangkutan Jalan Malaysia,6443821311,my.gov.jpj.myjpj,,,1
+app-6587560188,永豐銀行行動銀行-新版,Bank SinoPac,6587560188,com.sinopac.newmobilebank,,,1
+app-6755528973,CardSale - We buy gift cards,"Ansheer, Inc.",6755528973,com.ansheer.cardsale,,,1
+app-6760000183,UNO Digital Bank 2.0,Unoasia Pte. Ltd,6760000183,bank.uno.digital,,,1
+app-895682747,京东金融-黄金基金理财借贷保险一站式平台,"Beijing Jingdong Financial Technology Holdings Co., Ltd.",895682747,com.jd.jinrong,,,1
+app-444553167,ADP Mobile Solutions,"ADP, Inc",444553167,com.adp.adpmobile,,,2
+app-482066631,Roku Remote (Official),ROKU INC,482066631,com.roku.ios.roku,,,2
+app-358861688,Amazon FR,Amazon,358861688,com.amazon.AmazonFR,,,1
+app-374254473,Amazon ショッピングアプリ,AMZN Mobile LLC,374254473,com.amazon.AmazonJP,,,1
+app-382233851,Flightradar24 | Flight Tracker,Flightradar24 AB,382233851,se.resenatverket.FlightRadar24-Free,,,1
+app-483017239,iFood: pedir delivery em casa,iFood,483017239,br.com.brainweb.ifood,,,1
+app-1253773772,세븐일레븐,"Korea Seven Co., Ltd.",1253773772,kr.co.koreak7app,,,1
+app-1439730817,BRImo BRI,PT. Bank Rakyat Indonesia (Persero) Tbk.,1439730817,id.co.bri.newbrimobile,,,1
+app-1453556093,Checkers Sixty60,Shoprite Checkers (PTY) LTD,1453556093,za.co.checkers.sixty60,,,1
+app-1562697442,Instabox,Instabox AB,1562697442,io.instabox.consumer,,,1
+app-1605760107,Woolsocks: The money app,Woolsocks AG,1605760107,eu.woolsocks.app,,,1
+app-6463870097,Clear Status: Status Optimizer,Akash Varlani,6463870097,hd.clear.status.app.clearstatus,,,1
+app-6738619733,Instamart: Groceries & more,Swiggy Instamart Private Limited,6738619733,bundl.instamart,,,1
+app-6744908429,iCPV - Book,VIETTEL BUSINESS SOLUTIONS CORPORATION – BRANCH OF VIETTEL GROUP,6744908429,vn.dcs.icpvbook,,,1
+app-6817297312,ALPAI: Sesli Yapay Zekâ,ALP UNLU,6817297312,com.alpunlu.jarvis,,,1
+app-431477571,FamilyMart,"TAIWAN FAMILYMART CO.,LTD.",431477571,com.familymart.familymart,,,1
+app-484115113,leboncoin,LBC France,484115113,fr.leboncoin.Leboncoin,,,1
+app-532097000,ユニバーサル・スタジオ・ジャパン 公式アプリ,"NBCUniversal Media, LLC",532097000,jp.co.usj.guideapp,,,1
+app-533140250,Parkster - Smidig Parkering,Parkster,533140250,se.parkster.Parkster,,,1
+app-634040057,PC Optimum,Loblaw Companies Limited,634040057,com.loblaw.loyalty,,,1
+app-1186271926,Mein dm,dm-drogerie markt GmbH + Co. KG,1186271926,de.dm.meindm,,,1
+app-1250312807,X-VPN: VPN Fast & Secure,LIGHTNINGLINK NETWORKS PTE. LTD.,1250312807,com.xvpn,,,1
+app-1473428031,메가MGC커피,"Annhouse Co., Ltd",1473428031,co.kr.waldlust.megacoffee,,,1
+app-1482083123,JoyRide: Book Moto Taxi & Car,JoyRide PH Corporation,1482083123,com.joyride.customerapp,,,1
+app-1555414743,Livin' by Mandiri,PT. Bank Mandiri (Persero) Tbk.,1555414743,id.bmri.livin,,,1
+app-1598460384,Trust Bank SG,TRUST BANK SINGAPORE LIMITED,1598460384,sg.trust,,,1
+app-6737809050,Công dân số TPHCM,Trung tâm Chuyển đổi số Thành phố Hồ Chí Minh,6737809050,vn.gov.tphcm.hcmccitizen,,,1
+app-6743737857,LC Waikiki Online Shopping,LC Waikiki,6743737857,com.lcwaikiki.global.prod,,,1
+app-1255358463,知到.,上海卓越睿新数码科技有限公司,1255358463,com.able-elec.WisdomTreeZs,,,1
+app-808807355,mystc KSA,STC,808807355,sa.com.stc.MySTC,,,1
+app-1114430602,Octopus 八達通,Octopus Cards,1114430602,com.octopuscards.octopus,,,1
+app-1225034537,"Smiles: Food, Groceries & More",Emirates Telecommunications Corporation,1225034537,Etisalat.House,,,1
+app-1470361790,모바일티머니,"Tmoney Co., Ltd",1470361790,com.tmoney.tmpay,,,1
+app-1570409180,Videoland,RTL Nederland B.V.,1570409180,nl.rtl.videoland.v2,,,1
+app-1661134941,Moniepoint Business Banking,Moniepoint,1661134941,com.moniepoint.business1,,,1
+app-6670536058,District: Movies Events Dining,Zomato Media Pvt. Ltd.,6670536058,com.district.prod,,,1
+app-407932476,MeinMagenta: Handy & Festnetz,Telekom Deutschland GmbH,407932476,de.telekom.Kundencenter,,,1
+app-473941634,Paytm: Secure UPI Payments,Paytm Mobile Solutions,473941634,com.one97.paytm,,,1
+app-551942662,PrintSmash,Sharp Corporation,551942662,jp.co.sharp.printsystem.CvsWifiPrint,,,1
+app-839711154,"Inter: Conta, Cartão e Pix",Banco Inter,839711154,br.com.intermedium,,,1
+app-1025707485,VPN Proxy Master - Unlimited,"ALL Connected Co.,Ltd",1025707485,co.allconnected.vpnmaster,,,1
+app-1031141698,Mr D - Groceries & Takeaway,Mr Delivery (Pty) Ltd,1031141698,com.mrd.MrDelivery,,,1
+app-1256462727,KOLEO,Astarium sp. z o.o.,1256462727,pl.koleo.app,,,1
+app-1296749505,瑞幸咖啡,"Beijing Luckin Coffee Co., Ltd",1296749505,com.bjlc.luckycoffee,,,1
+app-1514349620,ALBAIK,ALBAIK®,1514349620,com.albaik.customer,,,1
+app-1570860098,myMTN NG,MTN Nigeria,1570860098,ng.mtn.nextgen,,,1
+app-1621211149,DiDi Finanzas,DiDi,1621211149,com.didiglobal.cashloan,,,1
+app-6759854285,"Bosta - Track, Shop, Ship",BOSTA TECHNOLOGY LLC,6759854285,co.bosta.customer,,,1
+app-1468454200,番茄小说 - 热门短剧全本小说电子书阅读器,"Beijing Zhending Technology Co., Ltd.",1468454200,com.dragon.read,,,1
+app-363126964,PAYBACK - Karte und Coupons,PAYBACK GmbH,363126964,de.payback.client.iphone,,,1
+app-506795511,Jakdojade - Timetables,CITY-NAV sp. z o.o.,506795511,com.citynav.jakdojade.pl.ios-lite,,,1
+app-513218878,PostNL,PostNL Holding B.V.,513218878,nl.postnl.TrackNTrace,,,1
+app-807379317,MOHRE UAE,Ministry of Human Resources & Emiratisation,807379317,com.uaegov.mol,,,1
+app-959841107,蝦皮購物 | 花得更少買得更好,SHOPEE TAIWAN PRIVATE LIMITED,959841107,com.beeasy.shopee.tw,,,1
+app-989540920,Swiggy: Food Instamart Dineout,BUNDL TECHNOLOGIES PRIVATE LIMITED,989540920,bundl.swiggy,,,1
+app-1098233626,Greggs App - Food & Drink,Greggs,1098233626,uk.co.greggs.app,,,1
+app-1209349510,VPBank NEO,VIETNAM PROSPERITY JOINT STOCK COMMERCIAL BANK,1209349510,com.vnp.VpBankOnline,,,1
+app-1254341709,GO タクシーが呼べるアプリ - AI予約・配車・迎車・決済,GO Inc.,1254341709,com.dena.automotive.taxibell,,,1
+app-1538531939,모두의카드,교통안전공단,1538531939,kr.or.kotsa.watc,,,1
+app-6448465018,Mitt DHL,DHL Freight,6448465018,com.dhlparcel.se,,,1
+app-6499518320,wondr by BNI,PT. BANK NEGARA INDONESIA (PERSERO) TBK.,6499518320,id.bni.wondr,,,1
+app-6670405226,Olago - GPS piéton,Safe,6670405226,com.safeapplication.safe,,,1
+app-6741758037,Hollywoodbets - Sport & Casino,Hollywood Sportsbook Gauteng,6741758037,com.hollywoodbets.wrapped,,,1
+app-521545878,du,"EITC, du telecom UAE",521545878,com.DuAppPushDist.DuApp,,,1
+app-561524792,"PicPay: Conta, Cartão e Pix",PicPay Apps,561524792,com.picpay.PicPay,,,1
+app-791525539,Rossmann PL,Rossmann SDP sp. z o.o.,791525539,pl.com.rossmann.app,,,1
+app-1343581380,VN: Photo & Video Editor,"Ubiquiti Labs, LLC",1343581380,com.frontrow.vlog,,,1
+app-1598092335,行動郵局,"Chunghwa Post Co., Ltd.",1598092335,tw.gov.post.mpost,,,1
+app-6755009437,Shawarma Palace,Shawarma Palace,6755009437,com.shawarma.palace.app,,,1
+app-6784635268,BillsJet App,BILLSJET TECHNOLOGIES LIMITED,6784635268,com.msorgdevelopers.billsjet,,,1
+app-480079300,58同城-招聘求职找工作家政租房二手房二手车,北京城市网邻信息技术有限公司,480079300,com.taofang.iphone,,,1
+app-1662982304,Partiful: Party Invite Maker,Partiful,1662982304,com.partiful.partiful,,,1
+app-6743074605,YayTalk: Learn & Speak English,IdeaLabs,6743074605,com.ai.language.learning.tutor,,,2
+app-579523206,Zalo,Zalo Group,579523206,vn.com.vng.zingalo,,,1
+app-910898851,Social Deal - Dé beste deals,Social Deal,910898851,nl.socialdeal.app,,,1
+app-959895787,Coffeecapp,N-and Italia Srl,959895787,com.ivsitalia.coffeecapp,,,1
+app-1228503534,國泰證券,Cathaysec Securities Corporation,1228503534,tw.cathaysec.STP,,,1
+app-1231393474,"YONO SBI: Banking, UPI & Pay",State Bank of India,1231393474,com.sbi.lotusintouch,,,1
+app-1288436997,Breadfast: Groceries And More,Breadfast,1288436997,com.breadfast.breadfast,,,1
+app-1441424081,Setel: BUDI MADANI,Setel Ventures Sdn. Bhd.,1441424081,com.setel.ios,,,1
+app-1539508996,CDAS,T.C. Saglik Bakanligi,1539508996,tr.gov.saglik.MHRSMOBIL,,,1
+app-1645341041,Banco del Bienestar Movil,"Banco del Bienestar, Sociedad Nacional de Credito, Institucion de Banca de Desarrollo",1645341041,gob.bancodelbienestar.bcobienapp,,,1
+app-1667214457,コメダ珈琲店,"KOMEDA CO.,LTD.",1667214457,jp.co.komeda.ua.ios.pub,,,1
+app-6464280697,Angkas: Motorcycle Taxi PH,DBDOYC Inc,6464280697,com.angkas.customer,,,1
+app-6744350770,MyNIISe,JABATAN DIGITAL NEGARA (JDN),6744350770,my.gov.onegovappstore.niise,,,1
+app-6814796812,Derrimut Gym,The trustee for Solomos Family Trust,6814796812,com.innovatise.derrimut,,,1
+app-405894842,BookMyShow | Movies & Events,Bigtree Entertainment Pvt. Ltd.,405894842,BookMyShow.com,,,1
+app-496489138,Türk Telekom,TT Mobil Iletisim Hizmetleri A.S.,496489138,com.avea.onlineislemler,,,1
+app-1368037685,Mercadona,Mercadona,1368037685,es.mercadona.tienda,,,1
+app-1413151505,My WE,Telecom Egypt,1413151505,com.te.wemobile,,,1
+app-1458725539,SOS Alarm 112,SOS Alarm AB,1458725539,se.sosalarm.sosalarm,,,1
+app-1464496236,카카오페이,kakaopay corp.,1464496236,com.kakaopay.payapp.store,,,1
+app-1481198245,Move It: Book a Moto Taxi,We-Load Transcargo Corporation,1481198245,com.moveit.app.customer,,,1
+app-1514742468,醫健通eHealth,"eHR Office, Health Bureau, HKSARG",1514742468,hk.gov.ehealth.ehr,,,1
+app-1571437424,Payflex - Buy Now Pay Later,Payflex,1571437424,za.co.payflex.app,,,1
+app-1584952674,MyICA Mobile,Immigration & Checkpoints Authority of Singapore,1584952674,sg.gov.ica.mobile.app,,,1
+app-6448176203,GoodShort - Short Dramas Hub,SINGAPORE NEW READING TECHNOLOGY PTE. LTD.,6448176203,com.newreading.goodreels,,,1
+app-6458546150,STC Bank,STCPay,6458546150,sa.com.STCBank,,,1
+app-6742174824,uniopen,President Chain Store Corporation,6742174824,com.unipcsc.uniopen,,,1
+app-1401729613,飞书 - 字节跳动旗下 AI 工作平台,"Beijing Feishu Technology Co., Ltd.",1401729613,com.bytedance.ee.lark,,,1
+app-336435697,imo-International Calls & Chat,imo.im,336435697,imoimiphone,,,1
+app-689963454,VietinBank iPay,VietinBank,689963454,com.vietinbank.mobilebanking,,,1
+app-1011095795,Fitatu AI Calorie Counter,Fitatu Sp. z o.o.,1011095795,com.fitatu.tracker,,,1
+app-1276095353,ClasseViva Studenti e Famiglie,Gruppo Spaggiari Parma SpA,1276095353,eu.spaggiari.classevivafamiglia,,,1
+app-1437480803,DLT Smart Queue,Department of Land Transport Thailand,1437480803,th.go.dlt.dltsmartqueue,,,1
+app-1444834757,JMO - Jamsostek Mobile,BPJS Ketenagakerjaan,1444834757,com.bpjstku.ios,,,1
+app-1469340861,HA Go,Hospital Authority,1469340861,hk.org.ha.hago,,,1
+app-1485193566,캐치테이블,WADcorp,1485193566,co.catchtable.m,,,1
+app-1542974651,PayJustNow,PayJustNow,1542974651,com.payjustnow.iphoneapp,,,1
+app-1589210147,Citrus 1 Tap Photo Enhancer AI,Wemagine.ai LLP,1589210147,com.wemagineai.citrus,,,1
+app-6444340959,Creation Finance,Creation Consumer Finance Limited,6444340959,uk.co.bnpparibas-pf.strategic,,,1
+app-6473384334,RailOne,Centre for Railway Information Systems,6473384334,org.cris.aikyam,,,1
+app-6670533913,PT Gaming,PLAYMATE LEISURE SOLUTIONS CORP.,6670533913,com.playmate.playtime,,,1
+app-6802670738,Helpling SG: Home Services App,Helpling,6802670738,sg.com.helpling.customer,,,1
+app-1629600786,Holafly eSIM: datos ilimitados,HOLAFLY LIMITED,1629600786,com.holafly.Customers,,,2
+app-450094779,FNB Banking App,FirstRand Bank Limited,450094779,za.co.fnb.connect.touch,,,1
+app-568388474,SCB EASY,The Siam Commercial Bank PCL,568388474,com.scb.iphone,,,1
+app-916461662,RBL MyBank,RBL Bank Ltd,916461662,com.rbl.mobilebankingiphone,,,1
+app-950232162,LANDBANK Mobile Banking,Land Bank of the Philippines,950232162,com.landbank.mobilebanking,,,1
+app-1061867449,BIDV SmartBanking,BIDV,1061867449,com.bidv.smartbanking,,,1
+app-1117424833,Joom. Shopping varje dag.,Joom,1117424833,com.joom.joom,,,1
+app-1254981556,Reverse Audio,Nobutaka Yuasa,1254981556,dev.y.nobu.ReversePlay,,,1
+app-1320338088,e-Título,Tribunal Superior Eleitoral,1320338088,br.jus.tse.eleitoral.e-titulo,,,1
+app-1354232135,CFE Contigo,CFE SSB,1354232135,com.mx.cfe.cfecontigo,,,1
+app-1503023855,eDO App,Polska Wytwórnia Papierów Wartościowych S. A.,1503023855,pl.pwpw.mobile.edohub,,,1
+app-1548207780,Fizz: Your Authentic Community,Fizz Social Corp.,1548207780,com.ashtoncofer.Buzz,,,1
+app-1571987104,myDPD,GEOPOST,1571987104,com.dpdgroup.chatbot.lemny.prod,,,1
+app-1617509708,Super App Polri,Divisi Teknologi Informasi dan Komunikasi Kepolisian Negara Republik Indonesia,1617509708,superapps.polri.presisi,,,1
+app-6446607328,SmartHR（スマートエイチアール）,"SmartHR, Inc.",6446607328,jp.co.smarthr.mobile,,,1
+app-6478366140,고용24(Work24),한국고용정보원,6478366140,kr.or.keis.mo,,,1
+app-6738610571,"Myt : Videos, Songs Streaming",Gorka Zubizarreta,6738610571,com.tuannguyenrn.musicapp,,,1
+app-6785787277,"ChefGenie: Hot, Fresh & Tasty",Aikit Pte Ltd,6785787277,com.AIKIT.Singapore.ChefGenie,,,1
+app-629774477,芒果TV,快乐阳光,629774477,com.hunantv.imgotv,,,1
+app-6812144044,LockDay: 투두리스트 & 플래너,Dat Pham,6812144044,phamtiendat1099.LockDay,,,2
+app-310251202,CommBank,Commonwealth Bank of Australia,310251202,au.com.commbank.commbank,,,1
+app-326459697,Air Canada + Aeroplan,Air Canada,326459697,com.aircanada.csp.aciclient,,,1
+app-474505665,"Banco Itaú: Conta, Cartão e +",Itaú Unibanco S.A.,474505665,com.itau.iphone.varejo,,,1
+app-714121079,REWE - Supermarkt,REWE Markt GmbH,714121079,com.rewe.iosapp,,,1
+app-1066751553,Gardrops: Online Alış Satış,GARDROPS ELEKTRONIK HIZMETLER VE TICARET ANONIM SIRKETI,1066751553,com.gardrops.iphone,,,1
+app-1500264724,CDcare Pay Small Small App,EMAXIE LIMITED,1500264724,com.nipek.cdcare,,,1
+app-6745784273,케이타운포유 - Ktown4u,"Ktown4u Co.,Ltd.",6745784273,com.ktown4u.app,,,1
+app-6771038681,LocaPing GPS Tracker,Khanh Thong Le,6771038681,com.exo.locationtracker,,,1
+app-6514312894,FlickReels - IA Cuento y Drama,FARSUN PTE. LTD.,6514312894,com.farsun.shortplay,,,2
+app-6737513497,Melolo - Short Movie & TV,POLIGON PTE. LTD.,6737513497,com.worldance.drama,,,2
+app-416451110,Mecenat,Mecenat AB,416451110,mecenat,,,1
+app-987047466,MyMo By GSB Mobile Banking,Government Savings Bank,987047466,com.gsb.mobilife.MyMo,,,1
+app-1069893953,Toby Carvery,Mitchells & Butlers Leisure Retail Ltd,1069893953,com.eagleeye.tobycarvery,,,1
+app-1148204349,Liverpool: Compra en línea,Distribuidora Liverpool S.A. De C.V.,1148204349,mx.com.liverpool.appcliente,,,1
+app-1185371908,Richart Life,Taishin International Bank,1185371908,tw.com.taishinbank.cardaily,,,1
+app-1220373112,Paidy (あと払いペイディ)-後払いアプリ,Paidy Inc.,1220373112,com.paidy.Paidy,,,1
+app-1438086768,"모두닥 - 안과/치과 최저가, 인증된 리뷰",MoDooDoc Inc.,1438086768,com.modoodoc.mddRN,,,1
+app-1622441145,Jornada do Estudante,Servicos e Informacoes do Brasil,1622441145,br.gov.mec.jornada.estudante,,,1
+app-1624635075,Blackhole Spliter,PROGMORE FOR WEB DESIGN AND MANAGEMENT,1624635075,com.progmore.blackhole-splitter,,,1
+app-1633045734,İŞKUR Mobil,Türkiye İş Kurumu,1633045734,tr.gov.iskur,,,1
+app-6793472711,xPlates MVD,Eneko Barrena,6793472711,com.xplat.esaplic,,,1
+app-298867247,Chase Mobile®: Bank & Invest,JPMorgan Chase & Co.,298867247,com.chase,,,1
+app-472208016,酷狗音乐 - 就是歌多,"Guangzhou KuGou Technology CO. , LTD",472208016,com.kugou.kugou1002,,,1
+app-1491101673,"WPS Office-AI Doc, PDF, Sheet",KINGSOFT OFFICE SOFTWARE CORPORATION LIMITED,1491101673,com.kingsoft.office.g.wpsoffice,,,3
+app-373963365,Marktplaats - koop en verkoop,Marktplaats BV,373963365,com.marktplaats.iphone,,,1
+app-377842707,Flybuys,Loyalty Pacific Pty Ltd,377842707,com.flybuys.iphone,,,1
+app-382581206,InfoJobs - Trabajo y Empleo,"ADEVINTA JOBS, SLU",382581206,net.infojobs.ijiphone,,,1
+app-516561342,LINE Camera - Photo editor,SNOW Corporation,516561342,jp.naver.linecamera,,,1
+app-806222359,LCW - Giyim & Online Alışveriş,LC Waikiki,806222359,com.lcwaikiki.iphone,,,1
+app-1070715498,다이소몰,"ASUNGDAISO, Co.,Ltd.",1070715498,net.pointwell.wipoint,,,1
+app-1137509279,إدارة الملفات (حمّل),Waraqat Group,1137509279,Alluhaybi.Hammel,,,1
+app-1382114621,投資先生,Yuanta Securities,1382114621,com.yuanta.nexus.ios,,,1
+app-1435783608,PayPay,PayPay Corporation,1435783608,jp.pay2.app.ios,,,1
+app-1467373738,Kuda - Free transfer & payment,Kuda Technologies Limited,1467373738,com.kudabank.app,,,1
+app-1481028763,MAE by Maybank2u,Maybank,1481028763,com.maybank2u.life,,,1
+app-1575323645,Zepto: Groceries in minutes,KIRANAKART TECHNOLOGIES PRIVATE LIMITED,1575323645,com.zeptonow.customer,,,1
+app-1503116917,GPS Map Camera : Geo Timestamp,SUSAMP INFOTECH,1503116917,com.gpsmapcamera.geotagginglocationonphoto,,,2
+app-768665731,MOI UAE,Ministry of Interior UAE,768665731,com.uaemoi.smartservices,,,1
+app-1256552092,Freja,Freja eID Group AB,1256552092,com.verisec.Freja-eID,,,1
+app-1462268018,My Airtel Africa,Airtel Africa,1462268018,com.airtel.africa.selfcare,,,1
+app-6443950982,BPI,Bank of the Philippine Islands,6443950982,com.bpi.ng.app,,,1
+app-6467094116,GOSI,general organization for social insurance,6467094116,sa.gov.gosi.taminaty,,,1
+app-6756636024,TP Oei,Temasek Polytechnic,6756636024,com.maivenpoint.tp.esms.prod,,,1
+app-6761522320,威秀影城訂票App,威秀影城,6761522320,com.vieshow.vscinemas,,,1
+app-590338362,网易云音乐-数亿音乐畅听,杭州网易云音乐科技有限公司,590338362,com.netease.cloudmusic,,,1
+app-1574436604,SUGO: Online Chat Party,MOBILE ALPHA LIMITED,1574436604,com.maker.sugo,,,2
+app-594119915,Lotto Max,The Lottery Company,594119915,com.alottery.lottomax,,,1
+app-908956795,MediaMarkt Türkiye,MMS E-Commerce GmbH,908956795,tr.mediamarkt.app,,,1
+app-1109398410,Porter - Logistics Service App,Resfeber Labs Pvt. Ltd.,1109398410,in.theporter.customerapp,,,1
+app-1313147771,Tokyo Disney Resort App,"Oriental Land Co., Ltd.",1313147771,jp.tokyodisneyresort.portalapp,,,1
+app-6758373190,PDF Converter - OCR Reader,Hitek Limited,6758373190,com.xingying.pdfconverter,,,1
+app-373500505,國泰世華網路銀行CUBE,Cathay United Bank,373500505,com.cathaybk.cathaybk,,,1
+app-385266473,Nectar: Shop & Collect Points,Nectar 360 Ltd,385266473,com.nectar.universal,,,1
+app-427984084,Tradera – köp & sälj begagnat,Tradera Marketplace AB,427984084,com.tradera.Tradera,,,1
+app-651412430,MyTelkomsel,PT Telekomunikasi Selular,651412430,com.telkomsel.my,,,1
+app-1071031131,오렌즈,"STARVISION CO., LTD.",1071031131,com.olens.byapps,,,1
+app-1086505626,ShopBack: Shop & Earn Cashback,eCommerce Enablers Pte Ltd,1086505626,com.shopback.ShopBack,,,1
+app-1088184021,Coke ON(コークオン),Coca-Cola,1088184021,com.coke.cokeon,,,1
+app-1143883086,Tim Hortons,Tim Hortons,1143883086,com.rbi.TimHortons,,,1
+app-1472508112,AlRajhi Mobile,Al Rajhi Banking and Investment Corporation,1472508112,sa.alrajhibank.retailapp,,,1
+app-1532652635,BEANZ - بينز,AL BATEEN HOLDINGS LIMITED,1532652635,ae.beanz.customer,,,1
+app-1536071266,"TV360: Phim, Thể Thao, Show",Viettel Telecom,1536071266,com.viettel.TV360,,,1
+app-1618200738,Nextline - Second Phone Number,GRAND APPS YAZILIM VE TEKNOLOJI ANONIM SIRKETI,1618200738,com.grandapps.nextline,,,1
+app-6501954960,"QR Code Scanner — Easy, Secure",FLOOMIX LTD,6501954960,app.qr.barcode.scanner,,,1
+app-6753942579,bob World New,Bank of Baroda,6753942579,com.bankofbaroda.bobworldmb,,,1
+app-6462904878,BigFuture School,The College Board,6462904878,org.collegeboard.bigfutureschool,,,1
+app-331050847,Trenitalia,Trenitalia S.p.A.,331050847,com.promptu.ProntoTreno,,,1
+app-407597290,RBC Mobile,Royal Bank of Canada,407597290,com.rbc.mobilebanking,,,1
+app-667933103,SimplyGo,SimplyGo Pte. Ltd.,667933103,sg.com.transitlink,,,1
+app-943905271,Wolt - Essen Bestellen & mehr,Wolt Oy,943905271,com.woltapp.wolt,,,1
+app-1113425372,AJIO Online Shopping App,Reliance Retail Private Limited,1113425372,com.ril.ajiofnl,,,1
+app-1462911630,myfawry,Fawry,1462911630,com.fawry.myfawry,,,1
+app-1525664178,로밍도깨비 eSIM – 데이터가 필요한 순간,UANGEL Corp.,1525664178,com.uangel.rokebi-ESIM,,,1
+app-6446452995,Tahara - طهارة,Tahara,6446452995,com.tahara.taharaApp,,,1
+app-395524977,Praxis,Maxeda DIY,395524977,nl.idreams.praxis,,,1
+app-498944221,Santander México,Banco Santander Mexico SA - Mexico,498944221,com.isban.santander.mx.supermovil,,,1
+app-520400855,SEEK Jobs Search & Employment,SEEK Ltd.,520400855,com.seek.jobseeker,,,1
+app-554610898,SARS Mobile eFiling,South African Revenue Service,554610898,za.gov.sars.efiling,,,1
+app-570105907,楽天カード：明細確認アプリ,"RAKUTEN CARD,INC.",570105907,jp.co.rakuten-card.RakutenCard,,,1
+app-907009662,Petrol Ofisi,PETROL OFİSİ A.Ş.,907009662,com.phrs.PositiveCard,,,1
+app-1013717463,Alfagift: Alfamart Online Shop,PT. Global Loyalty Indonesia,1013717463,com.alfamart.alfagift,,,1
+app-1258016944,카카오뱅크,KakaoBank Corp.,1258016944,com.kakaobank.channel,,,1
+app-1494883259,Thndr: Invest Your Money,Axis Markets B.V.,1494883259,com.axismarkets.thndr,,,1
+app-1504055630,MySejahtera,JABATAN DIGITAL NEGARA (JDN),1504055630,my.gov.onegovappstore.mysejahtera,,,1
+app-1563230455,LINE Pay - 支付體驗 煥然一新,LINE Pay Taiwan Limited,1563230455,com.linepaytw.upay,,,1
+app-6479648333,PSAC-AFPC,Public Service Alliance of Canada,6479648333,com.psacunion.psac-afpc,,,1
+app-6670176461,BPme - korzyści na stacji bp,BP PLC (UK),6670176461,com.bp.app.bpme.global.pl.prod,,,1
+app-6754912208,LPBank Plus,Fortune Vietnam Joint Stock Commercial Bank,6754912208,vn.com.lpbank.digibank,,,1
+app-6758148971,"PineBox: TV,Movie & Series",加佳 陈,6758148971,com.pinebox.app,,,1
+app-6760918280,Minute Data,Baker Data LLC,6760918280,com.bakerdata.minute,,,1
+app-959468399,志愿汇,"Zhongqing Yixin (Hangzhou) Technology Co., Ltd",959468399,com.kt.HzVoluntee,,,1
+app-335162906,Turkcell,Turkcell Iletisim Hizmetleri A.S.,335162906,com.turkcell.CSI,,,1
+app-458324110,ICA – recept och erbjudanden,ICA Sverige AB,458324110,se.ica.shoppinglista,,,1
+app-492764073,Mi Telcel,América Móvil,492764073,com.telcel.Mi-Telcel,,,1
+app-610303915,ZnanyLekarz – Umów wizytę,ZnanyLekarz Sp. z o. o.,610303915,pl.znanylekarz,,,1
+app-725215120,"SHAREit: Transfer, Share Files",SHAREit Technologies Co. Ltd,725215120,com.lenovo.anyshare,,,1
+app-786065396,Easy Wallet 悠遊付,EasyCard Corporation,786065396,tw.com.easycard.easycardwallet,,,1
+app-1130881210,BeterDichtbij,BeterDichtbij,1130881210,nl.BeterDichtbij.chat,,,1
+app-1487549868,Facio - Crédito rápido,Facio Pagamentos,1487549868,com.facio.app,,,1
+app-1528970623,مدرستي,Saudi Ministry of Education,1528970623,com.t4edu.madrasatiApp,,,1
+app-6446826848,ゆうちょ手続きアプリ,"Japan Post Bank Co., Ltd.",6446826848,jp.japanpost.jp-bank.tetsuzukiapp,,,1
+app-6502824776,MySSS,Philippine Social Security System,6502824776,com.sss.gov.mysss.mobileapp,,,1
+app-566347057,Just Eat: Food and Shops,Just-Eat.com,566347057,com.justeat.JUSTEAT,,,1
+app-586454505,정부24(구 민원24),행정안전부,586454505,kr.go.dcsc.minwon24,,,1
+app-830340223,TVer(ティーバー) 民放公式テレビ配信サービス,TVer INC.,830340223,jp.hamitv.hamitvapp1,,,1
+app-891130066,Magalu: compras com descontos,Luiza Lab Consultoria em Inovacao Ltda,891130066,br.com.magazineluiza,,,1
+app-1182878980,台灣電力,台灣電力公司,1182878980,com.taipower.taipowerapp,,,1
+app-1267382794,Coppel: compras en línea,Grupo Coppel,1267382794,com.coppel.CoppelApp,,,1
+app-1484485168,"Billease - Buy Now, Pay Later",First Digital Finance Corporation,1484485168,com.billease,,,1
+app-1507246381,Ziina: Send. Spend. Get Paid.,"Ziina, Inc",1507246381,com.ziina.app,,,1
+app-1531292843,bol - De Grote Speelgoed App,bol.com,1531292843,com.bol.speelgoed.boek,,,1
+app-1541152485,"Navi: UPI, Payments, Insurance",Navi Limited,1541152485,com.gonavi.app,,,1
+app-1638926773,Charlie - Walking Charlie,Hyowon Jeon,1638926773,com.Charlie-iOS,,,1
+app-1643534870,Free,Freebox,1643534870,fr.free.moncomptefree,,,1
+app-6477774492,Hudhud: Accurate KSA Maps,Hudhud Information Technology Company,6477774492,sa.hudhud.map,,,1
+app-6711348553,Enpara Bank Cep Şube,Enpara Bank A.Ş,6711348553,com.enparabank.retail,,,1
+app-1182474649,Fetch: Earn Rewards Every Day,"Fetch Rewards, LLC",1182474649,com.FetchRewards.HopBeta,,,1
+app-6756595533,火龙漫剧,Tencent Technology (Shenzhen) Company Limited,6756595533,com.tencent.kairos4iphone,,,1
+app-336353151,SoundCloud: The Music You Love,SoundCloud Global Limited & Co KG,336353151,com.soundcloud.TouchApp,,,2
+app-6751294549,Google Flow,Google,6751294549,com.google.whisk,,,2
+app-733712604,"redBus: Bus, Train Booking App",Pilani Soft Labs Pvt. Ltd,733712604,in.redbus.redBus,,,2
+app-374817863,Banorte Móvil,Grupo Financiero Banorte,374817863,com.banorte.Banorte-Movil,,,1
+app-417698185,中國信託行動銀行,"CTBC Bank Co., Ltd.",417698185,com.chinatrust.mobilebank,,,1
+app-605727126,SAS – Scandinavian Airlines,SAS,605727126,sas.se.sascore,,,1
+app-987435592,롯데마트GO,LOTTE Mart,987435592,com.lottemart.mcoupon.iphone,,,1
+app-1005030039,Mon Espace France Travail,France Travail,1005030039,com.poleemploi.poleemploietmoi,,,1
+app-1156875272,Suica,East Japan Railway Company,1156875272,jp.co.jreast.suica.app,,,1
+app-1423538627,1.1.1.1: Faster Internet,Cloudflare,1423538627,com.cloudflare.1dot1dot1dot1,,,1
+app-1439872423,Nykaa Fashion - Shopping App,FSN E-COMMERCE VENTURES PRIVATE LIMITED,1439872423,com.nds.ios,,,1
+app-1499795000,Yes Rewards by ENOC,Emirates National Oil Company Limited (ENOC) L.L.C,1499795000,com.enoc.yesrewards,,,1
+app-1501024389,Access More,Access Bank Plc,1501024389,com.accessbank.nextgen,,,1
+app-1639265003,NHG Health,National Healthcare Group Pte Ltd,1639265003,com.nhg.mha,,,1
+app-1668441657,tabii,Turkiye Radyo ve Televizyon Kurumu,1668441657,com.trt.tabii.ios,,,1
+app-6739246132,iliad,iliad Italia,6739246132,it.iliad.customer,,,1
+app-6759828348,CaLoMei 卡老味 - Calorie Tracker,Tin Lok Chan,6759828348,com.DominicChan.CaLoMei,,,1
+app-6818786102,بيت المسلم,Moataz AbdElkawy,6818786102,com.motaz.baytalmuslim,,,1
+app-879915134,MBC Shahid,MBC Group,879915134,net.mbc.shahid-iphone,,,2
+app-541508224,Oz Lotteries,Jumbo Interactive Ltd,541508224,com.jumbointeractive.ozlotteries,,,1
+app-904894760,bol,bol.com,904894760,com.bol.bol-com,,,1
+app-1014238801,有OPENPOINT真好,President Chain Store Corporation,1014238801,tw.com.openpoint.member,,,1
+app-1243048358,Meu INSS - Central de Serviços,Servicos e Informacoes do Brasil,1243048358,br.gov.dataprev.meuinss,,,1
+app-1255413338,Kredivo - Paylater & Loans,PT. KREDIVO FINANCE INDONESIA,1255413338,com.kredivo.ios,,,1
+app-1274057509,Betway - Sports Betting,Raging River,1274057509,com.betway.sa,,,1
+app-1409383333,タイミー｜スキマバイト・単発バイト・短期バイトの求人アプリ,"Timee, inc.",1409383333,jp.taimee.taimee-ios,,,1
+app-1412329684,TADA – Ride Hailing,MVL Foundation,1412329684,io.mvlchain.tada,,,1
+app-1511764877,Spin by OXXO,CADENA SERYS DE RECOLECCION SA DE CV,1511764877,com.pagopopmobile,,,1
+app-1512178806,مصر الرقمية,Ministry of Communications and Information Technology (Egypt),1512178806,gov.ministry-of-communications-and-information-technology.digitalegypt,,,1
+app-1663833654,blueplus+,PTT OIL AND RETAIL BUSINESS PUBLIC COMPANY LIMITED,1663833654,com.pttor.xplore,,,1
+app-6503702226,Nextbase,NEXTBASE UK,6503702226,com.nextbase.app,,,1
+app-6753937208,"SureFund: Fast Loan, Trusted",FLEETWOOD LENDING LIMITED,6753937208,app.fleetwood.surefund,,,1
+app-493489515,邮储银行,中国邮政储蓄银行,493489515,com.psbc.mobilebank,,,1
+app-6755376484,Spark Dramas – Trending Series,FORTUNE STAR TECHNOLOGY LIMITED,6755376484,com.video.snapdramas,,,2
+app-443904275,LINE,LINE Corporation,443904275,jp.naver.line,,,2
+app-514643583,Meta Business Suite,"Meta Platforms, Inc.",514643583,com.facebook.PageAdminApp,,,1
+app-610957461,Boyner – Online Shopping,Boyner,610957461,tr.com.boyner.ios,,,1
+app-878528688,DBS PayLah!,DBS Bank Ltd.,878528688,com.dbs.dbspaylah,,,1
+app-971043141,TW投資人行動網,TWCA,971043141,com.twca.twid.ios.prod,,,1
+app-1139755229,楽天ペイ-楽天ポイントカードも利用できるスマホ決済アプリ,"Rakuten Group, Inc.",1139755229,jp.co.rakuten.pay.shopper,,,1
+app-1295039064,MyPertamina,PT. Pertamina (Persero),1295039064,com.pertamina.mypertamina,,,1
+app-1344204781,Viettel Money,Viettel Telecom,1344204781,com.viettel.viettelpay,,,1
+app-1435485576,TAMM - Abu Dhabi Government,Abu Dhabi Systems and Information Centre,1435485576,abudhabi.tamm,,,1
+app-1482139568,Sahl سهل - Payments Made Easy,Egypt Pay,1482139568,com.egyptpay.gtpay,,,1
+app-1527037287,스파오 SPAO - 온라인 공식몰,"ELAND WORLD LIMITED CO., LTD",1527037287,com.cafe24.ec.plusspao,,,1
+app-6478032901,MTN App ZA,MTN South Africa (Pty) LTD,6478032901,com.mtn.nextgenapp,,,1
+app-592978487,"Careem: rides, food, grocery",Careem,592978487,com.careem.mobile.app.icma,,,1
+app-597657968,IKO – PKO Bank Polski,PKO BP S.A.,597657968,pl.pkobp.iko,,,1
+app-638165919,UniSalute Up,UniSalute S.p.A.,638165919,it.unisalute.mobile.clienti,,,1
+app-898244857,Traveloka: Book Hotel & Flight,Traveloka,898244857,com.traveloka.traveloka,,,1
+app-1445504255,쿠팡이츠 - 와우회원 배달비 0원,Coupang Corp.,1445504255,com.coupang.coupang-eats,,,1
+app-1478237405,Yahoo!フリマ（旧PayPayフリマ）,Yahoo Japan Corporation,1478237405,jp.co.yahoo.paypayfleamarket,,,1
+app-1485384945,Cofidis España,Cofidis S.A. Sucursal en España,1485384945,com.cofidises.bad.prd,,,1
+app-1533642823,Atome MY - Buy Now Pay Later,APayLater Financials Pte Ltd,1533642823,my.atome.paylater,,,1
+app-1627461339,Airmee - Spåra dina leveranser,Airmee,1627461339,airmizAB.Airmee.Customer,,,1
+app-6450001111,"Snapmint: Buy Now, Pay in EMIs",SNAPMINT CREDIT ADVISORY PRIVATE LIMITED,6450001111,com.snapmint.customer-app,,,1
+app-382201985,百度-AI智能搜索,"Beijing Baidu Netcom Science & Technology Co.,Ltd",382201985,com.baidu.BaiduMobile,,,1
+app-6815582297,Waffarak,SIDDHARTH H BHONSLE,6815582297,com.storeshop.waffarak,,,2
+app-458627086,Yapı Kredi Mobile,Yapı ve Kredi Bankası A.Ş.,458627086,com.pozitron.YKB,,,1
+app-475915064,"Vivo: Fatura, Suporte e mais",VIVO,475915064,br.com.vivo.meuvivo,,,1
+app-833967564,Webex,Cisco,833967564,com.cisco.squared,,,1
+app-1000669926,UBA Mobile Banking,United Bank For Africa,1000669926,com.uba.vericash,,,1
+app-1071165451,Imou Life,Huacheng Network(hk) Technology Limited,1071165451,com.dahuaoversea.easy4ip,,,1
+app-1411737922,TrainPal: Cheap train tickets,Trainpal B.V.,1411737922,com.ctrip.ct.Trainpal,,,1
+app-1515880756,JuanHand-Online Cash Loan App,WeFund Lending Corp.,1515880756,com.finvovs.juanhand,,,1
+app-1601367471,萬能翻譯大師-AI即時翻譯&語音翻譯,Top Joy,1601367471,com.topjoy.pprecord,,,1
+app-6504402552,HDFC Bank App: Banking & Cards,HDFC Bank Ltd.,6504402552,com.hdfcbank.ios.now,,,1
+app-572462317,신한 SOL페이 - 신한카드 대표플랫폼,"Shinhan Card Co., Ltd.",572462317,com.shinhancard.MobilePay,,,1
+app-613365711,Banco Santander Brasil,Banco Santander (Brasil) S.A.,613365711,br.com.santander.minhacontapf,,,1
+app-643133414,PAL CLOSET （パルクローゼット）,"PAL CO.,LTD.",643133414,jp.ne.palgroup.palshopapp,,,1
+app-821234247,Jetstar,Jetstar Airways Pty Ltd,821234247,com.jetstar,,,1
+app-935944952,Agribank Plus,VNPAY,935944952,com.vnp.Agribank,,,1
+app-1115101477,SmartLife: Smart Living,Volcano Technology Limited,1115101477,com.tuya.smartlife,,,1
+app-1208433822,Astrotalk - Talk to Astrologer,Codeyeti Software Solutions Private Limited,1208433822,codeyeti.com.AstroYeti,,,1
+app-1272688648,EDEKA,EDEKA ZENTRALE Stiftung & Co. KG,1272688648,de.edeka.Genusskonto,,,1
+app-1636420626,大快活,Fairwood Fast Food Limited,1636420626,com.fairwood.app,,,1
+app-6468482950,VriendenLoterij,VriendenLoterij,6468482950,info.postcodelottery.ios.friendslottery,,,1
+app-6733228838,LendSafe - Instant loan,SMARTLOANS INTEGRATED SERVICES LIMITED,6733228838,lendsafe.smartloans.forng,,,1
+app-6744744820,Axios Famiglia,Axios Italia,6744744820,com.axiositalia.re.fam,,,1
+app-416457422,中国联通,China United Network Communications Corporation Limited,416457422,com.chinaunicom.mobilebusiness,,,1
+app-530168168,Paramount+,CBS Interactive,530168168,com.cbsvideo.app,,,1
+app-534981561,Nesine – İddaa & At Yarışı,Doğan Online,534981561,com.doganonline.Nesine,,,1
+app-536321738,"Globoplay: séries, novelas e +",GLOBO COM. E PART. S/A,536321738,com.globo.hydra,,,1
+app-583348801,Wizz Air - Acquistare voli,Wizz Air Hungary Zrt.,583348801,com.wizzair.WizzAirApp,,,1
+app-1017188399,My VNPT,VNPT Media Corporation,1017188399,com.vnp.myvinaphone,,,1
+app-1028433924,AFAS Pocket,AFAS Software BV,1028433924,nl.afas.pocket2,,,1
+app-1504478215,Edenred Taiwan,Edenred,1504478215,com.edenred.tw.myedenredtaiwan,,,1
+app-1527218749,KAUCHE（カウシェ） - ショッピングアプリ,"KAUCHE, Inc.",1527218749,com.kauche.kauche-ios,,,1
+app-6755949705,夸克网盘-Live图无损，极速无广,广州市动悦信息技术有限公司,6755949705,com.quark.clouddrive,,,1
+app-475966832,"同程旅行-订酒店机票火车票,低价打车","Tongcheng Network Technology Co., Ltd.",475966832,com.tongcheng.iphone,,,1
+app-497387361,Taco Bell Fast Food & Delivery,Taco Bell,497387361,com.tacobell.ARgame,,,1
+app-1337474440,公考雷达,长沙麦都网络科技有限公司,1337474440,com.midas.gkld,,,1
+app-1431720653,DJI Mimo,DJI,1431720653,com.dji.mimo,,,1
+app-414603431,QQ音乐 - 听我想听,Tencent Technology (Shenzhen) Company Limited,414603431,com.tencent.QQMusic,,,1
+app-836215269,Chime® – Mobile Banking,"Chime Financial, Inc.",836215269,com.1debit.ChimeProdApp,,,1
+app-1490383593,国家医保服务平台,National Healthcare Security Administration,1490383593,cn.hsa.app,,,1
+app-336141475,优酷视频-《嫁金钗》全网独播,Youku.com Inc.,336141475,com.youku.YouKu,,,1
+app-6767364919,Trump Accounts: Official App,U.S. Department of the Treasury,6767364919,gov.trumpaccounts.release.GoldenEagle,,,1
+app-957323480,米家,"Beijing Xiaomi Co., Ltd",957323480,com.xiaomi.mihome,,,2
+app-6503676563,即梦AI - 抖音旗下AI图片和视频工具,深圳市脸萌科技有限公司,6503676563,com.bytedance.dreamina,,,1
+app-282614216,eBay online shopping & selling,eBay Inc.,282614216,com.ebay.iphone,,,2
+app-6771317345,PlayBox Lite,NS SQUARE GRADNJA DOO,6771317345,com.playbox.application,,,1
+app-480161784,航旅纵横-民航官方直销平台,China Travelsky Technology Limited,480161784,com.travelsky.umetrip,,,1
+app-379395415,携程旅行-订酒店机票火车票,"Shanghai Ctrip Commerce Co.,Ltd",379395415,ctrip.com,,,1
+app-1054033219,VIZIO | WatchFree+,VIZIO,1054033219,com.vizio.SmartCast,,,1
+app-417200582,唯品会,"Guangzhou Vipshop E-Commerce Co.,Ltd.",417200582,com.vipshop.iphone,,,1
+app-818237113,山姆会员商店,沃尔玛(中国)投资有限公司,818237113,cn.samsclub.iphone,,,1
+app-488818252,Chick-fil-A,"Chick-fil-A, Inc.",488818252,com.engauge.Chick-fil-A,,,1
+app-491024740,驾考宝典-2026驾校学车考驾照科目一科目四理论培训题库软件,武汉木仓科技股份有限公司,491024740,cn.mucang.ios.jiakaobaodianhuoche,,,1
+app-436491861,Domino's Pizza USA,Domino's Pizza LLC,436491861,com.dominos.iphone,,,1
+app-981030648,智学网—懂你的学习伙伴,安徽知学科技有限公司,981030648,com.iflytek.zhixue,,,1
+app-395096736,去哪儿旅行-订酒店机票火车票,Beijing Qunar Information Technology Company Limit,395096736,com.qunar.iphoneclient8,,,1
+app-1510944943,Cleanup: Phone Storage Cleaner,DEEP FLOW SOFTWARE SERVICES,1510944943,com.codeway.cleanerplus,,,1
+app-393765873,爱奇艺-《伟大的长征》全景史诗,"Beijing Qiyi Century Science & Technology Co.,LTD.",393765873,com.qiyi.iphone,,,1
+app-1508186374,Peacock TV: Stream TV & Movies,Peacock TV LLC,1508186374,com.peacocktv.peacock,,,1
