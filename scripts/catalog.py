@@ -14,8 +14,12 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
-COUNTRIES = "cn us jp kr in gb de fr br mx ca au id tr sa ae es it nl se pl sg th vn tw hk my ph za ng eg".split()
-TARGET = 1000
+COUNTRIES = (
+    "cn us jp kr in gb de fr br mx ca au id tr sa ae es it nl se pl sg th vn tw hk my ph za ng eg "
+    "ar cl co pe uy pt be ch at dk no fi ie nz il pk lk np ke gh ma tn dz ua ro cz hu gr"
+).split()
+TARGET = 2000
+AUTHOR_ID = "1250290964"
 ID_PATTERN = re.compile(r"app-[0-9]+\Z")
 STYLE_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 
@@ -49,6 +53,44 @@ def load_chart(country, chart_dir):
     return json.loads((chart_dir / f"ow-chart-{country}.json").read_text(encoding="utf-8"))
 
 
+def load_author_apps(author_file):
+    if author_file is not None:
+        return json.loads(author_file.read_text(encoding="utf-8"))
+    apps = {}
+    sources = {}
+    for country in ("us", "cn"):
+        url = f"https://itunes.apple.com/lookup?id={AUTHOR_ID}&entity=software&limit=200&country={country}"
+        request = Request(url, headers={"User-Agent": "OneWidgetAppIcons-catalog/1.0"})
+        with urlopen(request, timeout=30) as response:
+            results = json.load(response)["results"]
+        sources[country] = url
+        for result in results:
+            if result.get("wrapperType") != "software" or str(result.get("artistId")) != AUTHOR_ID:
+                continue
+            app_store_id = str(result["trackId"])
+            if app_store_id not in apps:
+                apps[app_store_id] = {
+                    "trackId": result["trackId"],
+                    "trackName": result["trackName"],
+                    "bundleId": result["bundleId"],
+                    "artistId": result["artistId"],
+                    "artistName": result["artistName"],
+                    "kind": result["kind"],
+                    "primaryGenreName": result["primaryGenreName"],
+                    "primaryGenreId": result["primaryGenreId"],
+                    "trackViewUrl": result["trackViewUrl"],
+                    "regions": [],
+                }
+            if country not in apps[app_store_id]["regions"]:
+                apps[app_store_id]["regions"].append(country)
+    return {
+        "artistId": AUTHOR_ID,
+        "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+        "sources": sources,
+        "apps": sorted(apps.values(), key=lambda app: (app["trackId"] != 1527355884, app["trackName"])),
+    }
+
+
 def normalize(country, entries):
     result = []
     for rank, entry in enumerate(entries, start=1):
@@ -70,7 +112,7 @@ def normalize(country, entries):
     return result
 
 
-def build(chart_dir, date):
+def build(chart_dir, author_file, date):
     captured_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     previous_path = ROOT / "metadata/apps.json"
     previous = {}
@@ -87,8 +129,14 @@ def build(chart_dir, date):
         charts[country] = {"source": source_url(country), "entries": entries}
         for entry in entries:
             grouped.setdefault(entry["appStoreId"], []).append((country, entry))
-    if len(grouped) < TARGET:
-        raise ValueError(f"Only {len(grouped)} unique apps; need {TARGET}")
+    author_snapshot = load_author_apps(author_file)
+    if str(author_snapshot["artistId"]) != AUTHOR_ID:
+        raise ValueError("Author snapshot has the wrong Apple artist ID")
+    author_apps = {str(app["trackId"]): app for app in author_snapshot["apps"]}
+    if "1527355884" not in author_apps or any(str(app["artistId"]) != AUTHOR_ID for app in author_apps.values()):
+        raise ValueError("Author snapshot is missing OneWidget or has another developer")
+    if len(set(grouped) | set(author_apps)) < TARGET:
+        raise ValueError(f"Only {len(set(grouped) | set(author_apps))} unique apps; need {TARGET}")
 
     for app_store_id, placements in grouped.items():
         if len({entry["bundleId"] for _, entry in placements}) != 1:
@@ -106,10 +154,11 @@ def build(chart_dir, date):
         or app["platforms"]["harmony"]["bundleName"] is not None
     }
     pinned_ids = published_ids | manually_mapped_ids
-    missing_pinned = pinned_ids - {f"app-{app_store_id}" for app_store_id in grouped}
+    missing_pinned = pinned_ids - {f"app-{app_store_id}" for app_store_id in set(grouped) | set(author_apps)}
     if missing_pinned:
         raise ValueError(f"Mapped or published apps absent from current charts: {sorted(missing_pinned)[:10]}")
     mandatory.update(app_id.removeprefix("app-") for app_id in pinned_ids)
+    mandatory.update(author_apps)
     if len(mandatory) > TARGET:
         raise ValueError(f"Mandatory regional coverage exceeds {TARGET} apps")
 
@@ -129,30 +178,43 @@ def build(chart_dir, date):
         if len(selected) == TARGET:
             break
         selected.add(app_store_id)
-    selected_order = [app_store_id for app_store_id in ordered if app_store_id in selected]
+    author_order = [str(app["trackId"]) for app in author_snapshot["apps"]]
+    selected_order = author_order + [app_store_id for app_store_id in ordered
+                                     if app_store_id in selected and app_store_id not in author_apps]
+
+    overrides = json.loads((ROOT / "metadata/platform-overrides.json").read_text(encoding="utf-8"))["apps"]
 
     apps = []
     for app_store_id in selected_order:
-        placements = grouped[app_store_id]
+        placements = grouped.get(app_store_id, [])
         old = previous.get(f"app-{app_store_id}")
         preferred = next((entry for country, entry in placements if country == "cn"), None)
         preferred = preferred or next((entry for country, entry in placements if country == "us"), None)
-        preferred = preferred or placements[0][1]
+        preferred = preferred or (placements[0][1] if placements else None)
+        author = author_apps.get(app_store_id)
+        name = preferred["name"] if preferred else author["trackName"]
+        developer = preferred["developer"] if preferred else author["artistName"]
+        genre_id = preferred["genreId"] if preferred else str(author["primaryGenreId"])
+        genre_name = preferred["genre"] if preferred else author["primaryGenreName"]
+        bundle_id = preferred["bundleId"] if preferred else author["bundleId"]
+        app_id = f"app-{app_store_id}"
+        platform_override = overrides.get(app_id, {})
         apps.append({
-            "id": f"app-{app_store_id}",
-            "name": preferred["name"],
-            "developer": preferred["developer"],
-            "genre": {"id": preferred["genreId"], "name": preferred["genre"]},
+            "id": app_id,
+            "name": name,
+            "developer": developer,
+            "genre": {"id": genre_id, "name": genre_name},
             "platforms": {
                 "apple": {
                     "appStoreId": app_store_id,
-                    "bundleId": preferred["bundleId"],
+                    "bundleId": bundle_id,
                     "url": f"https://apps.apple.com/app/id{app_store_id}",
                 },
-                "android": old["platforms"]["android"] if old else {"packageName": None},
-                "harmony": old["platforms"]["harmony"] if old else {"bundleName": None},
+                "android": platform_override.get("android", old["platforms"]["android"] if old else {"packageName": None}),
+                "harmony": platform_override.get("harmony", old["platforms"]["harmony"] if old else {"bundleName": None}),
             },
             "charts": [{"country": country, "rank": entry["rank"]} for country, entry in placements],
+            "authorApp": author is not None,
         })
 
     snapshot = {
@@ -165,28 +227,32 @@ def build(chart_dir, date):
         "schemaVersion": 1,
         "generatedAt": captured_at,
         "snapshot": f"data/app-store-snapshot-{date}.json",
+        "authorSnapshot": f"data/author-apps-{date}.json",
         "selection": {
             "target": TARGET,
-            "rule": "All CN and US top 100, all other regional top 20, then weighted cross-market chart score",
-            "candidateCount": len(grouped),
+            "rule": "All author apps, CN and US top 100, other regional top 20, then weighted cross-market chart score",
+            "candidateCount": len(set(grouped) | set(author_apps)),
             "marketCount": len(charts),
+            "authorAppCount": len(author_apps),
         },
         "apps": apps,
     }
     write_json(ROOT / f"data/app-store-snapshot-{date}.json", snapshot)
+    author_snapshot["capturedAt"] = captured_at
+    write_json(ROOT / f"data/author-apps-{date}.json", author_snapshot)
     write_json(ROOT / "metadata/apps.json", catalog)
     with (ROOT / "metadata/apps.csv").open("w", encoding="utf-8", newline="") as file:
         writer = csv.writer(file, lineterminator="\n")
         writer.writerow(("id", "name", "developer", "appleAppStoreId", "appleBundleId",
-                         "androidPackageName", "harmonyBundleName", "marketCount"))
+                         "androidPackageName", "harmonyBundleName", "marketCount", "authorApp"))
         for app in apps:
             platforms = app["platforms"]
             writer.writerow((app["id"], app["name"], app["developer"],
                              platforms["apple"]["appStoreId"], platforms["apple"]["bundleId"],
                              platforms["android"]["packageName"], platforms["harmony"]["bundleName"],
-                             len(app["charts"])))
+                             len(app["charts"]), app["authorApp"]))
     print(f"Captured {sum(len(c['entries']) for c in charts.values())} placements, "
-          f"{len(grouped)} unique apps, selected {len(apps)}")
+          f"{len(set(grouped) | set(author_apps))} unique apps, selected {len(apps)}")
 
 
 def validate():
@@ -194,6 +260,9 @@ def validate():
     styles = json.loads((ROOT / "metadata/styles.json").read_text(encoding="utf-8"))
     assets = json.loads((ROOT / "metadata/assets.json").read_text(encoding="utf-8"))
     snapshot = json.loads((ROOT / catalog["snapshot"]).read_text(encoding="utf-8"))
+    author_snapshot = json.loads((ROOT / catalog["authorSnapshot"]).read_text(encoding="utf-8"))
+    author_apps = {str(app["trackId"]): app for app in author_snapshot["apps"]}
+    overrides = json.loads((ROOT / "metadata/platform-overrides.json").read_text(encoding="utf-8"))["apps"]
     apps = catalog["apps"]
     if len(apps) != TARGET or catalog["selection"]["target"] != TARGET:
         raise ValueError(f"Catalog must have exactly {TARGET} apps")
@@ -203,6 +272,8 @@ def validate():
         raise ValueError("CSV application list differs from apps.json")
     if set(snapshot["charts"]) != set(COUNTRIES):
         raise ValueError("Snapshot storefronts do not match the supported countries")
+    if str(author_snapshot["artistId"]) != AUTHOR_ID or len(author_apps) != catalog["selection"]["authorAppCount"]:
+        raise ValueError("Author app snapshot mismatch")
     ids = set()
     apple_ids = set()
     for app in apps:
@@ -214,14 +285,25 @@ def validate():
             raise ValueError(f"Duplicate or missing Apple identity: {app_id}")
         ids.add(app_id)
         apple_ids.add(apple["appStoreId"])
-        if not app["charts"]:
-            raise ValueError(f"No chart provenance: {app_id}")
+        author = author_apps.get(apple["appStoreId"])
+        if app["authorApp"] != (author is not None):
+            raise ValueError(f"Author app flag mismatch: {app_id}")
+        if author and (str(author["artistId"]) != AUTHOR_ID or author["bundleId"] != apple["bundleId"]):
+            raise ValueError(f"Author identity mismatch: {app_id}")
+        if not app["charts"] and not author:
+            raise ValueError(f"No chart or author provenance: {app_id}")
         for position in app["charts"]:
             if position["country"] not in snapshot["charts"] or not 1 <= position["rank"] <= 100:
                 raise ValueError(f"Invalid chart position: {app_id}")
             source_entry = snapshot["charts"][position["country"]]["entries"][position["rank"] - 1]
             if source_entry["appStoreId"] != apple["appStoreId"]:
                 raise ValueError(f"Chart provenance mismatch: {app_id}")
+        if app_id in overrides:
+            for platform, identity in overrides[app_id].items():
+                if app["platforms"][platform] != identity:
+                    raise ValueError(f"Platform override mismatch: {app_id}")
+    if not {f"app-{app_store_id}" for app_store_id in author_apps}.issubset(ids):
+        raise ValueError("Not all author apps are included")
 
     style_ids = set()
     for style in styles["styles"]:
@@ -265,11 +347,12 @@ def main():
     subparsers = parser.add_subparsers(dest="command", required=True)
     refresh = subparsers.add_parser("refresh", help="Fetch and rebuild the App Store catalog")
     refresh.add_argument("--chart-dir", type=Path, help="Read saved ow-chart-<country>.json entries")
+    refresh.add_argument("--author-file", type=Path, help="Read a saved Apple artist lookup snapshot")
     refresh.add_argument("--date", default=datetime.now(timezone.utc).date().isoformat())
     subparsers.add_parser("validate", help="Check catalog and asset invariants")
     args = parser.parse_args()
     if args.command == "refresh":
-        build(args.chart_dir, args.date)
+        build(args.chart_dir, args.author_file, args.date)
     else:
         validate()
 

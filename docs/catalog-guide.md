@@ -5,12 +5,14 @@
 ```text
 metadata/apps.json              统一应用目录和各平台标识
 metadata/apps.csv               同序、便于表格查看的应用列表
+metadata/platform-overrides.json 已核实的跨平台 ID 与来源
 metadata/styles.json            风格列表
 metadata/assets.json            已发布图标的来源和授权记录
 styles/<style>/<id>.png         运行时图标；一个风格一个文件夹
 prompts/<style>/<id>.md         单图标生成提示词
 skills/<style>/SKILL.md         该风格的制作流程
 data/app-store-snapshot-*.json  App Store 榜单研究快照
+data/author-apps-*.json         OneWidget 开发者账号应用快照
 design/                         设计文字说明；预览图按项目规则存 OneDrive
 docs/                           使用说明和研究报告
 ```
@@ -23,7 +25,7 @@ docs/                           使用说明和研究报告
 styles/flat/app-414478124.png
 ```
 
-当前 `flat` 只是计划中的风格，尚未发布任何 PNG。应用目录中的 1000 项表示“可寻址的候选应用”，不表示 1000 张图已经制作。消费者应只使用 `metadata/assets.json` 中登记且文件存在的图标；缺图时使用自己端内的默认图。
+当前 `flat` 只是计划中的风格，尚未发布任何 PNG。应用目录中的 2000 项表示“可寻址的候选应用”，不表示 2000 张图已经制作。消费者应只使用 `metadata/assets.json` 中登记且文件存在的图标；缺图时使用自己端内的默认图。
 
 ## 平台标识
 
@@ -35,8 +37,9 @@ styles/flat/app-414478124.png
 - `platforms.android.packageName`：Android 包名；`null` 表示尚未核实。
 - `platforms.harmony.bundleName`：HarmonyOS bundle name；`null` 表示尚未核实。
 - `charts`：上榜地区与当时名次，供排序和人工审查。它不是永久热度排名。
+- `authorApp`：是否属于 OneWidget 所在的 Apple 开发者账号。作者应用即使未进入采样榜单也固定收录。
 
-Android 和 HarmonyOS 标识必须分别从对应官方应用商店、开发者资料或应用包核实后填写；不能从 Apple bundle ID 推导。跨平台同品牌但产品不同的情况要人工确认再映射到同一个统一 ID。
+Android 和 HarmonyOS 标识必须分别从对应官方应用商店、开发者资料或应用包核实后填写；不能从 Apple bundle ID 推导。跨平台同品牌但产品不同的情况要人工确认再映射到同一个统一 ID。OneWidget 已核实的 Android `applicationId` 和 HarmonyOS `bundleName` 均为 `tech.onenice.onewidget`，证据列在 `metadata/platform-overrides.json`。
 
 ## 查找流程
 
@@ -70,4 +73,4 @@ python3 scripts/catalog.py validate
 python3 scripts/catalog.py refresh
 ```
 
-刷新会生成新的日期快照并重建 `metadata/apps.json`；脚本保留已入选应用的人工跨平台标识，并将已发布图标的应用固定在候选中。若这些应用完全退出当前榜单，脚本会停止并要求人工处理，避免静默丢失映射。刷新后仍应审核与上一版的差异。
+刷新会生成新的日期快照并重建 `metadata/apps.json`；脚本从 Apple 开发者账号再次查询作者应用，保留已入选应用的人工跨平台标识，并将已发布图标的应用固定在候选中。若非作者应用完全退出当前榜单，脚本会停止并要求人工处理，避免静默丢失映射。刷新后仍应审核与上一版的差异。

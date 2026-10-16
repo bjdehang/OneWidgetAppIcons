@@ -1,0 +1,251 @@
+{
+  "artistId": "1250290964",
+  "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+  "sources": {
+    "us": "https://itunes.apple.com/lookup?id=1250290964&entity=software&limit=200&country=us",
+    "cn": "https://itunes.apple.com/lookup?id=1250290964&entity=software&limit=200&country=cn"
+  },
+  "apps": [
+    {
+      "trackId": 1527355884,
+      "trackName": "OneWidget - Widgets & Themes",
+      "bundleId": "app.imone.OneWidget",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Graphics & Design",
+      "primaryGenreId": 6027,
+      "trackViewUrl": "https://apps.apple.com/us/app/onewidget-widgets-themes/id1527355884?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1591163653,
+      "trackName": "OneBar - Hide Menu & Notch",
+      "bundleId": "app.imone.OneNotch",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "mac-software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/onebar-hide-menu-notch/id1591163653?mt=12&uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1263389963,
+      "trackName": "OneBoard - Snippets, Clipboard",
+      "bundleId": "online.ohwe.OneBoard",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/oneboard-snippets-clipboard/id1263389963?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1540421652,
+      "trackName": "OneCalendar - Desktop Calendar",
+      "bundleId": "app.imone.OneCalendar",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "mac-software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/onecalendar-desktop-calendar/id1540421652?mt=12&uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1257395357,
+      "trackName": "OneClock - A Simple Flip Clock",
+      "bundleId": "online.ohwe.oneclock",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/oneclock-a-simple-flip-clock/id1257395357?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 6502965303,
+      "trackName": "OneCoin - Assets & Returns",
+      "bundleId": "tech.onenice.OneCoin",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Finance",
+      "primaryGenreId": 6015,
+      "trackViewUrl": "https://apps.apple.com/us/app/onecoin-assets-returns/id6502965303?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1250290965,
+      "trackName": "OneDay - Countdown Dreamdays",
+      "bundleId": "online.ohwe.oneday",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/oneday-countdown-dreamdays/id1250290965?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1601581768,
+      "trackName": "OneGrow - Child Growth Tracker",
+      "bundleId": "com.onenicetech.OneGrow",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Health & Fitness",
+      "primaryGenreId": 6013,
+      "trackViewUrl": "https://apps.apple.com/us/app/onegrow-child-growth-tracker/id1601581768?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1449484075,
+      "trackName": "OneList - Minimalist",
+      "bundleId": "online.ohwe.OneFlag",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Productivity",
+      "primaryGenreId": 6007,
+      "trackViewUrl": "https://apps.apple.com/us/app/onelist-minimalist/id1449484075?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 6763771883,
+      "trackName": "OneMemory - Replay Your Life",
+      "bundleId": "tech.onenice.OneMemory",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/onememory-replay-your-life/id6763771883?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1355476695,
+      "trackName": "OneMockup - Make Custom Mockup",
+      "bundleId": "online.ohwe.onescreen",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/onemockup-make-custom-mockup/id1355476695?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1631977822,
+      "trackName": "OneMusic - Amazing Players",
+      "bundleId": "tech.onenice.OneMusic",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Music",
+      "primaryGenreId": 6011,
+      "trackViewUrl": "https://apps.apple.com/us/app/onemusic-amazing-players/id1631977822?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1546530435,
+      "trackName": "OneTodo - Personal Task System",
+      "bundleId": "app.imone.OneTodo",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Productivity",
+      "primaryGenreId": 6007,
+      "trackViewUrl": "https://apps.apple.com/us/app/onetodo-personal-task-system/id1546530435?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1601581616,
+      "trackName": "OneWall - Live Wallpaper",
+      "bundleId": "com.onenicetech.OneWall",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "mac-software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/onewall-live-wallpaper/id1601581616?mt=12&uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    },
+    {
+      "trackId": 1557099892,
+      "trackName": "Transparent Widget - OneWidget",
+      "bundleId": "app.imone.OneClear",
+      "artistId": 1250290964,
+      "artistName": "Chengdu Reinvent Technology Co., Ltd.",
+      "sellerName": "Chengdu Reinvent Technology Co., Ltd.",
+      "kind": "software",
+      "primaryGenreName": "Utilities",
+      "primaryGenreId": 6002,
+      "trackViewUrl": "https://apps.apple.com/us/app/transparent-widget-onewidget/id1557099892?uo=4",
+      "regions": [
+        "cn",
+        "us"
+      ]
+    }
+  ],
+  "capturedAt": "2026-10-16T06:04:22+00:00"
+}
