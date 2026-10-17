@@ -26,7 +26,7 @@ docs/                           使用说明和研究报告
 
 `<id>` 是统一 ID，由 Apple bundle ID 小写后把 `.` 和空格换成 `_` 得到。`app.imone.OneWidget` 的统一 ID 是 `app_imone_onewidget`。以前的 `app-<Apple App Store ID>` 写在 `legacyId`，例如 `app-1527355884`，查询时仍然可用。统一 ID 只用于本仓库和 OneWidget 各端取图；不要将它误当成 Android package name、Harmony bundle name 或华为 AppGallery ID。应用改名不改 bundle ID，因此也不改统一 ID。bundle ID 发生变化时要人工核对，不能静默覆盖已有文件。
 
-每个风格在 `metadata/styles.json` 和 `metadata/styles.csv` 里占一行。这一行记录文件后缀、风格定义，以及媒介、透明、尺寸和圆角这些特点。`original` 的后缀是 `.jpg` 和 `.png`，扩展名跟随商店返回的真实格式，不要求透明图层。`flat` 只存不透明的 `.png`，尺寸是 1024×1024，不预裁系统圆角。路径由风格、统一 ID 和该风格登记的后缀拼出：
+每个风格在 `metadata/styles.json` 和 `metadata/styles.csv` 里占一行。这一行记录文件后缀、风格定义，以及媒介、透明、尺寸和圆角这些特点。`original` 是官方原版，后缀是 `.jpg` 和 `.png`，扩展名跟随商店返回的真实格式，不要求透明图层。绘制风格目前都是计划中的 1024×1024 PNG，不预裁系统圆角：`mono`、`3d`、`skeuo`、`clay`、`plush` 带透明通道；`smartisan` 和 `flat` 不透明。`smartisan` 按锤子科技图标库的画法重绘，不存放锤子系统里的原文件。路径由风格、统一 ID 和该风格登记的后缀拼出：
 
 ```text
 styles/flat/app_imone_onewidget.png

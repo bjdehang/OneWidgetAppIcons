@@ -457,6 +457,18 @@ class StyleTableTests(unittest.TestCase):
         self.assertEqual(flat["characteristics"]["transparency"], "opaque")
         self.assertEqual(flat["characteristics"]["dimensions"], "1024x1024")
         self.assertTrue(flat["characteristics"]["summary"])
+        self.assertEqual(
+            [style["id"] for style in styles],
+            ["original", "mono", "3d", "skeuo", "clay", "plush", "smartisan", "flat"],
+        )
+        for style_id in ("mono", "3d", "skeuo", "clay", "plush"):
+            self.assertEqual(by_id[style_id]["extensions"], [".png"])
+            self.assertEqual(by_id[style_id]["characteristics"]["transparency"], "alpha")
+            self.assertTrue((ROOT / "styles" / style_id).is_dir())
+        self.assertEqual(by_id["smartisan"]["characteristics"]["transparency"], "opaque")
+        self.assertIn("锤子", by_id["smartisan"]["definition"])
+        self.assertIn("玻璃、金属", by_id["skeuo"]["definition"])
+        self.assertIn("Jellycat", by_id["plush"]["definition"])
 
     def test_style_table_accepts_svg_and_transparent_png_shapes(self):
         svg = {

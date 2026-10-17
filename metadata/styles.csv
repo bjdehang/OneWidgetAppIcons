@@ -1,3 +1,9 @@
 id,name,status,extensions,definition,media,transparency,dimensions,mask,summary
-original,Original,published,.jpg;.png,Apple iTunes Lookup API 返回的商店原图，使用 CDN 实际提供的最大尺寸，不放大。,raster,as-delivered,source,unspecified,扩展名跟随文件的真实格式。JPEG 没有透明通道；只有接口实际返回 PNG 时才保存为 .png，不把 JPEG 改名。此风格不要求透明图层，也不预裁圆角。
+original,Standard (原版),published,.jpg;.png,品牌标准色的官方原图，即 Apple iTunes Lookup API 返回的商店原图，使用 CDN 实际提供的最大尺寸，不放大。,raster,as-delivered,source,unspecified,官方、正统。扩展名跟随文件的真实格式。JPEG 没有透明通道；只有接口实际返回 PNG 时才保存为 .png，不把 JPEG 改名。此风格不要求透明图层，也不预裁圆角。
+mono,Monochrome (单色),planned,.png,单色图标。材质是纯色透明玻璃或单独的符号，不使用品牌全彩。,raster,alpha,1024x1024,none,只存带透明通道的 .png。调性是极简、系统原生。尺寸 1024×1024，不预裁圆角。尚未发布图片。
+3d,3D,planned,.png,立体图标。靠体积、高光和投影成形，表面按光滑塑料处理，不做成黏土、毛绒或拟物零件。,raster,alpha,1024x1024,none,只存带透明通道的 .png。调性是立体、有光泽。尺寸 1024×1024，不预裁圆角。尚未发布图片。
+skeuo,Skeuomorphic (拟物),planned,.png,拟物图标。材质是玻璃、金属和皮革，做成可以辨认的真实零件。,raster,alpha,1024x1024,none,只存带透明通道的 .png，以便表现玻璃。调性是精致、专业、复古。尺寸 1024×1024，不预裁圆角。尚未发布图片。
+clay,Claymorphism (黏土),planned,.png,黏土图标。材质是彩色橡皮泥或哑光陶瓷，表面不反光。,raster,alpha,1024x1024,none,只存带透明通道的 .png。调性是可爱、治愈、解压。尺寸 1024×1024，不预裁圆角。尚未发布图片。
+plush,Plush/Fluffy (毛绒),planned,.png,毛绒图标。材质是毛绒玩具或 Jellycat 那样的织物，能看出纤维和柔软的体积。,raster,alpha,1024x1024,none,只存带透明通道的 .png。调性是温暖、治愈。尺寸 1024×1024，不预裁圆角。尚未发布图片。
+smartisan,Smartisan (锤子),planned,.png,按锤子科技 Smartisan OS 图标库的画法重新绘制：大圆角色块底板、高饱和纯色、居中的简洁图形。这是绘制风格，不是把锤子系统图标文件拷进仓库。,raster,opaque,1024x1024,none,只存不透明的 .png。圆角画在图形里，不另做系统遮罩。调性是清晰、饱满的系统图标。尺寸 1024×1024。尚未发布图片。
 flat,Flat,planned,.png,按扁平色块重新绘制的方形图标，不是商店原图的拷贝。,raster,opaque,1024x1024,none,只存 .png。尺寸固定为 1024×1024，不预裁系统圆角，不带透明图层。尚未发布图片。
