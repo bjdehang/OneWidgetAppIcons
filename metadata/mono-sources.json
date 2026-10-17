@@ -1,0 +1,698 @@
+{
+  "schemaVersion": 1,
+  "provider": "simple-icons",
+  "homepage": "https://simpleicons.org",
+  "github": "https://github.com/simple-icons/simple-icons",
+  "license": "CC0-1.0",
+  "note": "Sole approved external pack for mono. All icons share Simple Icons filled-silhouette language, then normalized to viewBox 0 0 1024 1024. Only hot/popular catalog apps are listed; others stay empty.",
+  "apps": {
+    "com_openai_chat": {
+      "slug": "openai",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: ChatGPT",
+      "name": "ChatGPT",
+      "source": "https://api.iconify.design/simple-icons:openai.svg"
+    },
+    "com_anthropic_claude": {
+      "slug": "anthropic",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Claude",
+      "name": "Claude by Anthropic",
+      "source": "https://api.iconify.design/simple-icons:anthropic.svg"
+    },
+    "com_google_gemini": {
+      "slug": "googlegemini",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Gemini",
+      "name": "Google Gemini",
+      "source": "https://api.iconify.design/simple-icons:googlegemini.svg"
+    },
+    "com_aliyun_ios_tongyi": {
+      "slug": "qwen",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 千问",
+      "name": "千问 - 阿里AI助手",
+      "source": "https://api.iconify.design/simple-icons:qwen.svg"
+    },
+    "com_deepseek_chat": {
+      "slug": "deepseek",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: DeepSeek",
+      "name": "DeepSeek - AI 智能助手",
+      "source": "https://api.iconify.design/simple-icons:deepseek.svg"
+    },
+    "com_burbn_instagram": {
+      "slug": "instagram",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Instagram",
+      "name": "Instagram",
+      "source": "https://api.iconify.design/simple-icons:instagram.svg"
+    },
+    "com_zhiliaoapp_musically": {
+      "slug": "tiktok",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: TikTok",
+      "name": "TikTok - Videos, Shop & LIVE",
+      "source": "https://api.iconify.design/simple-icons:tiktok.svg"
+    },
+    "com_ss_iphone_ugc_tiktok_pro": {
+      "slug": "tiktok",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: TikTok Pro",
+      "name": "TikTok Pro - Events",
+      "source": "https://api.iconify.design/simple-icons:tiktok.svg"
+    },
+    "net_whatsapp_whatsapp": {
+      "slug": "whatsapp",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: WhatsApp",
+      "name": "WhatsApp Messenger",
+      "source": "https://api.iconify.design/simple-icons:whatsapp.svg"
+    },
+    "net_whatsapp_whatsappsmb": {
+      "slug": "whatsapp",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: WhatsApp Business",
+      "name": "WhatsApp Business",
+      "source": "https://api.iconify.design/simple-icons:whatsapp.svg"
+    },
+    "ph_telegra_telegraph": {
+      "slug": "telegram",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Telegram",
+      "name": "Telegram Messenger",
+      "source": "https://api.iconify.design/simple-icons:telegram.svg"
+    },
+    "com_hammerandchisel_discord": {
+      "slug": "discord",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Discord",
+      "name": "Discord - Talk, Play, Hang Out",
+      "source": "https://api.iconify.design/simple-icons:discord.svg"
+    },
+    "com_facebook_facebook": {
+      "slug": "facebook",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Facebook",
+      "name": "Facebook",
+      "source": "https://api.iconify.design/simple-icons:facebook.svg"
+    },
+    "com_facebook_messenger": {
+      "slug": "messenger",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Messenger",
+      "name": "Messenger",
+      "source": "https://api.iconify.design/simple-icons:messenger.svg"
+    },
+    "com_burbn_barcelona": {
+      "slug": "threads",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Threads",
+      "name": "Threads",
+      "source": "https://api.iconify.design/simple-icons:threads.svg"
+    },
+    "com_atebits_tweetie2": {
+      "slug": "x",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: X",
+      "name": "X（前身为Twitter）",
+      "source": "https://api.iconify.design/simple-icons:x.svg"
+    },
+    "com_reddit_reddit": {
+      "slug": "reddit",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Reddit",
+      "name": "Reddit",
+      "source": "https://api.iconify.design/simple-icons:reddit.svg"
+    },
+    "com_linkedin_linkedin": {
+      "slug": "linkedin",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: LinkedIn",
+      "name": "LinkedIn: Community & Network",
+      "source": "https://api.iconify.design/simple-icons:linkedin.svg"
+    },
+    "com_toyopagroup_picaboo": {
+      "slug": "snapchat",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Snapchat",
+      "name": "Snapchat",
+      "source": "https://api.iconify.design/simple-icons:snapchat.svg"
+    },
+    "pinterest": {
+      "slug": "pinterest",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Pinterest",
+      "name": "Pinterest",
+      "source": "https://api.iconify.design/simple-icons:pinterest.svg"
+    },
+    "tv_twitch": {
+      "slug": "twitch",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Twitch",
+      "name": "Twitch: Live Streaming",
+      "source": "https://api.iconify.design/simple-icons:twitch.svg"
+    },
+    "com_kick_mobile": {
+      "slug": "kick",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Kick",
+      "name": "KICK - Live Streaming",
+      "source": "https://api.iconify.design/simple-icons:kick.svg"
+    },
+    "com_google_ios_youtube": {
+      "slug": "youtube",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: YouTube",
+      "name": "YouTube",
+      "source": "https://api.iconify.design/simple-icons:youtube.svg"
+    },
+    "com_google_ios_youtubemusic": {
+      "slug": "youtubemusic",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: YouTube Music",
+      "name": "YouTube Music",
+      "source": "https://api.iconify.design/simple-icons:youtubemusic.svg"
+    },
+    "com_google_gmail": {
+      "slug": "gmail",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Gmail",
+      "name": "Gmail - Email by Google",
+      "source": "https://api.iconify.design/simple-icons:gmail.svg"
+    },
+    "com_google_maps": {
+      "slug": "googlemaps",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Google Maps",
+      "name": "Google Maps",
+      "source": "https://api.iconify.design/simple-icons:googlemaps.svg"
+    },
+    "com_google_chrome_ios": {
+      "slug": "googlechrome",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Chrome",
+      "name": "Google Chrome",
+      "source": "https://api.iconify.design/simple-icons:googlechrome.svg"
+    },
+    "com_google_googlemobile": {
+      "slug": "google",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Google",
+      "name": "Google",
+      "source": "https://api.iconify.design/simple-icons:google.svg"
+    },
+    "com_google_docs": {
+      "slug": "googledocs",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Docs",
+      "name": "Google Docs",
+      "source": "https://api.iconify.design/simple-icons:googledocs.svg"
+    },
+    "com_google_drive": {
+      "slug": "googledrive",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Drive",
+      "name": "Google Drive",
+      "source": "https://api.iconify.design/simple-icons:googledrive.svg"
+    },
+    "com_google_sheets": {
+      "slug": "googlesheets",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Sheets",
+      "name": "Google Sheets",
+      "source": "https://api.iconify.design/simple-icons:googlesheets.svg"
+    },
+    "com_google_photos": {
+      "slug": "googlephotos",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Photos",
+      "name": "Google Photos: Backup & Edit",
+      "source": "https://api.iconify.design/simple-icons:googlephotos.svg"
+    },
+    "com_google_tachyon": {
+      "slug": "googlemeet",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Meet",
+      "name": "Google Meet",
+      "source": "https://api.iconify.design/simple-icons:googlemeet.svg"
+    },
+    "com_google_translate": {
+      "slug": "googletranslate",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Translate",
+      "name": "Google Translate",
+      "source": "https://api.iconify.design/simple-icons:googletranslate.svg"
+    },
+    "com_google_authenticator": {
+      "slug": "googleauthenticator",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Authenticator",
+      "name": "Google Authenticator",
+      "source": "https://api.iconify.design/simple-icons:googleauthenticator.svg"
+    },
+    "com_microsoft_skype_teams": {
+      "slug": "microsoftteams",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Teams",
+      "name": "Microsoft Teams",
+      "source": "https://api.iconify.design/simple-icons:microsoftteams.svg"
+    },
+    "com_microsoft_office_outlook": {
+      "slug": "microsoftoutlook",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Outlook",
+      "name": "Microsoft Outlook",
+      "source": "https://api.iconify.design/simple-icons:microsoftoutlook.svg"
+    },
+    "com_microsoft_office_word": {
+      "slug": "microsoftword",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Word",
+      "name": "Microsoft Word",
+      "source": "https://api.iconify.design/simple-icons:microsoftword.svg"
+    },
+    "com_spotify_client": {
+      "slug": "spotify",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Spotify",
+      "name": "Spotify: Music and Podcasts",
+      "source": "https://api.iconify.design/simple-icons:spotify.svg"
+    },
+    "com_netflix_netflix": {
+      "slug": "netflix",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Netflix",
+      "name": "Netflix",
+      "source": "https://api.iconify.design/simple-icons:netflix.svg"
+    },
+    "com_amazon_amazon": {
+      "slug": "amazon",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Amazon",
+      "name": "Amazon Shopping",
+      "source": "https://api.iconify.design/simple-icons:amazon.svg"
+    },
+    "com_amazon_aiv_aivapp": {
+      "slug": "primevideo",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Prime Video",
+      "name": "Amazon Prime Video",
+      "source": "https://api.iconify.design/simple-icons:primevideo.svg"
+    },
+    "com_ubercab_uberclient": {
+      "slug": "uber",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Uber",
+      "name": "Uber - Rides, Eats, Hotels",
+      "source": "https://api.iconify.design/simple-icons:uber.svg"
+    },
+    "com_ubercab_ubereats": {
+      "slug": "ubereats",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Uber Eats",
+      "name": "Uber Eats: Food & Groceries",
+      "source": "https://api.iconify.design/simple-icons:ubereats.svg"
+    },
+    "com_zimride_instant": {
+      "slug": "lyft",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Lyft",
+      "name": "Lyft",
+      "source": "https://api.iconify.design/simple-icons:lyft.svg"
+    },
+    "doordash_doordashconsumer": {
+      "slug": "doordash",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: DoorDash",
+      "name": "DoorDash: Food, Grocery, More",
+      "source": "https://api.iconify.design/simple-icons:doordash.svg"
+    },
+    "com_airbnb_app": {
+      "slug": "airbnb",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Airbnb",
+      "name": "Airbnb",
+      "source": "https://api.iconify.design/simple-icons:airbnb.svg"
+    },
+    "com_yourcompany_ppclient": {
+      "slug": "paypal",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: PayPal",
+      "name": "PayPal - Pay, Send, Save",
+      "source": "https://api.iconify.design/simple-icons:paypal.svg"
+    },
+    "com_squareup_cash": {
+      "slug": "cashapp",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Cash App",
+      "name": "Cash App",
+      "source": "https://api.iconify.design/simple-icons:cashapp.svg"
+    },
+    "net_kortina_labs_venmo": {
+      "slug": "venmo",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Venmo",
+      "name": "Venmo",
+      "source": "https://api.iconify.design/simple-icons:venmo.svg"
+    },
+    "us_zoom_videomeetings": {
+      "slug": "zoom",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Zoom",
+      "name": "Zoom Workplace",
+      "source": "https://api.iconify.design/simple-icons:zoom.svg"
+    },
+    "com_canva_canvaeditor": {
+      "slug": "canva",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Canva",
+      "name": "Canva AI Photo & Video Editor",
+      "source": "https://api.iconify.design/simple-icons:canva.svg"
+    },
+    "com_duolingo_duolingomobile": {
+      "slug": "duolingo",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Duolingo",
+      "name": "多邻国Duolingo英语日语法语",
+      "source": "https://api.iconify.design/simple-icons:duolingo.svg"
+    },
+    "com_roblox_robloxmobile": {
+      "slug": "roblox",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Roblox",
+      "name": "Roblox",
+      "source": "https://api.iconify.design/simple-icons:roblox.svg"
+    },
+    "com_valvesoftware_steam": {
+      "slug": "steam",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Steam",
+      "name": "Steam Mobile",
+      "source": "https://api.iconify.design/simple-icons:steam.svg"
+    },
+    "lt_manodrabuziai_fr": {
+      "slug": "vinted",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Vinted",
+      "name": "Vinted: Pre-loved marketplace",
+      "source": "https://api.iconify.design/simple-icons:vinted.svg"
+    },
+    "org_whispersystems_signal": {
+      "slug": "signal",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Signal",
+      "name": "Signal - Private Messenger",
+      "source": "https://api.iconify.design/simple-icons:signal.svg"
+    },
+    "com_mcdonalds_gma": {
+      "slug": "mcdonalds",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: McDonald's",
+      "name": "McDonald's",
+      "source": "https://api.iconify.design/simple-icons:mcdonalds.svg"
+    },
+    "com_starbucks_mystarbucks": {
+      "slug": "starbucks",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Starbucks",
+      "name": "Starbucks",
+      "source": "https://api.iconify.design/simple-icons:starbucks.svg"
+    },
+    "com_walmart_electronics": {
+      "slug": "walmart",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Walmart",
+      "name": "Walmart: Shopping & Savings",
+      "source": "https://api.iconify.design/simple-icons:walmart.svg"
+    },
+    "com_target_target": {
+      "slug": "target",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Target",
+      "name": "Target: Shop. Style. Save.",
+      "source": "https://api.iconify.design/simple-icons:target.svg"
+    },
+    "com_ebay_iphone": {
+      "slug": "ebay",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: eBay",
+      "name": "eBay online shopping & selling",
+      "source": "https://api.iconify.design/simple-icons:ebay.svg"
+    },
+    "com_etsy_etsyforios": {
+      "slug": "etsy",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: Etsy",
+      "name": "Etsy: Shop from Real People",
+      "source": "https://api.iconify.design/simple-icons:etsy.svg"
+    },
+    "com_tencent_xin": {
+      "slug": "wechat",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 微信",
+      "name": "微信",
+      "source": "https://api.iconify.design/simple-icons:wechat.svg"
+    },
+    "com_tencent_mqq": {
+      "slug": "tencentqq",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: QQ",
+      "name": "QQ",
+      "source": "https://api.iconify.design/simple-icons:tencentqq.svg"
+    },
+    "com_alipay_iphoneclient": {
+      "slug": "alipay",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 支付宝",
+      "name": "支付宝-你的AI生活伙伴",
+      "source": "https://api.iconify.design/simple-icons:alipay.svg"
+    },
+    "com_sina_weibo": {
+      "slug": "sinaweibo",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 微博",
+      "name": "微博",
+      "source": "https://api.iconify.design/simple-icons:sinaweibo.svg"
+    },
+    "com_taobao_taobao4iphone": {
+      "slug": "taobao",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 淘宝",
+      "name": "淘宝-万能的淘宝！",
+      "source": "https://api.iconify.design/simple-icons:taobao.svg"
+    },
+    "com_meituan_imeituan": {
+      "slug": "meituan",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 美团",
+      "name": "美团-问美团，都安排",
+      "source": "https://api.iconify.design/simple-icons:meituan.svg"
+    },
+    "com_meituan_itakeaway": {
+      "slug": "meituan",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 美团外卖",
+      "name": "美团外卖-外卖订餐,送啥都快",
+      "source": "https://api.iconify.design/simple-icons:meituan.svg"
+    },
+    "tv_danmaku_bilianime": {
+      "slug": "bilibili",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 哔哩哔哩",
+      "name": "哔哩哔哩-弹幕番剧直播高清视频",
+      "source": "https://api.iconify.design/simple-icons:bilibili.svg"
+    },
+    "com_jiangjia_gif": {
+      "slug": "kuaishou",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 快手",
+      "name": "快手",
+      "source": "https://api.iconify.design/simple-icons:kuaishou.svg"
+    },
+    "com_kuaishou_nebula": {
+      "slug": "kuaishou",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 快手极速版",
+      "name": "快手极速版",
+      "source": "https://api.iconify.design/simple-icons:kuaishou.svg"
+    },
+    "com_xingin_discover": {
+      "slug": "xiaohongshu",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 小红书",
+      "name": "小红书 - 你的生活兴趣社区",
+      "source": "https://api.iconify.design/simple-icons:xiaohongshu.svg"
+    },
+    "com_dianping_dpscope": {
+      "slug": "dazhongdianping",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 大众点评",
+      "name": "大众点评 - 吃喝玩乐指南",
+      "source": "https://api.iconify.design/simple-icons:dazhongdianping.svg"
+    },
+    "com_zhihu_ios": {
+      "slug": "zhihu",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 知乎",
+      "name": "知乎",
+      "source": "https://api.iconify.design/simple-icons:zhihu.svg"
+    },
+    "com_alibaba_wireless": {
+      "slug": "alibabadotcom",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 1688",
+      "name": "阿里巴巴(1688)-货源批发采购进货市场",
+      "source": "https://api.iconify.design/simple-icons:alibabadotcom.svg"
+    },
+    "com_baidu_baidumobile": {
+      "slug": "baidu",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 百度",
+      "name": "百度-AI智能搜索",
+      "source": "https://api.iconify.design/simple-icons:baidu.svg"
+    },
+    "com_netease_cloudmusic": {
+      "slug": "neteasecloudmusic",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 网易云音乐",
+      "name": "网易云音乐-数亿音乐畅听",
+      "source": "https://api.iconify.design/simple-icons:neteasecloudmusic.svg"
+    },
+    "com_xiaomi_mihome": {
+      "slug": "xiaomi",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 米家",
+      "name": "米家",
+      "source": "https://api.iconify.design/simple-icons:xiaomi.svg"
+    },
+    "com_huawei_iossporthealth": {
+      "slug": "huawei",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 华为运动健康",
+      "name": "华为运动健康",
+      "source": "https://api.iconify.design/simple-icons:huawei.svg"
+    },
+    "cn_12306_rails12306": {
+      "slug": "chinarailway",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 铁路12306",
+      "name": "铁路12306",
+      "source": "https://api.iconify.design/simple-icons:chinarailway.svg"
+    },
+    "com_tencent_tmgp_codev": {
+      "slug": "valorant",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 无畏契约",
+      "name": "无畏契约：源能行动",
+      "source": "https://api.iconify.design/simple-icons:valorant.svg"
+    },
+    "com_tencent_apps_valorant": {
+      "slug": "valorant",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 掌上无畏契约",
+      "name": "掌上无畏契约",
+      "source": "https://api.iconify.design/simple-icons:valorant.svg"
+    },
+    "com_tencent_tmgp_pubgmhd": {
+      "slug": "pubg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 和平精英",
+      "name": "和平精英",
+      "source": "https://api.iconify.design/simple-icons:pubg.svg"
+    },
+    "com_tencent_lolm": {
+      "slug": "leagueoflegends",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "note": "hot/popular: 英雄联盟手游",
+      "name": "英雄联盟手游",
+      "source": "https://api.iconify.design/simple-icons:leagueoflegends.svg"
+    }
+  }
+}

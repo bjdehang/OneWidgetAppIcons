@@ -16,7 +16,8 @@ metadata/styles.csv             同一张风格表，便于表格查看
 metadata/assets.json            已发布风格图标的来源和授权记录
 styles/original/<id>.<ext>      默认原图风格，后缀见风格表
 styles/<style>/<id>.<ext>       绘制后的风格图标；后缀以风格表为准
-styles/mono/<id>.svg            手绘单色矢量图标（viewBox 1024×1024）
+styles/mono/<id>.svg            热门应用单色标（Simple Icons，规范化 1024×1024）
+metadata/mono-sources.json      mono 唯一外源清单（仅 Simple Icons slug）
 prompts/<style>/<id>.md         单图标生成提示词或绘制说明
 skills/<style>/SKILL.md         该风格的制作流程
 data/app-store-snapshot-*.json  App Store 榜单研究快照
@@ -33,7 +34,7 @@ docs/                           使用说明和研究报告
 styles/flat/app_imone_onewidget.png
 ```
 
-当前 `flat` 与 `mono` 都是计划中的绘制风格，尚未发布成品。`mono` 要求按 `skills/mono/SKILL.md` 的统一字重与边距手绘 SVG（viewBox `0 0 1024 1024`），禁止混入第三方图标包；未绘制则留空。应用表和游戏表的条目数以各自 JSON 里的 `selection.count` 为准。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。缺图时使用端内默认图。
+当前 `flat` 仍是计划中的绘制风格。`mono` 已发布：只从 [Simple Icons](https://simpleicons.org) 收录热门应用的单色标，规范化到 viewBox `0 0 1024 1024` 与纯黑填充，保证实心剪影语言统一；不混用其他图标包。清单见 `metadata/mono-sources.json`。应用表和游戏表的条目数以各自 JSON 里的 `selection.count` 为准。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。缺图时使用端内默认图。
 
 ## 平台标识
 
@@ -82,6 +83,7 @@ python3 scripts/resolve_icon.py legacy app-1527355884
 ```sh
 python3 scripts/catalog.py validate
 python3 scripts/official_icons.py verify
+python3 scripts/mono_icons.py download
 python3 scripts/mono_icons.py verify
 ```
 

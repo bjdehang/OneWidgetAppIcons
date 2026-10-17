@@ -1,44 +1,39 @@
 ---
 name: one-widget-mono-icon
-description: Draw a unified monochrome SVG app icon using the repository's unified app ID and provenance rules.
+description: Curate unified monochrome SVG app icons from Simple Icons only, normalized to the repo canvas.
 ---
 
-# Mono icon production
+# Mono icon curation
 
-`mono` is a **hand-drawn** style. Do not download or paste third-party icon packs
-(Simple Icons, Arcticons, Wikimedia wordmarks, etc.). Mixed sources break stroke
-weight and silhouette consistency.
+`mono` uses **one** external pack so style stays unified:
 
-## Visual system (must match across every icon)
+| Source | Why |
+| --- | --- |
+| [Simple Icons](https://simpleicons.org) ([GitHub](https://github.com/simple-icons/simple-icons)) | De-facto standard for monochrome brand SVGs; every mark is a filled silhouette on `24×24`, CC0 |
 
-1. Canvas: SVG `viewBox="0 0 1024 1024"` only (1:1). No other aspect ratio.
-2. Medium: single-color vector. Fill `#000000` on transparent background (alpha).
-3. Optical padding: keep the glyph inside the center ~76% box (about 122px inset
-   on each side). Do not touch the canvas edge.
-4. Weight: one optical weight family only — either **solid fill silhouettes** or
-   **uniform stroke** (`stroke-width` equivalent to ~64 on the 1024 canvas,
-   round caps/joins). Never mix fill-logo and thin-line icons in the same set.
-5. Default for this repo: **solid fill silhouette** (no outlines, no dual stroke
-   weights, no gradients, no text glyphs spelling the brand name).
-6. Corner language: prefer slightly rounded joins; no random sharp/soft mix.
-7. No system corner mask, no shadow, no color besides black.
+Do **not** mix Arcticons, Dashboard Icons stroke sets, Wikimedia wordmarks, or random X posts. Those packs use different line weights and break visual unity.
 
-If an icon cannot be drawn to this system, leave the slot empty.
+## Visual system (after normalize)
+
+1. Canvas: `viewBox="0 0 1024 1024"` (1:1 only).
+2. Fill: `#000000` on transparent background.
+3. Optical padding: ~12% inset (glyph in the center 76% box).
+4. Language: solid fill silhouette only (Simple Icons path language).
+5. No gradients, no multi-color, no system corner mask.
 
 ## Steps
 
-1. Find the target in `metadata/apps.json` or `metadata/games.json`; use unified `id`.
-2. Create `prompts/mono/<id>.md` from `prompts/mono/_template.md`. Record the
-   drawing brief (shapes, references reviewed, why the silhouette reads as that app).
-3. Draw original artwork to the visual system above. Export
-   `styles/mono/<id>.svg` with `viewBox="0 0 1024 1024"`.
-4. Register in `metadata/assets.json` with `appId`, `styleId`=`mono`, `path`,
-   `prompt`, `source` (e.g. `original-drawing`), and an approved `license`.
-5. Run:
+1. Only add **hot / popular** catalog apps that have a Simple Icons slug.
+2. Record the mapping in `metadata/mono-sources.json`.
+3. Run:
 
 ```sh
+python3 scripts/mono_icons.py download
 python3 scripts/mono_icons.py verify
 python3 scripts/catalog.py validate
 ```
 
-Do not copy files from `styles/original/` or ingest external icon CDNs.
+4. The download step normalizes each SVG onto the 1024 canvas and writes
+   `styles/mono/<id>.svg`, `prompts/mono/<id>.md`, and `metadata/assets.json`.
+
+If Simple Icons has no mark for an app, leave the slot empty.

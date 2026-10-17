@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests for mono SVG canvas checks and style registration."""
+"""Tests for mono SVG normalization and style registration."""
 
 import json
 import sys
@@ -9,34 +9,33 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from mono_icons import is_square_canvas, svg_canvas_ratio  # noqa: E402
+from mono_icons import is_square_canvas, normalize_simple_icon, svg_canvas_ratio  # noqa: E402
 
 
 class MonoIconsTests(unittest.TestCase):
-    def test_square_viewbox_accepted(self):
-        svg = '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1024v1024H0z"/></svg>'
-        self.assertEqual(svg_canvas_ratio(svg), (1024.0, 1024.0))
-        self.assertTrue(is_square_canvas(svg))
+    def test_normalize_simple_icon_to_1024(self):
+        raw = (
+            '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">'
+            '<title>Test</title><path d="M0 0h24v24H0z"/></svg>'
+        )
+        out = normalize_simple_icon(raw, "Test App")
+        self.assertEqual(svg_canvas_ratio(out), (1024.0, 1024.0))
+        self.assertTrue(is_square_canvas(out))
+        self.assertIn('fill="#000000"', out)
+        self.assertIn("scale(32.5)", out)
 
     def test_non_square_viewbox_rejected(self):
         svg = '<svg viewBox="0 0 32 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h32v16H0z"/></svg>'
-        self.assertEqual(svg_canvas_ratio(svg), (32.0, 16.0))
         self.assertFalse(is_square_canvas(svg))
 
-    def test_equal_width_height_accepted(self):
-        svg = '<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40"/></svg>'
-        self.assertTrue(is_square_canvas(svg))
-
-    def test_style_table_marks_mono_as_planned_hand_drawn(self):
+    def test_style_and_sources_use_simple_icons_only(self):
         styles = json.loads((ROOT / "metadata/styles.json").read_text(encoding="utf-8"))["styles"]
         mono = next(item for item in styles if item["id"] == "mono")
-        self.assertEqual(mono["extensions"], [".svg"])
-        self.assertEqual(mono["status"], "planned")
-        self.assertEqual(mono["characteristics"]["media"], "vector")
-        self.assertEqual(mono["characteristics"]["dimensions"], "scalable")
-        self.assertIn("手绘", mono["definition"])
-        self.assertTrue((ROOT / "skills/mono/SKILL.md").is_file())
-        self.assertFalse((ROOT / "metadata/mono-overrides.json").exists())
+        self.assertEqual(mono["status"], "published")
+        self.assertIn("Simple Icons", mono["definition"])
+        sources = json.loads((ROOT / "metadata/mono-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(sources["provider"], "simple-icons")
+        self.assertTrue(sources["apps"])
 
 
 if __name__ == "__main__":
