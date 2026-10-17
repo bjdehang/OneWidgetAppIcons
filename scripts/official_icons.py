@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from mapping import DuplicateMappingError, assert_unique_platform_ids
+from mapping import ORIGINAL_STYLE, DuplicateMappingError, assert_unique_platform_ids
 from unified_id import legacy_id, unified_id_from_bundle
 
 
@@ -169,6 +169,14 @@ def select_artwork(api_url, fetch_bytes):
             f"Artwork response {width}x{height} filled the {edge}px request and may be upscaled"
         )
     raise ValueError(f"Could not find a non-upscaled artwork for {api_url}: {last_error}")
+
+
+def original_icon_dir(root):
+    return root / "styles" / ORIGINAL_STYLE
+
+
+def original_icon_path(unified_id, extension):
+    return f"styles/{ORIGINAL_STYLE}/{unified_id}{extension}"
 
 
 def default_checkpoint_path(root):
@@ -557,7 +565,7 @@ def sync_official_icons(
     checkpoint = load_checkpoint(checkpoint_path)
     records = checkpoint["apps"]
     lock = threading.Lock()
-    icon_dir = root / "icons" / "official"
+    icon_dir = original_icon_dir(root)
     icon_dir.mkdir(parents=True, exist_ok=True)
 
     collisions = collision_groups(apps)
@@ -625,7 +633,10 @@ def sync_official_icons(
         current = records[store_id]
         artwork = select_artwork(current["sourceApiUrl"], fetch_bytes)
         destination = icon_dir / f"{app['id']}{artwork['extension']}"
+        relative_expected = original_icon_path(app["id"], artwork["extension"])
         relative = destination.relative_to(root).as_posix()
+        if relative != relative_expected:
+            raise ValueError(f"Original icon path must stay under styles/{ORIGINAL_STYLE}: {relative}")
         _write_icon(destination, artwork["data"])
         saved_bytes = destination.read_bytes()
         if sha256_bytes(saved_bytes) != artwork["sha256"]:
@@ -843,11 +854,11 @@ def verify(root, require_complete=None):
         if entry.get("iconPath") != expected_path:
             raise ValueError(f"Platform map icon path mismatch for {app['id']}")
 
-    icon_dir = root / "icons" / "official"
+    icon_dir = original_icon_dir(root)
     recorded_paths = set()
     for icon in icons:
         path = icon["path"]
-        if path != f"icons/official/{icon['id']}{_extension_for_format(icon['format'])}":
+        if path != original_icon_path(icon["id"], _extension_for_format(icon["format"])):
             raise ValueError(f"Icon path does not use the unified ID and real format: {path}")
         file_path = root / path
         if not file_path.is_file():

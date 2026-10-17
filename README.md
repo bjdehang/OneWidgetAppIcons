@@ -10,15 +10,15 @@ metadata/official-icons.json    官方图标的来源、尺寸、格式和校验
 metadata/platform-overrides.json 已核实的跨平台标识
 metadata/styles.json            风格目录
 metadata/assets.json            已发布的风格图标清单
-icons/official/<id>.<ext>       App Store 官方图标，扩展名与实际格式一致
-styles/<style>/<id>.png         一个风格一个文件夹
+styles/original/<id>.<ext>      默认原图风格，扩展名与实际格式一致
+styles/<style>/<id>.png         绘制风格；一个风格一个文件夹
 prompts/<style>/<id>.md         单图标提示词
 skills/<style>/SKILL.md         风格制作规范
 data/                           带日期的榜单研究快照
 docs/                           研究方法与使用说明
 ```
 
-统一 ID 的例子是 `app_imone_onewidget`，对应 bundle ID `app.imone.OneWidget`。旧 ID `app-1527355884` 保留在 `legacyId`。官方图标是否已经收齐，看 `metadata/official-icons.json` 的 `status`，不要凭目录里有没有文件猜测。OneWidget 的 Android 和 HarmonyOS 标识已按对应工程核实为 `tech.onenice.onewidget`；其他应用的原生标识未核实前保持空白。
+统一 ID 的例子是 `app_imone_onewidget`，对应 bundle ID `app.imone.OneWidget`。旧 ID `app-1527355884` 保留在 `legacyId`。默认原图在 `styles/original/`。是否已经收齐，看 `metadata/official-icons.json` 的 `status`。OneWidget 的 Android 和 HarmonyOS 标识已按对应工程核实为 `tech.onenice.onewidget`；其他应用的原生标识未核实前保持空白。
 
 - [目录结构与使用方法](docs/catalog-guide.md)
 - [官方图标与跨平台映射](docs/official-icons.md)

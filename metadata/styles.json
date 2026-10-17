@@ -2,6 +2,12 @@
   "schemaVersion": 1,
   "styles": [
     {
+      "id": "original",
+      "name": "Original",
+      "status": "published",
+      "description": "Default style. App Store artwork at the largest size Apple serves, kept in its real format."
+    },
+    {
       "id": "flat",
       "name": "Flat",
       "status": "planned",

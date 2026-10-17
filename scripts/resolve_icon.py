@@ -30,7 +30,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("platform", help=f"one of: {', '.join(PLATFORMS)}")
     parser.add_argument("identifier")
-    parser.add_argument("style", nargs="?", help="generated style id; omit for the official icon")
+    parser.add_argument("style", nargs="?", help="style id; omit or pass original for styles/original")
     parser.add_argument("--map", type=Path, help="platform map JSON (default: metadata/platform-map.json)")
     parser.add_argument("--root", type=Path, help="repository root used to check image files")
     args = parser.parse_args()

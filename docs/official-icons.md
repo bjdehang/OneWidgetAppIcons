@@ -1,6 +1,6 @@
 # 官方图标与跨平台映射
 
-本目录的 2000 款应用仍以 `metadata/apps.json` 为准，地区和榜单名次不因下载图标而改变。官方图标单独放在 `icons/official/`，不放进 `styles/flat/`。`styles/` 只收后来按风格重新绘制、并在 `metadata/assets.json` 登记的图。
+本目录的 2000 款应用仍以 `metadata/apps.json` 为准，地区和榜单名次不因下载图标而改变。默认原图风格的文件夹名是 `original`，路径为 `styles/original/<统一 ID>.<实际扩展名>`。它不放进 `styles/flat/`，也不登记进 `metadata/assets.json`。`flat` 只收后来按该风格重新绘制的 PNG。
 
 ## 统一 ID
 
@@ -50,7 +50,7 @@ python3 scripts/resolve_icon.py android tech.onenice.onewidget
 python3 scripts/resolve_icon.py legacy app-1527355884
 ```
 
-找不到映射、同一个平台 ID 命中多款应用、或映射存在但图片文件不在时，命令以非零状态退出，并在标准错误输出说明原因。标准输出同时给出 `missing_mapping`、`duplicate_mapping`、`missing_image` 或 `unknown_platform`。带上风格名时检查的是 `styles/<style>/<统一 ID>.png`，而不是官方图标。
+找不到映射、同一个平台 ID 命中多款应用、或映射存在但图片文件不在时，命令以非零状态退出，并在标准错误输出说明原因。标准输出同时给出 `missing_mapping`、`duplicate_mapping`、`missing_image` 或 `unknown_platform`。省略风格名或写上 `original` 时读取 `styles/original/`。其他风格名检查 `styles/<style>/<统一 ID>.png`。
 
 校验：
 

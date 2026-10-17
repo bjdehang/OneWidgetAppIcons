@@ -131,13 +131,13 @@ class MappingTests(unittest.TestCase):
         self.assertIn("Unknown platform", str(caught.exception))
 
     def test_missing_image_file(self):
-        entries = [map_entry(self.one, {"path": "icons/official/app_imone_onewidget.png"})]
+        entries = [map_entry(self.one, {"path": "styles/original/app_imone_onewidget.png"})]
         with self.assertRaises(MissingImageError) as caught:
             lookup(entries, "apple-bundle", "app.imone.OneWidget", self.root)
         self.assertIn("Missing image", str(caught.exception))
 
     def test_existing_image_returns_the_unified_path(self):
-        relative = "icons/official/app_imone_onewidget.png"
+        relative = "styles/original/app_imone_onewidget.png"
         destination = self.root / relative
         destination.parent.mkdir(parents=True)
         destination.write_bytes(png_bytes(1))
@@ -145,6 +145,8 @@ class MappingTests(unittest.TestCase):
         found = lookup(entries, "legacy", "app-1527355884", self.root)
         self.assertEqual(found["id"], "app_imone_onewidget")
         self.assertEqual(found["iconPath"], relative)
+        named = lookup(entries, "legacy", "app-1527355884", self.root, style="original")
+        self.assertEqual(named["iconPath"], relative)
 
     def test_cli_reports_wrong_platform_and_missing_image(self):
         map_path = self.root / "map.json"
@@ -201,19 +203,19 @@ class DownloadTests(unittest.TestCase):
             return png_bytes(2, (1, 2, 3))
 
         self.sync([self.one, self.two], fetch_lookup, fetch_bytes)
-        first = self.root / "icons" / "official" / "com_example_one.png"
+        first = self.root / "styles" / "original" / "com_example_one.png"
         original = first.read_bytes()
-        self.assertFalse((self.root / "icons" / "official" / "com_example_two.png").exists())
+        self.assertFalse((self.root / "styles" / "original" / "com_example_two.png").exists())
         calls["bytes"].clear()
         calls["lookups"].clear()
         self.sync([self.one, self.two], fetch_lookup, fetch_bytes)
         self.assertEqual(first.read_bytes(), original)
         self.assertTrue(all("/1/" not in url for url in calls["bytes"]))
         self.assertTrue(all("1" not in ids for _country, ids in calls["lookups"]))
-        self.assertTrue((self.root / "icons" / "official" / "com_example_two.png").is_file())
+        self.assertTrue((self.root / "styles" / "original" / "com_example_two.png").is_file())
 
     def test_refuses_to_overwrite_a_different_file(self):
-        destination = self.root / "icons" / "official" / "com_example_one.png"
+        destination = self.root / "styles" / "original" / "com_example_one.png"
         destination.parent.mkdir(parents=True)
         original = png_bytes(2, (9, 9, 9))
         destination.write_bytes(original)
@@ -245,7 +247,7 @@ class DownloadTests(unittest.TestCase):
         self.assertEqual(calls["bytes"], 0)
         self.assertEqual(records["1"]["reason"], "duplicate_id")
         self.assertEqual(records["2"]["reason"], "duplicate_id")
-        self.assertEqual(list((self.root / "icons" / "official").glob("*")), [])
+        self.assertEqual(list((self.root / "styles" / "original").glob("*")), [])
 
     def test_bundle_mismatch_and_removed_app(self):
         def fetch_lookup(country, ids):
@@ -262,7 +264,7 @@ class DownloadTests(unittest.TestCase):
         self.assertEqual(records["1"]["reason"], "bundle_mismatch")
         self.assertIn("bundleId mismatch", records["1"]["detail"])
         self.assertEqual(records["2"]["reason"], "not_in_store")
-        self.assertEqual(list((self.root / "icons" / "official").glob("*")), [])
+        self.assertEqual(list((self.root / "styles" / "original").glob("*")), [])
 
     def test_author_app_tries_us_then_cn(self):
         author = sample_app("5", "app.imone.OneWidget", author=True)
@@ -371,7 +373,7 @@ class CatalogTests(unittest.TestCase):
         (root / "metadata").mkdir()
         app = sample_app("7", "com.example.Icon", name="Icon")
         image = png_bytes(3, (4, 5, 6))
-        relative = "icons/official/com_example_icon.png"
+        relative = "styles/original/com_example_icon.png"
         destination = root / relative
         destination.parent.mkdir(parents=True)
         destination.write_bytes(image)

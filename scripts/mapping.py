@@ -1,6 +1,9 @@
 """Resolve a platform identifier to one unified app ID and icon path."""
 
 
+ORIGINAL_STYLE = "original"
+
+
 PLATFORMS = {
     "apple-bundle": "bundleId",
     "apple-store": "appleAppStoreId",
@@ -77,7 +80,7 @@ def lookup(entries, platform, identifier, root, style=None, assets=None):
         )
 
     entry = matches[0]
-    if style:
+    if style and style != ORIGINAL_STYLE:
         path = f"styles/{style}/{entry['id']}.png"
         if assets is not None and not any(asset.get("path") == path for asset in assets):
             raise MissingImageError(f"Missing image: {path} is not a published asset")
@@ -86,7 +89,7 @@ def lookup(entries, platform, identifier, root, style=None, assets=None):
     else:
         path = entry.get("iconPath")
         if not path:
-            raise MissingImageError(f"Missing image: {entry['id']} has no official icon")
+            raise MissingImageError(f"Missing image: {entry['id']} has no original icon")
         if not (root / path).is_file():
             raise MissingImageError(f"Missing image: {path}")
 

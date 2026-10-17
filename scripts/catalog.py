@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
+from mapping import ORIGINAL_STYLE
 from unified_id import legacy_id, unified_id_from_bundle
 
 
@@ -413,6 +414,8 @@ def validate():
         asset_paths.add(path)
 
     for image in (ROOT / "styles").glob("*/*.png"):
+        if image.parent.name == ORIGINAL_STYLE:
+            continue
         relative = image.relative_to(ROOT).as_posix()
         if relative not in asset_paths:
             raise ValueError(f"Unregistered image: {relative}")
