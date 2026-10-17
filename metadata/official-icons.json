@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "incomplete",
+  "updatedAt": "2026-10-17T14:04:34+00:00",
+  "expectedCount": 2000,
+  "imageCount": 0,
+  "failureCount": 0,
+  "artworkNote": "Icon bytes are the file returned by the Apple iTunes Lookup artwork URL after requesting the largest size that CDN serves. This record stores the source URL, query country, time, dimensions, format, and SHA-256. It does not grant usage rights.",
+  "icons": [],
+  "failures": []
+}

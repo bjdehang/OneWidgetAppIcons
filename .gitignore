@@ -16,3 +16,8 @@ private_keys/
 .DS_Store
 xcuserdata/
 *.xcuserstate
+
+# Download checkpoints and temporary files
+.cache/
+tmp/
+*.tmp

@@ -12,6 +12,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
+from unified_id import legacy_id, unified_id_from_bundle
+
 
 ROOT = Path(__file__).resolve().parents[1]
 COUNTRIES = (
@@ -20,8 +22,13 @@ COUNTRIES = (
 ).split()
 TARGET = 2000
 AUTHOR_ID = "1250290964"
-ID_PATTERN = re.compile(r"app-[0-9]+\Z")
 STYLE_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
+CSV_HEADER = (
+    "id", "legacyId", "name", "developer", "appleAppStoreId", "appleBundleId",
+    "androidPackageName", "harmonyBundleName", "huaweiAppGalleryId",
+    "marketCount", "authorApp", "officialIconPath", "iconWidth", "iconHeight",
+    "iconFormat", "iconSha256",
+)
 
 
 def write_json(path, value):
@@ -112,6 +119,28 @@ def normalize(country, entries):
     return result
 
 
+def store_id_of(app):
+    return str(app["platforms"]["apple"]["appStoreId"])
+
+
+def has_manual_platform_id(app):
+    platforms = app["platforms"]
+    huawei = (platforms.get("huawei") or {}).get("appGalleryId")
+    return (
+        platforms["android"]["packageName"] is not None
+        or platforms["harmony"]["bundleName"] is not None
+        or huawei is not None
+    )
+
+
+def carried_platform(old, override, platform, empty):
+    if platform in override:
+        return override[platform]
+    if old and platform in old["platforms"]:
+        return old["platforms"][platform]
+    return empty
+
+
 def build(chart_dir, author_file, date):
     captured_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     previous_path = ROOT / "metadata/apps.json"
@@ -119,9 +148,9 @@ def build(chart_dir, author_file, date):
     if previous_path.exists():
         previous = {app["id"]: app for app in json.loads(previous_path.read_text(encoding="utf-8"))["apps"]}
     asset_path = ROOT / "metadata/assets.json"
-    published_ids = set()
+    published_assets = []
     if asset_path.exists():
-        published_ids = {asset["appId"] for asset in json.loads(asset_path.read_text(encoding="utf-8"))["assets"]}
+        published_assets = json.loads(asset_path.read_text(encoding="utf-8"))["assets"]
     charts = {}
     grouped = {}
     for country in COUNTRIES:
@@ -148,16 +177,24 @@ def build(chart_dir, author_file, date):
         for entry in chart["entries"]
         if country in ("cn", "us") or entry["rank"] <= 20
     }
-    manually_mapped_ids = {
-        app_id for app_id, app in previous.items()
-        if app["platforms"]["android"]["packageName"] is not None
-        or app["platforms"]["harmony"]["bundleName"] is not None
+    published_store_ids = set()
+    for asset in published_assets:
+        match = previous.get(asset["appId"])
+        if match is None:
+            match = next((app for app in previous.values()
+                          if app.get("legacyId") == asset["appId"] or app["id"] == asset["appId"]), None)
+        if match is None:
+            raise ValueError(f"Published asset has unknown app id {asset['appId']}")
+        published_store_ids.add(store_id_of(match))
+    manually_mapped_store_ids = {
+        store_id_of(app) for app in previous.values() if has_manual_platform_id(app)
     }
-    pinned_ids = published_ids | manually_mapped_ids
-    missing_pinned = pinned_ids - {f"app-{app_store_id}" for app_store_id in set(grouped) | set(author_apps)}
+    pinned_store_ids = published_store_ids | manually_mapped_store_ids
+    available = set(grouped) | set(author_apps)
+    missing_pinned = pinned_store_ids - available
     if missing_pinned:
         raise ValueError(f"Mapped or published apps absent from current charts: {sorted(missing_pinned)[:10]}")
-    mandatory.update(app_id.removeprefix("app-") for app_id in pinned_ids)
+    mandatory.update(pinned_store_ids)
     mandatory.update(author_apps)
     if len(mandatory) > TARGET:
         raise ValueError(f"Mandatory regional coverage exceeds {TARGET} apps")
@@ -187,7 +224,6 @@ def build(chart_dir, author_file, date):
     apps = []
     for app_store_id in selected_order:
         placements = grouped.get(app_store_id, [])
-        old = previous.get(f"app-{app_store_id}")
         preferred = next((entry for country, entry in placements if country == "cn"), None)
         preferred = preferred or next((entry for country, entry in placements if country == "us"), None)
         preferred = preferred or (placements[0][1] if placements else None)
@@ -197,10 +233,13 @@ def build(chart_dir, author_file, date):
         genre_id = preferred["genreId"] if preferred else str(author["primaryGenreId"])
         genre_name = preferred["genre"] if preferred else author["primaryGenreName"]
         bundle_id = preferred["bundleId"] if preferred else author["bundleId"]
-        app_id = f"app-{app_store_id}"
-        platform_override = overrides.get(app_id, {})
+        app_id = unified_id_from_bundle(bundle_id)
+        alias = legacy_id(app_store_id)
+        old = previous.get(app_id) or previous.get(alias)
+        platform_override = overrides.get(app_id) or overrides.get(alias) or {}
         apps.append({
             "id": app_id,
+            "legacyId": alias,
             "name": name,
             "developer": developer,
             "genre": {"id": genre_id, "name": genre_name},
@@ -210,8 +249,12 @@ def build(chart_dir, author_file, date):
                     "bundleId": bundle_id,
                     "url": f"https://apps.apple.com/app/id{app_store_id}",
                 },
-                "android": platform_override.get("android", old["platforms"]["android"] if old else {"packageName": None}),
-                "harmony": platform_override.get("harmony", old["platforms"]["harmony"] if old else {"bundleName": None}),
+                "android": carried_platform(
+                    old, platform_override, "android", {"packageName": None}),
+                "harmony": carried_platform(
+                    old, platform_override, "harmony", {"bundleName": None}),
+                "huawei": carried_platform(
+                    old, platform_override, "huawei", {"appGalleryId": None}),
             },
             "charts": [{"country": country, "rank": entry["rank"]} for country, entry in placements],
             "authorApp": author is not None,
@@ -241,16 +284,8 @@ def build(chart_dir, author_file, date):
     author_snapshot["capturedAt"] = captured_at
     write_json(ROOT / f"data/author-apps-{date}.json", author_snapshot)
     write_json(ROOT / "metadata/apps.json", catalog)
-    with (ROOT / "metadata/apps.csv").open("w", encoding="utf-8", newline="") as file:
-        writer = csv.writer(file, lineterminator="\n")
-        writer.writerow(("id", "name", "developer", "appleAppStoreId", "appleBundleId",
-                         "androidPackageName", "harmonyBundleName", "marketCount", "authorApp"))
-        for app in apps:
-            platforms = app["platforms"]
-            writer.writerow((app["id"], app["name"], app["developer"],
-                             platforms["apple"]["appStoreId"], platforms["apple"]["bundleId"],
-                             platforms["android"]["packageName"], platforms["harmony"]["bundleName"],
-                             len(app["charts"]), app["authorApp"]))
+    from official_icons import load_official_icons, write_apps_csv
+    write_apps_csv(ROOT, apps, {icon["id"]: icon for icon in load_official_icons(ROOT)})
     print(f"Captured {sum(len(c['entries']) for c in charts.values())} placements, "
           f"{len(set(grouped) | set(author_apps))} unique apps, selected {len(apps)}")
 
@@ -267,7 +302,10 @@ def validate():
     if len(apps) != TARGET or catalog["selection"]["target"] != TARGET:
         raise ValueError(f"Catalog must have exactly {TARGET} apps")
     with (ROOT / "metadata/apps.csv").open(encoding="utf-8", newline="") as file:
-        csv_rows = list(csv.DictReader(file))
+        reader = csv.DictReader(file)
+        if tuple(reader.fieldnames or ()) != CSV_HEADER:
+            raise ValueError(f"CSV header mismatch: {reader.fieldnames}")
+        csv_rows = list(reader)
     if len(csv_rows) != TARGET or [row["id"] for row in csv_rows] != [app["id"] for app in apps]:
         raise ValueError("CSV application list differs from apps.json")
     if set(snapshot["charts"]) != set(COUNTRIES):
@@ -275,16 +313,41 @@ def validate():
     if str(author_snapshot["artistId"]) != AUTHOR_ID or len(author_apps) != catalog["selection"]["authorAppCount"]:
         raise ValueError("Author app snapshot mismatch")
     ids = set()
+    legacy_ids = set()
     apple_ids = set()
-    for app in apps:
+    bundle_ids = set()
+    platform_ids = {"android": {}, "harmony": {}, "huawei": {}}
+    platform_fields = {
+        "android": "packageName",
+        "harmony": "bundleName",
+        "huawei": "appGalleryId",
+    }
+    for app, row in zip(apps, csv_rows):
         app_id = app["id"]
         apple = app["platforms"]["apple"]
-        if not ID_PATTERN.fullmatch(app_id) or app_id != f"app-{apple['appStoreId']}":
+        if app_id != unified_id_from_bundle(apple["bundleId"]) or app.get("legacyId") != legacy_id(apple["appStoreId"]):
             raise ValueError(f"Invalid unified ID: {app_id}")
-        if app_id in ids or apple["appStoreId"] in apple_ids or not apple["bundleId"]:
+        if app_id in ids or app["legacyId"] in legacy_ids or apple["appStoreId"] in apple_ids or not apple["bundleId"]:
             raise ValueError(f"Duplicate or missing Apple identity: {app_id}")
+        if apple["bundleId"] in bundle_ids:
+            raise ValueError(f"Duplicate bundle ID: {apple['bundleId']}")
         ids.add(app_id)
+        legacy_ids.add(app["legacyId"])
         apple_ids.add(apple["appStoreId"])
+        bundle_ids.add(apple["bundleId"])
+        huawei = app["platforms"].get("huawei")
+        if not huawei or set(huawei) != {"appGalleryId"}:
+            raise ValueError(f"Missing Huawei field: {app_id}")
+        for platform, field in platform_fields.items():
+            value = app["platforms"][platform][field]
+            if value is None:
+                continue
+            if value in platform_ids[platform]:
+                raise ValueError(f"Duplicate {platform} mapping: {value}")
+            platform_ids[platform][value] = app_id
+            recorded = (overrides.get(app_id) or {}).get(platform)
+            if not recorded or recorded.get(field) != value:
+                raise ValueError(f"Unverified {platform} id on {app_id}: {value}")
         author = author_apps.get(apple["appStoreId"])
         if app["authorApp"] != (author is not None):
             raise ValueError(f"Author app flag mismatch: {app_id}")
@@ -298,11 +361,31 @@ def validate():
             source_entry = snapshot["charts"][position["country"]]["entries"][position["rank"] - 1]
             if source_entry["appStoreId"] != apple["appStoreId"]:
                 raise ValueError(f"Chart provenance mismatch: {app_id}")
+        if app["legacyId"] in overrides:
+            raise ValueError(f"Platform override is still keyed by the legacy ID: {app['legacyId']}")
         if app_id in overrides:
             for platform, identity in overrides[app_id].items():
-                if app["platforms"][platform] != identity:
+                if platform == "legacyId":
+                    if identity != app["legacyId"]:
+                        raise ValueError(f"Platform override legacy ID mismatch: {app_id}")
+                    continue
+                if app["platforms"].get(platform) != identity:
                     raise ValueError(f"Platform override mismatch: {app_id}")
-    if not {f"app-{app_store_id}" for app_store_id in author_apps}.issubset(ids):
+        if row["legacyId"] != app["legacyId"] or row["name"] != app["name"] or row["developer"] != app["developer"]:
+            raise ValueError(f"CSV identity mismatch: {app_id}")
+        if row["appleAppStoreId"] != apple["appStoreId"] or row["appleBundleId"] != apple["bundleId"]:
+            raise ValueError(f"CSV Apple identity mismatch: {app_id}")
+        if row["marketCount"] != str(len(app["charts"])) or row["authorApp"] != str(app["authorApp"]):
+            raise ValueError(f"CSV chart summary mismatch: {app_id}")
+        for platform, field, column in (
+            ("android", "packageName", "androidPackageName"),
+            ("harmony", "bundleName", "harmonyBundleName"),
+            ("huawei", "appGalleryId", "huaweiAppGalleryId"),
+        ):
+            value = app["platforms"][platform][field]
+            if row[column] != ("" if value is None else str(value)):
+                raise ValueError(f"CSV {platform} mismatch: {app_id}")
+    if not {f"app-{app_store_id}" for app_store_id in author_apps}.issubset(legacy_ids):
         raise ValueError("Not all author apps are included")
 
     style_ids = set()

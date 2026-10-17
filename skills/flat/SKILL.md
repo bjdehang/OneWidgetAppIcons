@@ -5,8 +5,8 @@ description: Produce a flat-style OneWidget app icon using the repository's unif
 
 # Flat icon production
 
-1. Find the target in `metadata/apps.json`; use its immutable `id`.
+1. Find the target in `metadata/apps.json`; use its unified `id` (for example `app_imone_onewidget`). The old `app-<store id>` value is `legacyId`.
 2. Create `prompts/flat/<id>.md` from `prompts/flat/_template.md`. Record the exact prompt and reference source.
 3. Generate original artwork, visually review it, and export a 1024 × 1024 PNG to `styles/flat/<id>.png`. Keep the square image unmasked.
 4. Add `styles/flat/<id>.png` to `metadata/assets.json` with `appId`, `styleId`, `path`, `prompt`, `source`, and an approved `license`.
-5. Run `python3 scripts/catalog.py validate` before committing. Do not add downloaded App Store artwork as a generated asset.
+5. Run `python3 scripts/catalog.py validate` before committing. Do not copy a file from `icons/official/` into this style. Official artwork stays in that directory and is not a generated asset.

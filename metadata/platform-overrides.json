@@ -1,17 +1,18 @@
 {
   "schemaVersion": 1,
   "apps": {
-    "app-1527355884": {
+    "app_imone_onewidget": {
       "android": {
         "packageName": "tech.onenice.onewidget"
       },
       "harmony": {
         "bundleName": "tech.onenice.onewidget"
-      }
+      },
+      "legacyId": "app-1527355884"
     }
   },
   "evidence": {
-    "app-1527355884": {
+    "app_imone_onewidget": {
       "android": "OneWidgetAndroid/app/build.gradle applicationId, commit df5d9edc396267763855c45cc3f312ad1298723e",
       "harmony": "OneWidgetHarmony/AppScope/app.json5 bundleName, commit b22f18a834b9b3aeace0ab782fa2320433a930bf"
     }
