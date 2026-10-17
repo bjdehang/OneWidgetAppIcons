@@ -1,17 +1,22 @@
-# Mono icon collection record
+# Mono icon drawing brief
 
 Application ID: `<unified id>`
 Application name: `<name from metadata/apps.json or games.json>`
 
-Collected a monochrome brand SVG (not redrawn). Canvas must be 1:1; non-square
-sources are rejected and the slot stays empty.
+Draw an original monochrome SVG icon that matches the repo mono visual system:
+`viewBox="0 0 1024 1024"`, solid black fill on transparent background, one
+optical weight, ~122px inset padding, no gradients/text/shadow/corner mask.
+
+## Drawing notes
+
+- Silhouette idea: `<geometric shapes and composition>`
+- Reference reviewed (do not paste): `<App Store icon / brand guidelines URL>`
+- Weight check: solid fill only / uniform stroke only (pick one; default solid fill)
+- Rejection reasons if skipped: `<why left empty>`
 
 ## Source and rights
 
-- Provider: `<simple-icons or other>`
-- Slug / key: `<slug>`
-- Source URL: `<URL>`
-- License: `<license>`
-- SHA-256: `<sha256 after download>`
-- Match reason: `<id|bundle|name-alias|si-title|manual>`
-- Collected at: `<UTC timestamp>`
+- Source: `original-drawing`
+- Rights / license for the drawn asset: `<approved license>`
+- Author / tool: `<name and tool>`
+- Review notes: `<visual consistency review against other mono icons>`

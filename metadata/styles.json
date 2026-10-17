@@ -32,15 +32,15 @@
     {
       "id": "mono",
       "name": "Mono",
-      "status": "published",
-      "definition": "从公开来源收集的单色矢量图标，优先 SVG；画布必须是 1:1，找不到或非正方形时留空。",
+      "status": "planned",
+      "definition": "按统一视觉规范手绘的单色矢量图标，不是外网图标站拼凑，也不是商店原图拷贝。",
       "extensions": [".svg"],
       "characteristics": {
         "media": "vector",
         "transparency": "alpha",
         "dimensions": "scalable",
         "mask": "none",
-        "summary": "只存 .svg。要求 viewBox 或宽高为 1:1 正方形画布，可含透明区域，不预裁系统圆角。未匹配到的应用保持缺图。"
+        "summary": "只存 .svg。viewBox 固定 0 0 1024 1024，纯黑实心剪影、透明底、统一光学字重与边距，不预裁系统圆角。禁止混入第三方图标包；未绘制的应用留空。"
       }
     }
   ]

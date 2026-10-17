@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests for monochrome SVG canvas checks and style registration."""
+"""Tests for mono SVG canvas checks and style registration."""
 
 import json
 import sys
@@ -14,8 +14,8 @@ from mono_icons import is_square_canvas, svg_canvas_ratio  # noqa: E402
 
 class MonoIconsTests(unittest.TestCase):
     def test_square_viewbox_accepted(self):
-        svg = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z"/></svg>'
-        self.assertEqual(svg_canvas_ratio(svg), (24.0, 24.0))
+        svg = '<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1024v1024H0z"/></svg>'
+        self.assertEqual(svg_canvas_ratio(svg), (1024.0, 1024.0))
         self.assertTrue(is_square_canvas(svg))
 
     def test_non_square_viewbox_rejected(self):
@@ -27,13 +27,16 @@ class MonoIconsTests(unittest.TestCase):
         svg = '<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40"/></svg>'
         self.assertTrue(is_square_canvas(svg))
 
-    def test_style_table_includes_mono(self):
+    def test_style_table_marks_mono_as_planned_hand_drawn(self):
         styles = json.loads((ROOT / "metadata/styles.json").read_text(encoding="utf-8"))["styles"]
         mono = next(item for item in styles if item["id"] == "mono")
         self.assertEqual(mono["extensions"], [".svg"])
+        self.assertEqual(mono["status"], "planned")
         self.assertEqual(mono["characteristics"]["media"], "vector")
         self.assertEqual(mono["characteristics"]["dimensions"], "scalable")
-        self.assertEqual(mono["status"], "published")
+        self.assertIn("手绘", mono["definition"])
+        self.assertTrue((ROOT / "skills/mono/SKILL.md").is_file())
+        self.assertFalse((ROOT / "metadata/mono-overrides.json").exists())
 
 
 if __name__ == "__main__":

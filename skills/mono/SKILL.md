@@ -1,20 +1,44 @@
 ---
 name: one-widget-mono-icon
-description: Collect a monochrome SVG app icon using the repository's unified app ID and provenance rules.
+description: Draw a unified monochrome SVG app icon using the repository's unified app ID and provenance rules.
 ---
 
-# Mono icon collection
+# Mono icon production
 
-1. Find the target in `metadata/apps.json` or `metadata/games.json`; use its unified `id`.
-2. Prefer a public monochrome SVG (Simple Icons or an official brand SVG). Record the source in `metadata/mono-overrides.json`.
-3. The SVG canvas must be 1:1 (`viewBox` width equals height, or equal `width`/`height`). Reject non-square sources and leave the slot empty.
-4. Save `styles/mono/<id>.svg` and `prompts/mono/<id>.md`, then register the asset in `metadata/assets.json` with `appId`, `styleId`, `path`, `prompt`, `source`, and `license`.
+`mono` is a **hand-drawn** style. Do not download or paste third-party icon packs
+(Simple Icons, Arcticons, Wikimedia wordmarks, etc.). Mixed sources break stroke
+weight and silhouette consistency.
+
+## Visual system (must match across every icon)
+
+1. Canvas: SVG `viewBox="0 0 1024 1024"` only (1:1). No other aspect ratio.
+2. Medium: single-color vector. Fill `#000000` on transparent background (alpha).
+3. Optical padding: keep the glyph inside the center ~76% box (about 122px inset
+   on each side). Do not touch the canvas edge.
+4. Weight: one optical weight family only — either **solid fill silhouettes** or
+   **uniform stroke** (`stroke-width` equivalent to ~64 on the 1024 canvas,
+   round caps/joins). Never mix fill-logo and thin-line icons in the same set.
+5. Default for this repo: **solid fill silhouette** (no outlines, no dual stroke
+   weights, no gradients, no text glyphs spelling the brand name).
+6. Corner language: prefer slightly rounded joins; no random sharp/soft mix.
+7. No system corner mask, no shadow, no color besides black.
+
+If an icon cannot be drawn to this system, leave the slot empty.
+
+## Steps
+
+1. Find the target in `metadata/apps.json` or `metadata/games.json`; use unified `id`.
+2. Create `prompts/mono/<id>.md` from `prompts/mono/_template.md`. Record the
+   drawing brief (shapes, references reviewed, why the silhouette reads as that app).
+3. Draw original artwork to the visual system above. Export
+   `styles/mono/<id>.svg` with `viewBox="0 0 1024 1024"`.
+4. Register in `metadata/assets.json` with `appId`, `styleId`=`mono`, `path`,
+   `prompt`, `source` (e.g. `original-drawing`), and an approved `license`.
 5. Run:
 
 ```sh
-python3 scripts/mono_icons.py download
 python3 scripts/mono_icons.py verify
 python3 scripts/catalog.py validate
 ```
 
-Do not copy files from `styles/original/`. Missing icons stay empty on purpose.
+Do not copy files from `styles/original/` or ingest external icon CDNs.

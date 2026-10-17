@@ -14,11 +14,10 @@ metadata/platform-overrides.json 已核实的跨平台 ID 与来源
 metadata/styles.json            风格表：每个风格的后缀、定义和特点
 metadata/styles.csv             同一张风格表，便于表格查看
 metadata/assets.json            已发布风格图标的来源和授权记录
-metadata/mono-overrides.json    单色 SVG 的高置信来源（按统一 ID）
 styles/original/<id>.<ext>      默认原图风格，后缀见风格表
 styles/<style>/<id>.<ext>       绘制后的风格图标；后缀以风格表为准
-styles/mono/<id>.svg            已收集的单色矢量图标（1:1 画布）
-prompts/<style>/<id>.md         单图标生成提示词或收集记录
+styles/mono/<id>.svg            手绘单色矢量图标（viewBox 1024×1024）
+prompts/<style>/<id>.md         单图标生成提示词或绘制说明
 skills/<style>/SKILL.md         该风格的制作流程
 data/app-store-snapshot-*.json  App Store 榜单研究快照
 data/author-apps-*.json         OneWidget 开发者账号应用快照
@@ -34,7 +33,7 @@ docs/                           使用说明和研究报告
 styles/flat/app_imone_onewidget.png
 ```
 
-当前 `flat` 只是计划中的绘制风格，尚未发布任何 PNG。`mono` 是已发布的单色 SVG 风格：来源登记在 `metadata/mono-overrides.json`，文件在 `styles/mono/<id>.svg`，画布必须是 1:1；收集不到或非正方形时留空。应用表和游戏表的条目数以各自 JSON 里的 `selection.count` 为准。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。缺图时使用端内默认图。
+当前 `flat` 与 `mono` 都是计划中的绘制风格，尚未发布成品。`mono` 要求按 `skills/mono/SKILL.md` 的统一字重与边距手绘 SVG（viewBox `0 0 1024 1024`），禁止混入第三方图标包；未绘制则留空。应用表和游戏表的条目数以各自 JSON 里的 `selection.count` 为准。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。缺图时使用端内默认图。
 
 ## 平台标识
 
@@ -83,7 +82,6 @@ python3 scripts/resolve_icon.py legacy app-1527355884
 ```sh
 python3 scripts/catalog.py validate
 python3 scripts/official_icons.py verify
-python3 scripts/mono_icons.py download
 python3 scripts/mono_icons.py verify
 ```
 
