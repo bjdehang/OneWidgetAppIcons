@@ -21,3 +21,5 @@ xcuserdata/
 .cache/
 tmp/
 *.tmp
+__pycache__/
+*.pyc
