@@ -301,6 +301,8 @@ def validate():
     for style in styles["styles"]:
         if style["id"] == ORIGINAL_STYLE or len(style["extensions"]) != 1:
             continue
+        if style["characteristics"].get("dimensions") == "source":
+            continue
         extension = style["extensions"][0]
         dimensions = style["characteristics"]["dimensions"]
         for image in (ROOT / "styles" / style["id"]).glob(f"*{extension}"):

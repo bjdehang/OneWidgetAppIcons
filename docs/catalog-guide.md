@@ -26,13 +26,13 @@ docs/                           使用说明和研究报告
 
 `<id>` 是统一 ID，由 Apple bundle ID 小写后把 `.` 和空格换成 `_` 得到。`app.imone.OneWidget` 的统一 ID 是 `app_imone_onewidget`。以前的 `app-<Apple App Store ID>` 写在 `legacyId`，例如 `app-1527355884`，查询时仍然可用。统一 ID 只用于本仓库和 OneWidget 各端取图；不要将它误当成 Android package name、Harmony bundle name 或华为 AppGallery ID。应用改名不改 bundle ID，因此也不改统一 ID。bundle ID 发生变化时要人工核对，不能静默覆盖已有文件。
 
-每个风格在 `metadata/styles.json` 和 `metadata/styles.csv` 里占一行。这一行记录文件后缀、风格定义，以及媒介、透明、尺寸和圆角这些特点。`original` 是官方原版，后缀是 `.jpg` 和 `.png`，扩展名跟随商店返回的真实格式，不要求透明图层。绘制风格目前都是计划中的 1024×1024 PNG，不预裁系统圆角：`mono`、`3d`、`skeuo`、`clay`、`plush` 带透明通道；`smartisan` 和 `flat` 不透明。`smartisan` 按锤子科技图标库的画法重绘，不存放锤子系统里的原文件。路径由风格、统一 ID 和该风格登记的后缀拼出：
+每个风格在 `metadata/styles.json` 和 `metadata/styles.csv` 里占一行。这一行记录文件后缀、风格定义，以及媒介、透明、尺寸和圆角这些特点。`original` 是官方原版，后缀是 `.jpg` 和 `.png`，扩展名跟随商店返回的真实格式，不要求透明图层。计划中的绘制风格是 1024×1024 PNG，不预裁系统圆角：`mono`、`3d`、`skeuo`、`clay`、`plush` 带透明通道；`flat` 不透明。`smartisan` 目前直接存放锤子图标服务器给出的原图，尺寸和透明通道保持原文件，还没有重绘。路径由风格、统一 ID 和该风格登记的后缀拼出，例如 `styles/smartisan/com_tencent_xin.png`。已经核对到苹果 bundle ID 的，文件名用这个 bundle ID 生成；还没有苹果 bundle ID 的，文件名先用 Android 包名按同一规则生成，并在 `metadata/smartisan.json` 里把 `idSource` 标成 `android`。名字、包名和苹果标识记在 `metadata/smartisan.json`，应用和游戏再分别写成 `metadata/smartisan-apps.csv`、`metadata/smartisan-games.csv`。
 
 ```text
 styles/flat/app_imone_onewidget.png
 ```
 
-当前 `flat` 只是计划中的绘制风格，尚未发布任何 PNG。应用表和游戏表的条目数以各自 JSON 里的 `selection.count` 为准。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。缺图时使用端内默认图。
+当前 `flat` 只是计划中的绘制风格，尚未发布任何 PNG。应用表和游戏表的条目数以各自 JSON 里的 `selection.count` 为准。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。尺寸写死的绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。`dimensions` 为 `source` 的风格按目录里的文件取图。缺图时使用端内默认图。
 
 ## 平台标识
 
