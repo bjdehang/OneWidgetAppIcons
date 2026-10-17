@@ -116,12 +116,37 @@ def extract_drawable(root: ET.Element) -> list[ET.Element]:
     return keep
 
 
-def normalize_simple_icon(content: str, title: str) -> str:
-    """Rewrite a Simple Icons SVG onto the repo mono canvas."""
+def _shape_markup(shape: ET.Element) -> str:
+    tag = _local_tag(shape.tag)
+    attrs = []
+    for key, value in shape.attrib.items():
+        local = key.rsplit("}", 1)[-1]
+        if local in {"fill", "stroke", "style", "class", "id"}:
+            continue
+        attrs.append(f'{local}="{_xml_escape(value)}"')
+    attr_text = (" " + " ".join(attrs)) if attrs else ""
+    return f"<{tag}{attr_text}/>"
+
+
+def _first_subpath(path_d: str) -> str:
+    """Return the outer subpath (usually the rounded app-icon frame)."""
+    match = re.match(r"\s*([Mm][^Mm]*)", path_d)
+    if not match:
+        raise ValueError("path has no subpath")
+    return match.group(1).strip()
+
+
+def normalize_simple_icon(content: str, title: str, invert_frame: bool = False) -> str:
+    """Rewrite a Simple Icons SVG onto the repo mono canvas.
+
+    When ``invert_frame`` is true, treat the mark as a filled rounded rectangle
+    with cut-out content and emit the *content* as a solid black glyph instead
+    (no recessed rectangular plate).
+    """
     try:
         root = ET.fromstring(content)
     except ET.ParseError as exc:
-        raise ValueError(f"invalid SVG: {exc}") from exc
+        raise ValueError(f"invalid SVG: {exc}") from (exc)
     if _local_tag(root.tag) != "svg":
         raise ValueError("root is not svg")
     size = svg_canvas_ratio(content)
@@ -131,23 +156,47 @@ def normalize_simple_icon(content: str, title: str) -> str:
     if not shapes:
         raise ValueError("no drawable shapes")
 
-    parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img">',
-        f"<title>{_xml_escape(title)}</title>",
-        f'<g transform="translate({PAD:g},{PAD:g}) scale({SCALE:g})" fill="#000000">',
-    ]
-    for shape in shapes:
-        tag = _local_tag(shape.tag)
-        attrs = []
-        for key, value in shape.attrib.items():
-            local = key.rsplit("}", 1)[-1]
-            if local in {"fill", "stroke", "style", "class", "id"}:
-                continue
-            attrs.append(f'{local}="{_xml_escape(value)}"')
-        attr_text = (" " + " ".join(attrs)) if attrs else ""
-        parts.append(f"<{tag}{attr_text}/>")
-    parts.append("</g></svg>\n")
-    return "".join(parts)
+    transform = f"translate({PAD:g},{PAD:g}) scale({SCALE:g})"
+    if not invert_frame:
+        parts = [
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img">',
+            f"<title>{_xml_escape(title)}</title>",
+            f'<g transform="{transform}" fill="#000000">',
+        ]
+        for shape in shapes:
+            parts.append(_shape_markup(shape))
+        parts.append("</g></svg>\n")
+        return "".join(parts)
+
+    # Invert framed app icons: keep glyph, drop the rectangular plate.
+    path_shapes = [shape for shape in shapes if _local_tag(shape.tag) == "path"]
+    if not path_shapes:
+        raise ValueError("invert_frame requires a path")
+    primary = path_shapes[0]
+    path_d = primary.attrib.get("d") or primary.attrib.get("D")
+    if not path_d:
+        raise ValueError("invert_frame path missing d")
+    frame_d = _first_subpath(path_d)
+    uid = "m" + hashlib.sha1(title.encode("utf-8")).hexdigest()[:10]
+    clip_id = f"clip-{uid}"
+    mask_id = f"mask-{uid}"
+    shape_markup = "".join(_shape_markup(shape) for shape in shapes)
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img">'
+        f"<title>{_xml_escape(title)}</title>"
+        "<defs>"
+        f'<clipPath id="{clip_id}" transform="{transform}">'
+        f'<path d="{_xml_escape(frame_d)}"/>'
+        "</clipPath>"
+        f'<mask id="{mask_id}" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">'
+        '<rect width="1024" height="1024" fill="#ffffff"/>'
+        f'<g transform="{transform}" fill="#000000">{shape_markup}</g>'
+        "</mask>"
+        "</defs>"
+        f'<rect width="1024" height="1024" fill="#000000" '
+        f'clip-path="url(#{clip_id})" mask="url(#{mask_id})"/>'
+        "</svg>\n"
+    )
 
 
 def _xml_escape(text: str) -> str:
@@ -160,6 +209,12 @@ def _xml_escape(text: str) -> str:
 
 
 def prompt_text(app_id: str, name: str, entry: dict, sha256: str, source: str) -> str:
+    invert_note = (
+        "Framed app-icon plates were inverted so the content glyph reads solid "
+        "(no recessed rectangle)."
+        if entry.get("invertFrame")
+        else ""
+    )
     return f"""# Mono icon curation record
 
 Application ID: `{app_id}`
@@ -168,6 +223,7 @@ Application name: `{name}`
 Curated from the sole approved pack **Simple Icons** (filled monochrome brand
 marks, unified 24×24 language), then normalized to the repo mono canvas
 `viewBox="0 0 1024 1024"` with black fill and ~12% optical padding.
+{invert_note}
 
 ## Source and rights
 
@@ -256,7 +312,11 @@ def download(force: bool = False) -> int:
             entry["source"] = used_url
             entry["provider"] = APPROVED_PROVIDER
             entry.setdefault("license", "CC0-1.0")
-            normalized = normalize_simple_icon(raw.decode("utf-8"), name)
+            normalized = normalize_simple_icon(
+                raw.decode("utf-8"),
+                name,
+                invert_frame=bool(entry.get("invertFrame")),
+            )
         except (urllib.error.URLError, TimeoutError, OSError, ValueError, UnicodeDecodeError) as exc:
             print(f"fail {app_id} ({slug}): {exc}", file=sys.stderr)
             failed += 1

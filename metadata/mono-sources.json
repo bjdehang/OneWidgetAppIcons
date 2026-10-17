@@ -554,17 +554,19 @@
       "slug": "meituan",
       "provider": "simple-icons",
       "license": "CC0-1.0",
-      "note": "hot/popular: 美团",
+      "note": "hot/popular: 美团; invert framed plate → solid content glyph",
       "name": "美团-问美团，都安排",
-      "source": "https://api.iconify.design/simple-icons:meituan.svg"
+      "source": "https://api.iconify.design/simple-icons:meituan.svg",
+      "invertFrame": true
     },
     "com_meituan_itakeaway": {
       "slug": "meituan",
       "provider": "simple-icons",
       "license": "CC0-1.0",
-      "note": "hot/popular: 美团外卖",
+      "note": "hot/popular: 美团外卖; invert framed plate → solid content glyph",
       "name": "美团外卖-外卖订餐,送啥都快",
-      "source": "https://api.iconify.design/simple-icons:meituan.svg"
+      "source": "https://api.iconify.design/simple-icons:meituan.svg",
+      "invertFrame": true
     },
     "tv_danmaku_bilianime": {
       "slug": "bilibili",
@@ -602,17 +604,19 @@
       "slug": "dazhongdianping",
       "provider": "simple-icons",
       "license": "CC0-1.0",
-      "note": "hot/popular: 大众点评",
+      "note": "hot/popular: 大众点评; invert framed plate → solid content glyph",
       "name": "大众点评 - 吃喝玩乐指南",
-      "source": "https://api.iconify.design/simple-icons:dazhongdianping.svg"
+      "source": "https://api.iconify.design/simple-icons:dazhongdianping.svg",
+      "invertFrame": true
     },
     "com_zhihu_ios": {
       "slug": "zhihu",
       "provider": "simple-icons",
       "license": "CC0-1.0",
-      "note": "hot/popular: 知乎",
+      "note": "hot/popular: 知乎; invert framed plate → solid content glyph",
       "name": "知乎",
-      "source": "https://api.iconify.design/simple-icons:zhihu.svg"
+      "source": "https://api.iconify.design/simple-icons:zhihu.svg",
+      "invertFrame": true
     },
     "com_alibaba_wireless": {
       "slug": "alibabadotcom",
