@@ -97,10 +97,58 @@ def is_square_canvas(content: str, tol: float = 1e-6) -> bool:
     return abs(width - height) <= tol * max(width, height)
 
 
+SI_VERSIONS = ("16.35.0", "15.0.0", "12.4.0", "11.14.0")
+
+
 def fetch(url: str, timeout: float = 30.0) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read()
+
+
+def resolve_source(entry: dict) -> str:
+    """Return a downloadable URL for one override entry, with SI version fallback."""
+    if entry.get("source"):
+        source = entry["source"]
+        # Prefer the recorded URL; callers may still fall back on failure.
+        return source
+    provider = entry.get("provider") or "simple-icons"
+    slug = entry.get("slug")
+    if not slug:
+        raise ValueError("override entry needs source or slug")
+    if provider == "arcticons":
+        return f"https://api.iconify.design/arcticons:{slug}.svg"
+    if provider == "simple-icons":
+        return f"https://api.iconify.design/simple-icons:{slug}.svg"
+    raise ValueError(f"unsupported provider: {provider}")
+
+
+def fetch_entry(entry: dict) -> tuple[bytes, str]:
+    """Download SVG bytes and the URL that succeeded."""
+    provider = entry.get("provider") or "simple-icons"
+    slug = entry.get("slug") or ""
+    candidates: list[str] = []
+    primary = resolve_source(entry)
+    candidates.append(primary)
+    if provider == "simple-icons" and slug:
+        candidates.append(f"https://api.iconify.design/simple-icons:{slug}.svg")
+        for version in SI_VERSIONS:
+            candidates.append(
+                f"https://cdn.jsdelivr.net/npm/simple-icons@{version}/icons/{slug}.svg"
+            )
+    elif provider == "arcticons" and slug:
+        candidates.append(f"https://api.iconify.design/arcticons:{slug}.svg")
+    seen: set[str] = set()
+    errors: list[str] = []
+    for url in candidates:
+        if url in seen:
+            continue
+        seen.add(url)
+        try:
+            return fetch(url), url
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            errors.append(f"{url}: {exc}")
+    raise urllib.error.URLError("; ".join(errors) or "no candidates")
 
 
 def prompt_text(app_id: str, name: str, entry: dict, sha256: str) -> str:
@@ -164,7 +212,8 @@ def download(force: bool = False) -> int:
         name = catalog[app_id]["name"]
         target = STYLE_DIR / f"{app_id}.svg"
         prompt_path = PROMPT_DIR / f"{app_id}.md"
-        source = entry["source"]
+        provider = entry.get("provider") or "simple-icons"
+        slug = entry.get("slug") or app_id
 
         if target.is_file() and prompt_path.is_file() and not force:
             content = target.read_text(encoding="utf-8")
@@ -181,14 +230,16 @@ def download(force: bool = False) -> int:
             ok += 1
             continue
 
-        cache_file = CACHE_DIR / f"{entry.get('slug') or app_id}.svg"
+        cache_file = CACHE_DIR / f"{provider}_{slug}.svg"
         try:
             if cache_file.is_file() and not force:
                 raw = cache_file.read_bytes()
+                used_url = entry.get("source") or resolve_source(entry)
             else:
-                raw = fetch(source)
+                raw, used_url = fetch_entry(entry)
                 cache_file.write_bytes(raw)
-        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+                entry["source"] = used_url
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:
             print(f"fetch failed {app_id}: {exc}", file=sys.stderr)
             failed += 1
             continue
@@ -215,7 +266,7 @@ def download(force: bool = False) -> int:
         prompt_path.write_text(prompt_text(app_id, name, entry, sha256), encoding="utf-8")
         kept.append(asset_record(app_id, entry))
         ok += 1
-        print(f"saved {app_id} <- {entry.get('slug')}")
+        print(f"saved {app_id} <- {provider}:{slug}")
 
     # Drop mono assets that are no longer sourced or whose files vanished.
     mono_ids = {item["appId"] for item in kept}
@@ -232,6 +283,9 @@ def download(force: bool = False) -> int:
     assets_doc["assets"] = other_assets + kept
     assets_doc["schemaVersion"] = assets_doc.get("schemaVersion", 1)
     _write_json(ASSETS_PATH, assets_doc)
+    # Persist any source URLs resolved via provider fallback.
+    overrides["apps"] = apps
+    _write_json(OVERRIDES_PATH, overrides)
 
     print(
         f"mono icons: saved/kept={ok} fetch_failed={failed} "

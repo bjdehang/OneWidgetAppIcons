@@ -2,12 +2,52 @@
   "schemaVersion": 1,
   "assets": [
     {
+      "appId": "cn_10086_app",
+      "styleId": "mono",
+      "path": "styles/mono/cn_10086_app.svg",
+      "prompt": "prompts/mono/cn_10086_app.md",
+      "source": "https://api.iconify.design/arcticons:china-mobile.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "cn_12306_rails12306",
+      "styleId": "mono",
+      "path": "styles/mono/cn_12306_rails12306.svg",
+      "prompt": "prompts/mono/cn_12306_rails12306.md",
+      "source": "https://api.iconify.design/simple-icons:chinarailway.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "cn_com_chsi_chsiapp",
+      "styleId": "mono",
+      "path": "styles/mono/cn_com_chsi_chsiapp.svg",
+      "prompt": "prompts/mono/cn_com_chsi_chsiapp.md",
+      "source": "https://api.iconify.design/arcticons:chsi.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "cn_damai_iphone",
+      "styleId": "mono",
+      "path": "styles/mono/cn_damai_iphone.svg",
+      "prompt": "prompts/mono/cn_damai_iphone.md",
+      "source": "https://api.iconify.design/arcticons:damaiapp.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "cn_walmart_app",
       "styleId": "mono",
       "path": "styles/mono/cn_walmart_app.svg",
       "prompt": "prompts/mono/cn_walmart_app.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/walmart.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_360buy_jdmobile",
+      "styleId": "mono",
+      "path": "styles/mono/com_360buy_jdmobile.svg",
+      "prompt": "prompts/mono/com_360buy_jdmobile.md",
+      "source": "https://api.iconify.design/arcticons:jd-com.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_aa_americanairlines",
@@ -42,11 +82,27 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_alibaba_wireless",
+      "styleId": "mono",
+      "path": "styles/mono/com_alibaba_wireless.svg",
+      "prompt": "prompts/mono/com_alibaba_wireless.md",
+      "source": "https://api.iconify.design/simple-icons:alibabadotcom.svg",
+      "license": "CC0-1.0"
+    },
+    {
       "appId": "com_alipay_iphoneclient",
       "styleId": "mono",
       "path": "styles/mono/com_alipay_iphoneclient.svg",
       "prompt": "prompts/mono/com_alipay_iphoneclient.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/alipay.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_aliyun_ios_tongyi",
+      "styleId": "mono",
+      "path": "styles/mono/com_aliyun_ios_tongyi.svg",
+      "prompt": "prompts/mono/com_aliyun_ios_tongyi.md",
+      "source": "https://api.iconify.design/simple-icons:qwen.svg",
       "license": "CC0-1.0"
     },
     {
@@ -82,6 +138,14 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_autonavi_amap",
+      "styleId": "mono",
+      "path": "styles/mono/com_autonavi_amap.svg",
+      "prompt": "prompts/mono/com_autonavi_amap.md",
+      "source": "https://api.iconify.design/arcticons:autonavi.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_baidu_baidumobile",
       "styleId": "mono",
       "path": "styles/mono/com_baidu_baidumobile.svg",
@@ -112,6 +176,22 @@
       "prompt": "prompts/mono/com_baidu_netdisk.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/baidu.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_bankabc_iphonerelease",
+      "styleId": "mono",
+      "path": "styles/mono/com_bankabc_iphonerelease.svg",
+      "prompt": "prompts/mono/com_bankabc_iphonerelease.md",
+      "source": "https://api.iconify.design/arcticons:agricultural-bank-of-china.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_boc_bocmbci",
+      "styleId": "mono",
+      "path": "styles/mono/com_boc_bocmbci.svg",
+      "prompt": "prompts/mono/com_boc_bocmbci.md",
+      "source": "https://api.iconify.design/arcticons:boc.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_burbn_barcelona",
@@ -146,11 +226,67 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_ccb_ccbdemo",
+      "styleId": "mono",
+      "path": "styles/mono/com_ccb_ccbdemo.svg",
+      "prompt": "prompts/mono/com_ccb_ccbdemo.md",
+      "source": "https://api.iconify.design/arcticons:china-construction-bank.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_chess_iphone",
       "styleId": "mono",
       "path": "styles/mono/com_chess_iphone.svg",
       "prompt": "prompts/mono/com_chess_iphone.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/chessdotcom.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_chillyroom_dungeonshooter",
+      "styleId": "mono",
+      "path": "styles/mono/com_chillyroom_dungeonshooter.svg",
+      "prompt": "prompts/mono/com_chillyroom_dungeonshooter.md",
+      "source": "https://api.iconify.design/arcticons:soul-knight.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_chinaunicom_mobilebusiness",
+      "styleId": "mono",
+      "path": "styles/mono/com_chinaunicom_mobilebusiness.svg",
+      "prompt": "prompts/mono/com_chinaunicom_mobilebusiness.md",
+      "source": "https://api.iconify.design/arcticons:china-unicom.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_cmbchina_cmblife",
+      "styleId": "mono",
+      "path": "styles/mono/com_cmbchina_cmblife.svg",
+      "prompt": "prompts/mono/com_cmbchina_cmblife.md",
+      "source": "https://api.iconify.design/arcticons:cmb-life.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_cmbchina_mpbbank",
+      "styleId": "mono",
+      "path": "styles/mono/com_cmbchina_mpbbank.svg",
+      "prompt": "prompts/mono/com_cmbchina_mpbbank.md",
+      "source": "https://api.iconify.design/arcticons:china-merchants-bank.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_deepseek_chat",
+      "styleId": "mono",
+      "path": "styles/mono/com_deepseek_chat.svg",
+      "prompt": "prompts/mono/com_deepseek_chat.md",
+      "source": "https://api.iconify.design/simple-icons:deepseek.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_dianping_dpscope",
+      "styleId": "mono",
+      "path": "styles/mono/com_dianping_dpscope.svg",
+      "prompt": "prompts/mono/com_dianping_dpscope.md",
+      "source": "https://api.iconify.design/simple-icons:dazhongdianping.svg",
       "license": "CC0-1.0"
     },
     {
@@ -224,6 +360,14 @@
       "prompt": "prompts/mono/com_facebook_messenger.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/messenger.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_fgol_hungrysharkevolutionsimpliedchinese",
+      "styleId": "mono",
+      "path": "styles/mono/com_fgol_hungrysharkevolutionsimpliedchinese.svg",
+      "prompt": "prompts/mono/com_fgol_hungrysharkevolutionsimpliedchinese.md",
+      "source": "https://api.iconify.design/arcticons:hungry-shark.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_google_authenticator",
@@ -354,6 +498,14 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_hpbr_bosszhipin",
+      "styleId": "mono",
+      "path": "styles/mono/com_hpbr_bosszhipin.svg",
+      "prompt": "prompts/mono/com_hpbr_bosszhipin.md",
+      "source": "https://api.iconify.design/arcticons:boss-zhipin.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_huawei_iosclone",
       "styleId": "mono",
       "path": "styles/mono/com_huawei_iosclone.svg",
@@ -368,6 +520,38 @@
       "prompt": "prompts/mono/com_huawei_iossporthealth.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/huawei.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_icbc_iphoneclient",
+      "styleId": "mono",
+      "path": "styles/mono/com_icbc_iphoneclient.svg",
+      "prompt": "prompts/mono/com_icbc_iphoneclient.md",
+      "source": "https://api.iconify.design/arcticons:icbc.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_imangi_templerun2_cn",
+      "styleId": "mono",
+      "path": "styles/mono/com_imangi_templerun2_cn.svg",
+      "prompt": "prompts/mono/com_imangi_templerun2_cn.md",
+      "source": "https://api.iconify.design/arcticons:temple-run.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_intsig_camscannerlite",
+      "styleId": "mono",
+      "path": "styles/mono/com_intsig_camscannerlite.svg",
+      "prompt": "prompts/mono/com_intsig_camscannerlite.md",
+      "source": "https://api.iconify.design/arcticons:camscanner.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_jd_jinrong",
+      "styleId": "mono",
+      "path": "styles/mono/com_jd_jinrong.svg",
+      "prompt": "prompts/mono/com_jd_jinrong.md",
+      "source": "https://api.iconify.design/arcticons:jd-finance.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_jiangjia_gif",
@@ -386,12 +570,52 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_kingsoft_www_office_wpsoffice",
+      "styleId": "mono",
+      "path": "styles/mono/com_kingsoft_www_office_wpsoffice.svg",
+      "prompt": "prompts/mono/com_kingsoft_www_office_wpsoffice.md",
+      "source": "https://api.iconify.design/arcticons:wpsoffice.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_klarna_app",
       "styleId": "mono",
       "path": "styles/mono/com_klarna_app.svg",
       "prompt": "prompts/mono/com_klarna_app.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/klarna.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_kuaishou_nebula",
+      "styleId": "mono",
+      "path": "styles/mono/com_kuaishou_nebula.svg",
+      "prompt": "prompts/mono/com_kuaishou_nebula.md",
+      "source": "https://api.iconify.design/simple-icons:kuaishou.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_kylin_readnew",
+      "styleId": "mono",
+      "path": "styles/mono/com_kylin_readnew.svg",
+      "prompt": "prompts/mono/com_kylin_readnew.md",
+      "source": "https://api.iconify.design/arcticons:hongguo.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_laiwang_dingtalk",
+      "styleId": "mono",
+      "path": "styles/mono/com_laiwang_dingtalk.svg",
+      "prompt": "prompts/mono/com_laiwang_dingtalk.md",
+      "source": "https://api.iconify.design/arcticons:dingtalk.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_lemon_lv",
+      "styleId": "mono",
+      "path": "styles/mono/com_lemon_lv.svg",
+      "prompt": "prompts/mono/com_lemon_lv.md",
+      "source": "https://api.iconify.design/arcticons:capcut.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_linkedin_linkedin",
@@ -418,11 +642,27 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_meitu_mtxx",
+      "styleId": "mono",
+      "path": "styles/mono/com_meitu_mtxx.svg",
+      "prompt": "prompts/mono/com_meitu_mtxx.md",
+      "source": "https://api.iconify.design/arcticons:meitu.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_meituan_imeituan",
       "styleId": "mono",
       "path": "styles/mono/com_meituan_imeituan.svg",
       "prompt": "prompts/mono/com_meituan_imeituan.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/meituan.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_meituan_itakeaway",
+      "styleId": "mono",
+      "path": "styles/mono/com_meituan_itakeaway.svg",
+      "prompt": "prompts/mono/com_meituan_itakeaway.md",
+      "source": "https://api.iconify.design/simple-icons:meituan.svg",
       "license": "CC0-1.0"
     },
     {
@@ -450,12 +690,36 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_mihoyo_cloudgames_ys",
+      "styleId": "mono",
+      "path": "styles/mono/com_mihoyo_cloudgames_ys.svg",
+      "prompt": "prompts/mono/com_mihoyo_cloudgames_ys.md",
+      "source": "https://api.iconify.design/arcticons:genshin-impact.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_mihoyo_yuanshen",
+      "styleId": "mono",
+      "path": "styles/mono/com_mihoyo_yuanshen.svg",
+      "prompt": "prompts/mono/com_mihoyo_yuanshen.md",
+      "source": "https://api.iconify.design/arcticons:genshin-impact.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_netease_cloudmusic",
       "styleId": "mono",
       "path": "styles/mono/com_netease_cloudmusic.svg",
       "prompt": "prompts/mono/com_netease_cloudmusic.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/neteasecloudmusic.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_netease_mc",
+      "styleId": "mono",
+      "path": "styles/mono/com_netease_mc.svg",
+      "prompt": "prompts/mono/com_netease_mc.md",
+      "source": "https://api.iconify.design/arcticons:minecraft.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_netflix_netflix",
@@ -480,6 +744,70 @@
       "prompt": "prompts/mono/com_openai_chat.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/openai.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_outfit7_talkingtomgoldrun",
+      "styleId": "mono",
+      "path": "styles/mono/com_outfit7_talkingtomgoldrun.svg",
+      "prompt": "prompts/mono/com_outfit7_talkingtomgoldrun.md",
+      "source": "https://api.iconify.design/arcticons:talking-tom-gold-run.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_phoenix_video",
+      "styleId": "mono",
+      "path": "styles/mono/com_phoenix_video.svg",
+      "prompt": "prompts/mono/com_phoenix_video.md",
+      "source": "https://api.iconify.design/arcticons:hongguo.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_plrx_township-cn",
+      "styleId": "mono",
+      "path": "styles/mono/com_plrx_township-cn.svg",
+      "prompt": "prompts/mono/com_plrx_township-cn.md",
+      "source": "https://api.iconify.design/arcticons:township.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_popcap_ios_chs_pvz2",
+      "styleId": "mono",
+      "path": "styles/mono/com_popcap_ios_chs_pvz2.svg",
+      "prompt": "prompts/mono/com_popcap_ios_chs_pvz2.md",
+      "source": "https://api.iconify.design/arcticons:plants-vs-zombies-2.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_qiyi_iphone",
+      "styleId": "mono",
+      "path": "styles/mono/com_qiyi_iphone.svg",
+      "prompt": "prompts/mono/com_qiyi_iphone.md",
+      "source": "https://api.iconify.design/arcticons:iqiyi.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_quark_browser",
+      "styleId": "mono",
+      "path": "styles/mono/com_quark_browser.svg",
+      "prompt": "prompts/mono/com_quark_browser.md",
+      "source": "https://api.iconify.design/arcticons:quark-browser.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_quark_clouddrive",
+      "styleId": "mono",
+      "path": "styles/mono/com_quark_clouddrive.svg",
+      "prompt": "prompts/mono/com_quark_clouddrive.md",
+      "source": "https://api.iconify.design/arcticons:quark-browser.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_qunar_iphoneclient8",
+      "styleId": "mono",
+      "path": "styles/mono/com_qunar_iphoneclient8.svg",
+      "prompt": "prompts/mono/com_qunar_iphoneclient8.md",
+      "source": "https://api.iconify.design/arcticons:qunar.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_reddit_reddit",
@@ -538,6 +866,14 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_siwuai_duapp",
+      "styleId": "mono",
+      "path": "styles/mono/com_siwuai_duapp.svg",
+      "prompt": "prompts/mono/com_siwuai_duapp.md",
+      "source": "https://api.iconify.design/arcticons:dewu.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_southwest_iphoneprod",
       "styleId": "mono",
       "path": "styles/mono/com_southwest_iphoneprod.svg",
@@ -594,6 +930,30 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_supercell_magic_china",
+      "styleId": "mono",
+      "path": "styles/mono/com_supercell_magic_china.svg",
+      "prompt": "prompts/mono/com_supercell_magic_china.md",
+      "source": "https://api.iconify.design/arcticons:clash-of-clans.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_taobao_fleamarket",
+      "styleId": "mono",
+      "path": "styles/mono/com_taobao_fleamarket.svg",
+      "prompt": "prompts/mono/com_taobao_fleamarket.md",
+      "source": "https://api.iconify.design/arcticons:xianyu.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_taobao_live",
+      "styleId": "mono",
+      "path": "styles/mono/com_taobao_live.svg",
+      "prompt": "prompts/mono/com_taobao_live.md",
+      "source": "https://api.iconify.design/arcticons:taobao.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_taobao_taobao4iphone",
       "styleId": "mono",
       "path": "styles/mono/com_taobao_taobao4iphone.svg",
@@ -618,12 +978,76 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_tencent_live4iphone",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_live4iphone.svg",
+      "prompt": "prompts/mono/com_tencent_live4iphone.md",
+      "source": "https://api.iconify.design/arcticons:wetv.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_tencent_lolm",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_lolm.svg",
+      "prompt": "prompts/mono/com_tencent_lolm.md",
+      "source": "https://api.iconify.design/arcticons:wild-rift.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_tencent_mqq",
       "styleId": "mono",
       "path": "styles/mono/com_tencent_mqq.svg",
       "prompt": "prompts/mono/com_tencent_mqq.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/tencentqq.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_tencent_smoba",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_smoba.svg",
+      "prompt": "prompts/mono/com_tencent_smoba.md",
+      "source": "https://api.iconify.design/arcticons:honor-of-kings.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_tencent_tmgp_cod",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_tmgp_cod.svg",
+      "prompt": "prompts/mono/com_tencent_tmgp_cod.md",
+      "source": "https://api.iconify.design/arcticons:call-of-duty.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_tencent_tmgp_codev",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_tmgp_codev.svg",
+      "prompt": "prompts/mono/com_tencent_tmgp_codev.md",
+      "source": "https://api.iconify.design/simple-icons:valorant.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_tencent_tmgp_dfm",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_tmgp_dfm.svg",
+      "prompt": "prompts/mono/com_tencent_tmgp_dfm.md",
+      "source": "https://api.iconify.design/arcticons:delta-force.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_tencent_tmgp_pubgmhd",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_tmgp_pubgmhd.svg",
+      "prompt": "prompts/mono/com_tencent_tmgp_pubgmhd.md",
+      "source": "https://api.iconify.design/simple-icons:pubg.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_tencent_ww",
+      "styleId": "mono",
+      "path": "styles/mono/com_tencent_ww.svg",
+      "prompt": "prompts/mono/com_tencent_ww.md",
+      "source": "https://api.iconify.design/arcticons:wecom.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_tencent_xin",
@@ -640,6 +1064,14 @@
       "prompt": "prompts/mono/com_ticketmaster_ios_ticketmasterapp.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ticketmaster.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_tmri_12123",
+      "styleId": "mono",
+      "path": "styles/mono/com_tmri_12123.svg",
+      "prompt": "prompts/mono/com_tmri_12123.md",
+      "source": "https://api.iconify.design/arcticons:jiaoguan12123.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_toyopagroup_picaboo",
@@ -664,6 +1096,22 @@
       "prompt": "prompts/mono/com_ubercab_ubereats.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ubereats.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_ucweb_iphone_lowversion",
+      "styleId": "mono",
+      "path": "styles/mono/com_ucweb_iphone_lowversion.svg",
+      "prompt": "prompts/mono/com_ucweb_iphone_lowversion.md",
+      "source": "https://api.iconify.design/arcticons:uc-browser.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_unionpay_chsp",
+      "styleId": "mono",
+      "path": "styles/mono/com_unionpay_chsp.svg",
+      "prompt": "prompts/mono/com_unionpay_chsp.md",
+      "source": "https://api.iconify.design/arcticons:unionpay-app.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_united_unitedcustomerfacingiphone",
@@ -698,6 +1146,14 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_xiaojukeji_didi",
+      "styleId": "mono",
+      "path": "styles/mono/com_xiaojukeji_didi.svg",
+      "prompt": "prompts/mono/com_xiaojukeji_didi.md",
+      "source": "https://api.iconify.design/arcticons:didi.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_xiaomi_mihome",
       "styleId": "mono",
       "path": "styles/mono/com_xiaomi_mihome.svg",
@@ -714,12 +1170,44 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "com_xingin_discover",
+      "styleId": "mono",
+      "path": "styles/mono/com_xingin_discover.svg",
+      "prompt": "prompts/mono/com_xingin_discover.md",
+      "source": "https://api.iconify.design/simple-icons:xiaohongshu.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_xunlei_mvideo",
+      "styleId": "mono",
+      "path": "styles/mono/com_xunlei_mvideo.svg",
+      "prompt": "prompts/mono/com_xunlei_mvideo.md",
+      "source": "https://api.iconify.design/arcticons:xunlei.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "com_xunmeng_pinduoduo",
+      "styleId": "mono",
+      "path": "styles/mono/com_xunmeng_pinduoduo.svg",
+      "prompt": "prompts/mono/com_xunmeng_pinduoduo.md",
+      "source": "https://api.iconify.design/arcticons:pinduoduo.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "com_yelp_yelpiphone",
       "styleId": "mono",
       "path": "styles/mono/com_yelp_yelpiphone.svg",
       "prompt": "prompts/mono/com_yelp_yelpiphone.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/yelp.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_youku_youku",
+      "styleId": "mono",
+      "path": "styles/mono/com_youku_youku.svg",
+      "prompt": "prompts/mono/com_youku_youku.md",
+      "source": "https://api.iconify.design/arcticons:youku.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "com_yourcompany_ppclient",
@@ -735,6 +1223,14 @@
       "path": "styles/mono/com_yum_kfc_brand.svg",
       "prompt": "prompts/mono/com_yum_kfc_brand.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/kfc.svg",
+      "license": "CC0-1.0"
+    },
+    {
+      "appId": "com_zhihu_ios",
+      "styleId": "mono",
+      "path": "styles/mono/com_zhihu_ios.svg",
+      "prompt": "prompts/mono/com_zhihu_ios.md",
+      "source": "https://api.iconify.design/simple-icons:zhihu.svg",
       "license": "CC0-1.0"
     },
     {
@@ -754,12 +1250,36 @@
       "license": "CC0-1.0"
     },
     {
+      "appId": "ctclient",
+      "styleId": "mono",
+      "path": "styles/mono/ctclient.svg",
+      "prompt": "prompts/mono/ctclient.md",
+      "source": "https://api.iconify.design/arcticons:china-telecom.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "appId": "ctrip_com",
+      "styleId": "mono",
+      "path": "styles/mono/ctrip_com.svg",
+      "prompt": "prompts/mono/ctrip_com.md",
+      "source": "https://api.iconify.design/arcticons:ctrip-travel.svg",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
       "appId": "doordash_doordashconsumer",
       "styleId": "mono",
       "path": "styles/mono/doordash_doordashconsumer.svg",
       "prompt": "prompts/mono/doordash_doordashconsumer.md",
       "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/doordash.svg",
       "license": "CC0-1.0"
+    },
+    {
+      "appId": "games_pigeon_phigros",
+      "styleId": "mono",
+      "path": "styles/mono/games_pigeon_phigros.svg",
+      "prompt": "prompts/mono/games_pigeon_phigros.md",
+      "source": "https://api.iconify.design/arcticons:phigros.svg",
+      "license": "CC-BY-SA-4.0"
     },
     {
       "appId": "net_kortina_labs_venmo",

@@ -3,7 +3,7 @@
   "provider": "simple-icons",
   "providerVersion": "11.14.0",
   "cdnTemplate": "https://cdn.jsdelivr.net/npm/simple-icons@{version}/icons/{slug}.svg",
-  "note": "High-confidence monochrome SVG sources keyed by unified app id. Missing ids are intentionally unset.",
+  "note": "High-confidence monochrome SVG sources keyed by unified app id. Simple Icons (CC0) preferred; Arcticons (CC-BY-SA-4.0) used for many China-market apps. Missing ids are intentionally unset.",
   "apps": {
     "cn_walmart_app": {
       "slug": "walmart",
@@ -836,6 +836,526 @@
       "license": "CC0-1.0",
       "match": "si-title",
       "name": "肯德基KFC（官方版）"
+    },
+    "com_xingin_discover": {
+      "slug": "xiaohongshu",
+      "source": "https://api.iconify.design/simple-icons:xiaohongshu.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "小红书 - 你的生活兴趣社区"
+    },
+    "com_dianping_dpscope": {
+      "slug": "dazhongdianping",
+      "source": "https://api.iconify.design/simple-icons:dazhongdianping.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "大众点评 - 吃喝玩乐指南"
+    },
+    "com_zhihu_ios": {
+      "slug": "zhihu",
+      "source": "https://api.iconify.design/simple-icons:zhihu.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "知乎"
+    },
+    "com_aliyun_ios_tongyi": {
+      "slug": "qwen",
+      "source": "https://api.iconify.design/simple-icons:qwen.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "千问 - 阿里AI助手"
+    },
+    "com_deepseek_chat": {
+      "slug": "deepseek",
+      "source": "https://api.iconify.design/simple-icons:deepseek.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "DeepSeek - AI 智能助手"
+    },
+    "com_alibaba_wireless": {
+      "slug": "alibabadotcom",
+      "source": "https://api.iconify.design/simple-icons:alibabadotcom.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "阿里巴巴(1688)-货源批发采购进货市场"
+    },
+    "cn_12306_rails12306": {
+      "slug": "chinarailway",
+      "source": "https://api.iconify.design/simple-icons:chinarailway.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "铁路12306"
+    },
+    "com_kuaishou_nebula": {
+      "slug": "kuaishou",
+      "source": "https://api.iconify.design/simple-icons:kuaishou.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "快手极速版"
+    },
+    "com_meituan_itakeaway": {
+      "slug": "meituan",
+      "source": "https://api.iconify.design/simple-icons:meituan.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "美团外卖-外卖订餐,送啥都快"
+    },
+    "com_phoenix_video": {
+      "slug": "hongguo",
+      "source": "https://api.iconify.design/arcticons:hongguo.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "红果短剧 - 海量热门短剧随心看"
+    },
+    "com_kylin_readnew": {
+      "slug": "hongguo",
+      "source": "https://api.iconify.design/arcticons:hongguo.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "红果漫剧 - 热门精彩漫剧"
+    },
+    "com_unionpay_chsp": {
+      "slug": "unionpay-app",
+      "source": "https://api.iconify.design/arcticons:unionpay-app.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "云闪付-银行业统一移动支付App"
+    },
+    "com_youku_youku": {
+      "slug": "youku",
+      "source": "https://api.iconify.design/arcticons:youku.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "优酷视频-《嫁金钗》全网独播"
+    },
+    "com_360buy_jdmobile": {
+      "slug": "jd-com",
+      "source": "https://api.iconify.design/arcticons:jd-com.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "京东-又好又便宜"
+    },
+    "com_jd_jinrong": {
+      "slug": "jd-finance",
+      "source": "https://api.iconify.design/arcticons:jd-finance.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "京东金融-黄金基金理财借贷保险一站式平台"
+    },
+    "com_taobao_fleamarket": {
+      "slug": "xianyu",
+      "source": "https://api.iconify.design/arcticons:xianyu.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "闲鱼 - 上闲鱼，赚一笔 !"
+    },
+    "cn_damai_iphone": {
+      "slug": "damaiapp",
+      "source": "https://api.iconify.design/arcticons:damaiapp.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "大麦 - 电影、演出、体育购票平台"
+    },
+    "cn_com_chsi_chsiapp": {
+      "slug": "chsi",
+      "source": "https://api.iconify.design/arcticons:chsi.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "学信网"
+    },
+    "com_lemon_lv": {
+      "slug": "capcut",
+      "source": "https://api.iconify.design/arcticons:capcut.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "剪映 - 抖音官方AI创作神器"
+    },
+    "com_quark_browser": {
+      "slug": "quark-browser",
+      "source": "https://api.iconify.design/arcticons:quark-browser.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "夸克-AI旗舰应用"
+    },
+    "com_xunlei_mvideo": {
+      "slug": "xunlei",
+      "source": "https://api.iconify.design/arcticons:xunlei.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "迅雷-高速传输,网盘,4K原画"
+    },
+    "com_autonavi_amap": {
+      "slug": "autonavi",
+      "source": "https://api.iconify.design/arcticons:autonavi.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "高德地图-高德打车,导航公交地铁出行"
+    },
+    "cn_10086_app": {
+      "slug": "china-mobile",
+      "source": "https://api.iconify.design/arcticons:china-mobile.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "中国移动（手机营业厅）"
+    },
+    "com_siwuai_duapp": {
+      "slug": "dewu",
+      "source": "https://api.iconify.design/arcticons:dewu.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "得物 - 得到美好事物"
+    },
+    "com_tmri_12123": {
+      "slug": "jiaoguan12123",
+      "source": "https://api.iconify.design/arcticons:jiaoguan12123.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "交管12123"
+    },
+    "com_xunmeng_pinduoduo": {
+      "slug": "pinduoduo",
+      "source": "https://api.iconify.design/arcticons:pinduoduo.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "拼多多 - 多多买菜，百亿补贴"
+    },
+    "com_ucweb_iphone_lowversion": {
+      "slug": "uc-browser",
+      "source": "https://api.iconify.design/arcticons:uc-browser.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "UC浏览器-随心搜·畅快看"
+    },
+    "games_pigeon_phigros": {
+      "slug": "phigros",
+      "source": "https://api.iconify.design/arcticons:phigros.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "Phigros"
+    },
+    "com_bankabc_iphonerelease": {
+      "slug": "agricultural-bank-of-china",
+      "source": "https://api.iconify.design/arcticons:agricultural-bank-of-china.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "中国农业银行"
+    },
+    "com_mihoyo_yuanshen": {
+      "slug": "genshin-impact",
+      "source": "https://api.iconify.design/arcticons:genshin-impact.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "原神-6周年"
+    },
+    "com_mihoyo_cloudgames_ys": {
+      "slug": "genshin-impact",
+      "source": "https://api.iconify.design/arcticons:genshin-impact.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "云·原神"
+    },
+    "com_tencent_ww": {
+      "slug": "wecom",
+      "source": "https://api.iconify.design/arcticons:wecom.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "企业微信"
+    },
+    "com_hpbr_bosszhipin": {
+      "slug": "boss-zhipin",
+      "source": "https://api.iconify.design/arcticons:boss-zhipin.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "BOSS直聘-招聘求职找工作招人"
+    },
+    "com_xiaojukeji_didi": {
+      "slug": "didi",
+      "source": "https://api.iconify.design/arcticons:didi.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "滴滴-打车骑车顺风车火车票租车代驾送货"
+    },
+    "com_tencent_smoba": {
+      "slug": "honor-of-kings",
+      "source": "https://api.iconify.design/arcticons:honor-of-kings.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "王者荣耀"
+    },
+    "com_supercell_magic_china": {
+      "slug": "clash-of-clans",
+      "source": "https://api.iconify.design/arcticons:clash-of-clans.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "部落冲突（Clash of Clans）"
+    },
+    "com_icbc_iphoneclient": {
+      "slug": "icbc",
+      "source": "https://api.iconify.design/arcticons:icbc.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "中国工商银行"
+    },
+    "com_kingsoft_www_office_wpsoffice": {
+      "slug": "wpsoffice",
+      "source": "https://api.iconify.design/arcticons:wpsoffice.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "WPS Office - 智能AI办公助手"
+    },
+    "com_ccb_ccbdemo": {
+      "slug": "china-construction-bank",
+      "source": "https://api.iconify.design/arcticons:china-construction-bank.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "中国建设银行"
+    },
+    "com_plrx_township-cn": {
+      "slug": "township",
+      "source": "https://api.iconify.design/arcticons:township.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "梦想城镇 - Township"
+    },
+    "com_intsig_camscannerlite": {
+      "slug": "camscanner",
+      "source": "https://api.iconify.design/arcticons:camscanner.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "扫描全能王-手机扫描仪 & PDF图片转文字"
+    },
+    "com_laiwang_dingtalk": {
+      "slug": "dingtalk",
+      "source": "https://api.iconify.design/arcticons:dingtalk.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "钉钉"
+    },
+    "com_taobao_live": {
+      "slug": "taobao",
+      "source": "https://api.iconify.design/arcticons:taobao.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "点淘-淘宝直播官方APP"
+    },
+    "com_qiyi_iphone": {
+      "slug": "iqiyi",
+      "source": "https://api.iconify.design/arcticons:iqiyi.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "爱奇艺-《伟大的长征》全景史诗"
+    },
+    "ctrip_com": {
+      "slug": "ctrip-travel",
+      "source": "https://api.iconify.design/arcticons:ctrip-travel.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "携程旅行-订酒店机票火车票"
+    },
+    "com_qunar_iphoneclient8": {
+      "slug": "qunar",
+      "source": "https://api.iconify.design/arcticons:qunar.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "去哪儿旅行-订酒店机票火车票"
+    },
+    "com_cmbchina_cmblife": {
+      "slug": "cmb-life",
+      "source": "https://api.iconify.design/arcticons:cmb-life.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "掌上生活-招商银行信用卡"
+    },
+    "com_cmbchina_mpbbank": {
+      "slug": "china-merchants-bank",
+      "source": "https://api.iconify.design/arcticons:china-merchants-bank.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "招商银行"
+    },
+    "ctclient": {
+      "slug": "china-telecom",
+      "source": "https://api.iconify.design/arcticons:china-telecom.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "中国电信-全国统一官方服务平台"
+    },
+    "com_chinaunicom_mobilebusiness": {
+      "slug": "china-unicom",
+      "source": "https://api.iconify.design/arcticons:china-unicom.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "中国联通"
+    },
+    "com_boc_bocmbci": {
+      "slug": "boc",
+      "source": "https://api.iconify.design/arcticons:boc.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "中国银行"
+    },
+    "com_meitu_mtxx": {
+      "slug": "meitu",
+      "source": "https://api.iconify.design/arcticons:meitu.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "美图秀秀:视频/图片/Live人像精修工具"
+    },
+    "com_tencent_live4iphone": {
+      "slug": "wetv",
+      "source": "https://api.iconify.design/arcticons:wetv.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "腾讯视频-沈腾携《现在就出发4》爆笑回归"
+    },
+    "com_quark_clouddrive": {
+      "slug": "quark-browser",
+      "source": "https://api.iconify.design/arcticons:quark-browser.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "夸克网盘-Live图无损，极速无广"
+    },
+    "com_netease_mc": {
+      "slug": "minecraft",
+      "source": "https://api.iconify.design/arcticons:minecraft.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "我的世界：移动版"
+    },
+    "com_tencent_tmgp_pubgmhd": {
+      "slug": "pubg",
+      "source": "https://api.iconify.design/simple-icons:pubg.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "和平精英"
+    },
+    "com_tencent_tmgp_codev": {
+      "slug": "valorant",
+      "source": "https://api.iconify.design/simple-icons:valorant.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "cn-curated",
+      "name": "无畏契约：源能行动"
+    },
+    "com_tencent_lolm": {
+      "slug": "wild-rift",
+      "source": "https://api.iconify.design/arcticons:wild-rift.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "英雄联盟手游"
+    },
+    "com_popcap_ios_chs_pvz2": {
+      "slug": "plants-vs-zombies-2",
+      "source": "https://api.iconify.design/arcticons:plants-vs-zombies-2.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "植物大战僵尸2"
+    },
+    "com_fgol_hungrysharkevolutionsimpliedchinese": {
+      "slug": "hungry-shark",
+      "source": "https://api.iconify.design/arcticons:hungry-shark.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "饥饿鲨：进化"
+    },
+    "com_outfit7_talkingtomgoldrun": {
+      "slug": "talking-tom-gold-run",
+      "source": "https://api.iconify.design/arcticons:talking-tom-gold-run.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "汤姆猫跑酷-猫拉松：秋风逐月"
+    },
+    "com_chillyroom_dungeonshooter": {
+      "slug": "soul-knight",
+      "source": "https://api.iconify.design/arcticons:soul-knight.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "元气骑士"
+    },
+    "com_tencent_tmgp_dfm": {
+      "slug": "delta-force",
+      "source": "https://api.iconify.design/arcticons:delta-force.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "三角洲行动"
+    },
+    "com_tencent_tmgp_cod": {
+      "slug": "call-of-duty",
+      "source": "https://api.iconify.design/arcticons:call-of-duty.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "使命召唤手游"
+    },
+    "com_imangi_templerun2_cn": {
+      "slug": "temple-run",
+      "source": "https://api.iconify.design/arcticons:temple-run.svg",
+      "provider": "arcticons",
+      "license": "CC-BY-SA-4.0",
+      "match": "cn-curated",
+      "name": "神庙逃亡2"
     }
   }
 }
