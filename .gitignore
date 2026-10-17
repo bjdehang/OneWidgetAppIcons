@@ -1,0 +1,25 @@
+# Generated build output
+build/
+.build/
+DerivedData/
+
+# Secrets and local configuration
+*.p8
+.env
+.env.*
+private_keys/
+.appstoreconnect/
+*.mobileprovision
+*.certSigningRequest
+
+# macOS and Xcode user state
+.DS_Store
+xcuserdata/
+*.xcuserstate
+
+# Download checkpoints and temporary files
+.cache/
+tmp/
+*.tmp
+__pycache__/
+*.pyc

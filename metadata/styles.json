@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "styles": [
+    {
+      "id": "original",
+      "name": "Original",
+      "status": "published",
+      "definition": "Apple iTunes Lookup API 返回的商店原图，使用 CDN 实际提供的最大尺寸，不放大。",
+      "extensions": [".jpg", ".png"],
+      "characteristics": {
+        "media": "raster",
+        "transparency": "as-delivered",
+        "dimensions": "source",
+        "mask": "unspecified",
+        "summary": "扩展名跟随文件的真实格式。JPEG 没有透明通道；只有接口实际返回 PNG 时才保存为 .png，不把 JPEG 改名。此风格不要求透明图层，也不预裁圆角。"
+      }
+    },
+    {
+      "id": "flat",
+      "name": "Flat",
+      "status": "planned",
+      "definition": "按扁平色块重新绘制的方形图标，不是商店原图的拷贝。",
+      "extensions": [".png"],
+      "characteristics": {
+        "media": "raster",
+        "transparency": "opaque",
+        "dimensions": "1024x1024",
+        "mask": "none",
+        "summary": "只存 .png。尺寸固定为 1024×1024，不预裁系统圆角，不带透明图层。尚未发布图片。"
+      }
+    },
+    {
+      "id": "mono",
+      "name": "Mono",
+      "status": "published",
+      "definition": "仅采用 Simple Icons 单色品牌标（统一实心剪影），规范化到 1024×1024 画布；只收录热门应用，其余留空。",
+      "extensions": [".svg"],
+      "characteristics": {
+        "media": "vector",
+        "transparency": "alpha",
+        "dimensions": "scalable",
+        "mask": "none",
+        "summary": "只存 .svg。来源唯一为 Simple Icons（CC0），下载后统一为 viewBox 0 0 1024 1024、纯黑填充、约 12% 边距。禁止混入 Arcticons 等其他包。未匹配的热门应用以外条目保持缺图。"
+      }
+    }
+  ]
+}
