@@ -1,0 +1,3 @@
+id,name,status,extensions,definition,media,transparency,dimensions,mask,summary
+original,Original,published,.jpg;.png,Apple iTunes Lookup API 返回的商店原图，使用 CDN 实际提供的最大尺寸，不放大。,raster,as-delivered,source,unspecified,扩展名跟随文件的真实格式。JPEG 没有透明通道；只有接口实际返回 PNG 时才保存为 .png，不把 JPEG 改名。此风格不要求透明图层，也不预裁圆角。
+flat,Flat,planned,.png,按扁平色块重新绘制的方形图标，不是商店原图的拷贝。,raster,opaque,1024x1024,none,只存 .png。尺寸固定为 1024×1024，不预裁系统圆角，不带透明图层。尚未发布图片。

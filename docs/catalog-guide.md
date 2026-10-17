@@ -8,10 +8,11 @@ metadata/apps.csv               同序、便于表格查看的应用列表
 metadata/platform-map.json      平台 ID → 统一 ID → 图标相对路径
 metadata/official-icons.json    官方图标来源、尺寸、格式和 SHA-256
 metadata/platform-overrides.json 已核实的跨平台 ID 与来源
-metadata/styles.json            风格列表
+metadata/styles.json            风格表：每个风格的后缀、定义和特点
+metadata/styles.csv             同一张风格表，便于表格查看
 metadata/assets.json            已发布风格图标的来源和授权记录
-styles/original/<id>.<ext>      默认原图风格，按实际格式保存
-styles/<style>/<id>.png         绘制后的风格图标；一个风格一个文件夹
+styles/original/<id>.<ext>      默认原图风格，后缀见风格表
+styles/<style>/<id>.<ext>       绘制后的风格图标；后缀以风格表为准
 prompts/<style>/<id>.md         单图标生成提示词
 skills/<style>/SKILL.md         该风格的制作流程
 data/app-store-snapshot-*.json  App Store 榜单研究快照
@@ -22,7 +23,7 @@ docs/                           使用说明和研究报告
 
 `<id>` 是统一 ID，由 Apple bundle ID 小写后把 `.` 和空格换成 `_` 得到。`app.imone.OneWidget` 的统一 ID 是 `app_imone_onewidget`。以前的 `app-<Apple App Store ID>` 写在 `legacyId`，例如 `app-1527355884`，查询时仍然可用。统一 ID 只用于本仓库和 OneWidget 各端取图；不要将它误当成 Android package name、Harmony bundle name 或华为 AppGallery ID。应用改名不改 bundle ID，因此也不改统一 ID。bundle ID 发生变化时要人工核对，不能静默覆盖已有文件。
 
-`original` 是默认原图风格，文件在 `styles/original/`，扩展名按图片真实格式保留。绘制风格另放在自己的目录，只收 PNG。绘制结果统一为 **1024 × 1024 PNG**，不预裁系统圆角。路径由风格与统一 ID 拼出：
+每个风格在 `metadata/styles.json` 和 `metadata/styles.csv` 里占一行。这一行记录文件后缀、风格定义，以及媒介、透明、尺寸和圆角这些特点。`original` 的后缀是 `.jpg` 和 `.png`，扩展名跟随商店返回的真实格式，不要求透明图层。`flat` 只存不透明的 `.png`，尺寸是 1024×1024，不预裁系统圆角。路径由风格、统一 ID 和该风格登记的后缀拼出：
 
 ```text
 styles/flat/app_imone_onewidget.png
@@ -51,7 +52,7 @@ Android 包名、HarmonyOS bundle name 和华为 AppGallery ID 必须分别核�
 
 1. 用 `metadata/platform-map.json` 按 Apple bundle ID、App Store 数字 ID、旧统一 ID、Android 包名、HarmonyOS bundle name 或华为 AppGallery ID 找到唯一的 `id`。
 2. 取默认原图时读取该行的 `iconPath`，文件在 `styles/original/`。查询时省略风格名，或显式使用 `original`。
-3. 取某种绘制风格时，再查 `metadata/assets.json`，并读取 `styles/<style>/<id>.png`。
+3. 取某种绘制风格时，再查 `metadata/assets.json`，并按风格表里的后缀读取 `styles/<style>/<id>.<后缀>`。
 
 映射不存在、同一个平台 ID 对应多款应用、或记录在册但文件缺失时，查询命令会失败并说明是哪一种错误。不要把缺失当成空路径继续使用。
 
@@ -68,7 +69,7 @@ python3 scripts/resolve_icon.py legacy app-1527355884
 
 新增应用时先核实 Apple App Store ID 与 bundle ID，检查目录中是否已有同一产品。目录刷新脚本用于榜单研究；手工维护的跨平台标识在刷新前需保留或合并，不能被榜单快照覆盖。
 
-新增风格时，在 `metadata/styles.json` 登记新 ID，创建 `styles/<style>/`、`prompts/<style>/` 与 `skills/<style>/SKILL.md`。风格 ID 只用小写英文字母、数字和连字符。
+新增风格时，在 `metadata/styles.json` 增加一行，并同步 `metadata/styles.csv`。必填的是 `id`、`name`、`status`、`definition`、`extensions` 和 `characteristics`。特点里的 `media` 取 `raster` 或 `vector`，`transparency` 取 `as-delivered`（保持原图有没有透明）、`opaque`（不带透明图层）或 `alpha`（必须有透明图层），`dimensions` 取 `source`、`scalable` 或 `1024x1024` 这种固定尺寸，`mask` 取 `none`（不预裁圆角）或 `unspecified`。矢量风格的后缀只能是 `.svg`，尺寸写 `scalable`。带透明图层的光栅风格把 `transparency` 写成 `alpha`，后缀用 `.png` 这类能保存透明通道的格式。风格 ID 只用小写英文字母、数字和连字符。同时创建 `styles/<style>/`、`prompts/<style>/` 与 `skills/<style>/SKILL.md`。
 
 新增绘制风格的图标时保存准确提示词、来源及授权，在 `metadata/assets.json` 登记 `appId`、`styleId`、`path`、`prompt`、`source`、`license`。这里的 `appId` 使用新的统一 ID。`original` 不写入 `assets.json`：它由 `scripts/official_icons.py` 下载到 `styles/original/`，来源和校验值写在 `metadata/official-icons.json`。该清单不记载商业授权。运行：
 

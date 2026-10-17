@@ -24,6 +24,17 @@ COUNTRIES = (
 TARGET = 2000
 AUTHOR_ID = "1250290964"
 STYLE_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
+STYLE_EXTENSION = re.compile(r"\.[a-z0-9]+\Z")
+STYLE_DIMENSIONS = re.compile(r"[0-9]+x[0-9]+\Z")
+STYLE_MEDIA = {"raster", "vector"}
+STYLE_TRANSPARENCY = {"as-delivered", "opaque", "alpha"}
+STYLE_MASK = {"none", "unspecified"}
+STYLE_STATUS = {"planned", "published"}
+ALPHA_EXTENSIONS = {".png", ".webp", ".svg"}
+STYLE_CSV_HEADER = (
+    "id", "name", "status", "extensions", "definition", "media", "transparency",
+    "dimensions", "mask", "summary",
+)
 CSV_HEADER = (
     "id", "legacyId", "name", "developer", "appleAppStoreId", "appleBundleId",
     "androidPackageName", "harmonyBundleName", "huaweiAppGalleryId",
@@ -118,6 +129,67 @@ def normalize(country, entries):
             "genre": category["term"],
         })
     return result
+
+
+def check_style_record(style):
+    """Check one style-table row. The row records suffix, definition, and traits."""
+    style_id = style.get("id")
+    if not isinstance(style_id, str) or not STYLE_PATTERN.fullmatch(style_id):
+        raise ValueError(f"Invalid style ID: {style_id}")
+    if style.get("status") not in STYLE_STATUS:
+        raise ValueError(f"Invalid style status: {style_id}")
+    if not style.get("name") or not style.get("definition"):
+        raise ValueError(f"Style {style_id} is missing a name or definition")
+    extensions = style.get("extensions")
+    if not isinstance(extensions, list) or not extensions:
+        raise ValueError(f"Style {style_id} needs at least one file suffix")
+    if len(set(extensions)) != len(extensions):
+        raise ValueError(f"Style {style_id} repeats a file suffix")
+    for extension in extensions:
+        if not isinstance(extension, str) or not STYLE_EXTENSION.fullmatch(extension):
+            raise ValueError(f"Invalid file suffix for {style_id}: {extension}")
+    traits = style.get("characteristics")
+    if not isinstance(traits, dict):
+        raise ValueError(f"Style {style_id} is missing characteristics")
+    media = traits.get("media")
+    transparency = traits.get("transparency")
+    dimensions = traits.get("dimensions")
+    mask = traits.get("mask")
+    if media not in STYLE_MEDIA:
+        raise ValueError(f"Invalid media for {style_id}: {media}")
+    if transparency not in STYLE_TRANSPARENCY:
+        raise ValueError(f"Invalid transparency for {style_id}: {transparency}")
+    if mask not in STYLE_MASK:
+        raise ValueError(f"Invalid mask for {style_id}: {mask}")
+    if dimensions not in {"source", "scalable"} and not (isinstance(dimensions, str) and STYLE_DIMENSIONS.fullmatch(dimensions)):
+        raise ValueError(f"Invalid dimensions for {style_id}: {dimensions}")
+    if not traits.get("summary"):
+        raise ValueError(f"Style {style_id} is missing a characteristics summary")
+    if media == "vector" and extensions != [".svg"]:
+        raise ValueError(f"Vector style {style_id} must use the .svg suffix")
+    if media == "raster" and ".svg" in extensions:
+        raise ValueError(f"Raster style {style_id} cannot use the .svg suffix")
+    if transparency == "alpha" and not set(extensions) & ALPHA_EXTENSIONS:
+        raise ValueError(f"Style {style_id} needs a suffix that can store a transparent layer")
+    if media == "vector" and dimensions != "scalable":
+        raise ValueError(f"Vector style {style_id} uses scalable dimensions")
+    return style_id
+
+
+def style_csv_row(style):
+    traits = style["characteristics"]
+    return {
+        "id": style["id"],
+        "name": style["name"],
+        "status": style["status"],
+        "extensions": ";".join(style["extensions"]),
+        "definition": style["definition"],
+        "media": traits["media"],
+        "transparency": traits["transparency"],
+        "dimensions": traits["dimensions"],
+        "mask": traits["mask"],
+        "summary": traits["summary"],
+    }
 
 
 def store_id_of(app):
@@ -389,22 +461,51 @@ def validate():
     if not {f"app-{app_store_id}" for app_store_id in author_apps}.issubset(legacy_ids):
         raise ValueError("Not all author apps are included")
 
+    if styles.get("schemaVersion") != 2:
+        raise ValueError("Style table must use schemaVersion 2")
+    with (ROOT / "metadata/styles.csv").open(encoding="utf-8", newline="") as file:
+        style_reader = csv.DictReader(file)
+        if tuple(style_reader.fieldnames or ()) != STYLE_CSV_HEADER:
+            raise ValueError(f"Style CSV header mismatch: {style_reader.fieldnames}")
+        style_rows = list(style_reader)
     style_ids = set()
+    styles_by_id = {}
     for style in styles["styles"]:
-        style_id = style["id"]
-        if not STYLE_PATTERN.fullmatch(style_id) or style_id in style_ids:
-            raise ValueError(f"Invalid style ID: {style_id}")
+        style_id = check_style_record(style)
+        if style_id in style_ids:
+            raise ValueError(f"Duplicate style ID: {style_id}")
         style_ids.add(style_id)
+        styles_by_id[style_id] = style
         if not (ROOT / "styles" / style_id).is_dir():
             raise ValueError(f"Missing style directory: {style_id}")
+        allowed = set(style["extensions"])
+        for image in (ROOT / "styles" / style_id).iterdir():
+            if not image.is_file() or image.name.startswith("."):
+                continue
+            if image.suffix.lower() not in allowed:
+                raise ValueError(
+                    f"File suffix {image.suffix} is not registered for style {style_id}: {image.name}"
+                )
+    if [row["id"] for row in style_rows] != [style["id"] for style in styles["styles"]]:
+        raise ValueError("styles.csv is not the same style sequence as styles.json")
+    for row, style in zip(style_rows, styles["styles"]):
+        expected = style_csv_row(style)
+        for column, value in expected.items():
+            if row[column] != value:
+                raise ValueError(f"Style CSV field {column} mismatch for {style['id']}")
 
     asset_paths = set()
     for asset in assets["assets"]:
         path = asset["path"]
-        if path in asset_paths or asset["appId"] not in ids or asset["styleId"] not in style_ids:
+        style = styles_by_id.get(asset["styleId"])
+        if path in asset_paths or asset["appId"] not in ids or style is None:
             raise ValueError(f"Invalid asset record: {path}")
-        if path != f"styles/{asset['styleId']}/{asset['appId']}.png":
-            raise ValueError(f"Asset path does not follow the unified ID: {path}")
+        if style["id"] == ORIGINAL_STYLE:
+            raise ValueError(f"Original icons are not generated assets: {path}")
+        if len(style["extensions"]) != 1:
+            raise ValueError(f"Generated style {style['id']} must declare one file suffix")
+        if path != f"styles/{style['id']}/{asset['appId']}{style['extensions'][0]}":
+            raise ValueError(f"Asset path does not follow the style table: {path}")
         if not asset.get("license") or not asset.get("source") or not asset.get("prompt"):
             raise ValueError(f"Missing asset provenance: {path}")
         if asset["prompt"] != f"prompts/{asset['styleId']}/{asset['appId']}.md":
@@ -413,18 +514,23 @@ def validate():
             raise ValueError(f"Missing asset or prompt file: {path}")
         asset_paths.add(path)
 
-    for image in (ROOT / "styles").glob("*/*.png"):
-        if image.parent.name == ORIGINAL_STYLE:
+    for style in styles["styles"]:
+        if style["id"] == ORIGINAL_STYLE or len(style["extensions"]) != 1:
             continue
-        relative = image.relative_to(ROOT).as_posix()
-        if relative not in asset_paths:
-            raise ValueError(f"Unregistered image: {relative}")
-        with image.open("rb") as file:
-            header = file.read(24)
-        if len(header) < 24 or header[:8] != b"\x89PNG\r\n\x1a\n":
-            raise ValueError(f"Invalid PNG: {relative}")
-        if struct.unpack(">II", header[16:24]) != (1024, 1024):
-            raise ValueError(f"PNG must be 1024x1024: {relative}")
+        extension = style["extensions"][0]
+        dimensions = style["characteristics"]["dimensions"]
+        for image in (ROOT / "styles" / style["id"]).glob(f"*{extension}"):
+            relative = image.relative_to(ROOT).as_posix()
+            if relative not in asset_paths:
+                raise ValueError(f"Unregistered image: {relative}")
+            if extension == ".png" and STYLE_DIMENSIONS.fullmatch(dimensions):
+                with image.open("rb") as file:
+                    header = file.read(24)
+                if len(header) < 24 or header[:8] != b"\x89PNG\r\n\x1a\n":
+                    raise ValueError(f"Invalid PNG: {relative}")
+                expected = tuple(int(part) for part in dimensions.split("x"))
+                if struct.unpack(">II", header[16:24]) != expected:
+                    raise ValueError(f"PNG must be {dimensions}: {relative}")
     print(f"Validated {len(apps)} apps, {len(style_ids)} styles, {len(asset_paths)} assets")
 
 

@@ -8,10 +8,11 @@ metadata/apps.csv               便于人工查阅的同序列表
 metadata/platform-map.json      平台 ID 到统一 ID、再到图标路径
 metadata/official-icons.json    官方图标的来源、尺寸、格式和校验值
 metadata/platform-overrides.json 已核实的跨平台标识
-metadata/styles.json            风格目录
-metadata/assets.json            已发布的风格图标清单
-styles/original/<id>.<ext>      默认原图风格，扩展名与实际格式一致
-styles/<style>/<id>.png         绘制风格；一个风格一个文件夹
+metadata/styles.json            风格表：后缀、定义和特点
+metadata/styles.csv             同一张风格表的表格
+metadata/assets.json            已发布的绘制风格图标清单
+styles/original/<id>.<ext>      默认原图风格，后缀见风格表
+styles/<style>/<id>.<ext>       绘制风格；后缀以风格表为准
 prompts/<style>/<id>.md         单图标提示词
 skills/<style>/SKILL.md         风格制作规范
 data/                           带日期的榜单研究快照

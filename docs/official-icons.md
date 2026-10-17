@@ -1,6 +1,6 @@
 # 官方图标与跨平台映射
 
-本目录的 2000 款应用仍以 `metadata/apps.json` 为准，地区和榜单名次不因下载图标而改变。默认原图风格的文件夹名是 `original`，路径为 `styles/original/<统一 ID>.<实际扩展名>`。它不放进 `styles/flat/`，也不登记进 `metadata/assets.json`。`flat` 只收后来按该风格重新绘制的 PNG。
+本目录的 2000 款应用仍以 `metadata/apps.json` 为准，地区和榜单名次不因下载图标而改变。默认原图风格的文件夹名是 `original`，路径为 `styles/original/<统一 ID>.<实际扩展名>`。后缀、定义和特点登记在 `metadata/styles.json`：`original` 允许 `.jpg` 和 `.png`，透明情况保持原图，不要求透明图层。它不放进 `styles/flat/`，也不登记进 `metadata/assets.json`。`flat` 在同一张表里登记为不透明的 `.png`。
 
 ## 统一 ID
 

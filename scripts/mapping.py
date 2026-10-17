@@ -35,6 +35,10 @@ class MissingImageError(MappingError):
     """The row exists, but the icon file is not in the catalog."""
 
 
+class UnknownStyleError(MappingError):
+    """The caller named a style that is not in the style table."""
+
+
 def _present(value):
     return value is not None and value != ""
 
@@ -57,11 +61,11 @@ def assert_unique_platform_ids(entries):
     return seen
 
 
-def lookup(entries, platform, identifier, root, style=None, assets=None):
+def lookup(entries, platform, identifier, root, style=None, assets=None, style_extension=".png"):
     """Map one platform ID to a unified ID and an existing image.
 
-    ``style`` selects a generated icon under ``styles/<style>/<id>.png``.
-    Without it, the official icon path on the mapping row is used.
+    ``style`` selects a generated icon. Its suffix comes from the style table.
+    Without a style, or with ``original``, the original icon path on the row is used.
     """
     if platform not in PLATFORMS:
         known = ", ".join(PLATFORMS)
@@ -81,7 +85,9 @@ def lookup(entries, platform, identifier, root, style=None, assets=None):
 
     entry = matches[0]
     if style and style != ORIGINAL_STYLE:
-        path = f"styles/{style}/{entry['id']}.png"
+        if not style_extension.startswith("."):
+            raise UnknownStyleError(f"Style {style} has no file suffix in the style table")
+        path = f"styles/{style}/{entry['id']}{style_extension}"
         if assets is not None and not any(asset.get("path") == path for asset in assets):
             raise MissingImageError(f"Missing image: {path} is not a published asset")
         if not (root / path).is_file():

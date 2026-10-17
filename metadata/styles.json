@@ -1,17 +1,33 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "styles": [
     {
       "id": "original",
       "name": "Original",
       "status": "published",
-      "description": "Default style. App Store artwork at the largest size Apple serves, kept in its real format."
+      "definition": "Apple iTunes Lookup API 返回的商店原图，使用 CDN 实际提供的最大尺寸，不放大。",
+      "extensions": [".jpg", ".png"],
+      "characteristics": {
+        "media": "raster",
+        "transparency": "as-delivered",
+        "dimensions": "source",
+        "mask": "unspecified",
+        "summary": "扩展名跟随文件的真实格式。JPEG 没有透明通道；只有接口实际返回 PNG 时才保存为 .png，不把 JPEG 改名。此风格不要求透明图层，也不预裁圆角。"
+      }
     },
     {
       "id": "flat",
       "name": "Flat",
       "status": "planned",
-      "description": "Flat-color icon collection; no published images yet."
+      "definition": "按扁平色块重新绘制的方形图标，不是商店原图的拷贝。",
+      "extensions": [".png"],
+      "characteristics": {
+        "media": "raster",
+        "transparency": "opaque",
+        "dimensions": "1024x1024",
+        "mask": "none",
+        "summary": "只存 .png。尺寸固定为 1024×1024，不预裁系统圆角，不带透明图层。尚未发布图片。"
+      }
     }
   ]
 }

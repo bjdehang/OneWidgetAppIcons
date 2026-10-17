@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import catalog  # noqa: E402
+from catalog import check_style_record  # noqa: E402
 import official_icons  # noqa: E402
 from mapping import (  # noqa: E402
     DuplicateMappingError,
@@ -423,6 +424,62 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaises(MissingImageError):
             lookup(entries, "android", "tech.onenice.onewidget", ROOT)
         catalog.validate()
+
+
+class StyleTableTests(unittest.TestCase):
+    def test_registered_styles_record_suffix_definition_and_traits(self):
+        styles = json.loads((ROOT / "metadata/styles.json").read_text(encoding="utf-8"))["styles"]
+        by_id = {style["id"]: style for style in styles}
+        original = by_id["original"]
+        flat = by_id["flat"]
+        self.assertEqual(original["extensions"], [".jpg", ".png"])
+        self.assertIn("商店原图", original["definition"])
+        self.assertEqual(original["characteristics"]["transparency"], "as-delivered")
+        self.assertEqual(flat["extensions"], [".png"])
+        self.assertEqual(flat["characteristics"]["transparency"], "opaque")
+        self.assertEqual(flat["characteristics"]["dimensions"], "1024x1024")
+        self.assertTrue(flat["characteristics"]["summary"])
+
+    def test_style_table_accepts_svg_and_transparent_png_shapes(self):
+        svg = {
+            "id": "line",
+            "name": "Line",
+            "status": "planned",
+            "definition": "描边矢量图标。",
+            "extensions": [".svg"],
+            "characteristics": {
+                "media": "vector",
+                "transparency": "alpha",
+                "dimensions": "scalable",
+                "mask": "none",
+                "summary": "SVG，可以包含透明区域。",
+            },
+        }
+        transparent = {
+            "id": "cutout",
+            "name": "Cutout",
+            "status": "planned",
+            "definition": "带透明图层的光栅图标。",
+            "extensions": [".png"],
+            "characteristics": {
+                "media": "raster",
+                "transparency": "alpha",
+                "dimensions": "1024x1024",
+                "mask": "none",
+                "summary": "PNG 必须保留透明通道。",
+            },
+        }
+        self.assertEqual(check_style_record(svg), "line")
+        self.assertEqual(check_style_record(transparent), "cutout")
+        jpeg_alpha = json.loads(json.dumps(transparent))
+        jpeg_alpha["extensions"] = [".jpg"]
+        with self.assertRaises(ValueError) as caught:
+            check_style_record(jpeg_alpha)
+        self.assertIn("transparent", str(caught.exception))
+        raster_svg = json.loads(json.dumps(svg))
+        raster_svg["characteristics"]["media"] = "raster"
+        with self.assertRaises(ValueError):
+            check_style_record(raster_svg)
 
 
 if __name__ == "__main__":
