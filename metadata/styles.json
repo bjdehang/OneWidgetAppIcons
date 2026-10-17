@@ -28,6 +28,20 @@
         "mask": "none",
         "summary": "只存 .png。尺寸固定为 1024×1024，不预裁系统圆角，不带透明图层。尚未发布图片。"
       }
+    },
+    {
+      "id": "mono",
+      "name": "Mono",
+      "status": "published",
+      "definition": "从公开来源收集的单色矢量图标，优先 SVG；画布必须是 1:1，找不到或非正方形时留空。",
+      "extensions": [".svg"],
+      "characteristics": {
+        "media": "vector",
+        "transparency": "alpha",
+        "dimensions": "scalable",
+        "mask": "none",
+        "summary": "只存 .svg。要求 viewBox 或宽高为 1:1 正方形画布，可含透明区域，不预裁系统圆角。未匹配到的应用保持缺图。"
+      }
     }
   ]
 }

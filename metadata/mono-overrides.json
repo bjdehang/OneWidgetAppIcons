@@ -1,0 +1,841 @@
+{
+  "schemaVersion": 1,
+  "provider": "simple-icons",
+  "providerVersion": "11.14.0",
+  "cdnTemplate": "https://cdn.jsdelivr.net/npm/simple-icons@{version}/icons/{slug}.svg",
+  "note": "High-confidence monochrome SVG sources keyed by unified app id. Missing ids are intentionally unset.",
+  "apps": {
+    "cn_walmart_app": {
+      "slug": "walmart",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/walmart.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "沃尔玛"
+    },
+    "com_aa_americanairlines": {
+      "slug": "americanairlines",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/americanairlines.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "American Airlines"
+    },
+    "com_adrise_tubitv": {
+      "slug": "tubi",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/tubi.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Tubi: Movies & Live TV"
+    },
+    "com_airbnb_app": {
+      "slug": "airbnb",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/airbnb.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "Airbnb"
+    },
+    "com_alibaba_ialiexpress": {
+      "slug": "aliexpress",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/aliexpress.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "AliExpress - Shopping App"
+    },
+    "com_alipay_iphoneclient": {
+      "slug": "alipay",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/alipay.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "支付宝-你的AI生活伙伴"
+    },
+    "com_amazon_aiv_aivapp": {
+      "slug": "primevideo",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/primevideo.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Amazon Prime Video"
+    },
+    "com_amazon_amazon": {
+      "slug": "amazon",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/amazon.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Amazon Shopping"
+    },
+    "com_anthropic_claude": {
+      "slug": "anthropic",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/anthropic.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "Claude by Anthropic"
+    },
+    "com_atebits_tweetie2": {
+      "slug": "x",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/x.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "X（前身为Twitter）"
+    },
+    "com_baidu_baidumobile": {
+      "slug": "baidu",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/baidu.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "百度-AI智能搜索"
+    },
+    "com_baidu_homework": {
+      "slug": "baidu",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/baidu.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "作业帮-新学期高效伴学 中小学家长作业检查辅导"
+    },
+    "com_baidu_map": {
+      "slug": "baidu",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/baidu.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "百度地图-想出门，先问百度地图"
+    },
+    "com_baidu_netdisk": {
+      "slug": "baidu",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/baidu.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "百度网盘"
+    },
+    "com_burbn_barcelona": {
+      "slug": "threads",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/threads.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Threads"
+    },
+    "com_burbn_instagram": {
+      "slug": "instagram",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/instagram.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Instagram"
+    },
+    "com_canva_canvaeditor": {
+      "slug": "canva",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/canva.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "Canva AI Photo & Video Editor"
+    },
+    "com_cbsvideo_app": {
+      "slug": "paramountplus",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/paramountplus.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Paramount+"
+    },
+    "com_chess_iphone": {
+      "slug": "chessdotcom",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/chessdotcom.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Chess.com - Play and Learn"
+    },
+    "com_dji_mimo": {
+      "slug": "dji",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/dji.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "DJI Mimo"
+    },
+    "com_doordash_dasher": {
+      "slug": "doordash",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/doordash.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "DoorDash - Dasher"
+    },
+    "com_duolingo_duolingomobile": {
+      "slug": "duolingo",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/duolingo.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "多邻国Duolingo英语日语法语"
+    },
+    "com_ebay_iphone": {
+      "slug": "ebay",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ebay.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "eBay online shopping & selling"
+    },
+    "com_eventbrite_attendee": {
+      "slug": "eventbrite",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/eventbrite.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Eventbrite"
+    },
+    "com_expedia_booking": {
+      "slug": "expedia",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/expedia.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Expedia: Hotels, Flights, Cars"
+    },
+    "com_facebook_facebook": {
+      "slug": "facebook",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/facebook.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Facebook"
+    },
+    "com_facebook_messenger": {
+      "slug": "messenger",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/messenger.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Messenger"
+    },
+    "com_google_authenticator": {
+      "slug": "googleauthenticator",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googleauthenticator.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Google Authenticator"
+    },
+    "com_google_chrome_ios": {
+      "slug": "googlechrome",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlechrome.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Google Chrome"
+    },
+    "com_google_docs": {
+      "slug": "googledocs",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googledocs.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Google Docs"
+    },
+    "com_google_drive": {
+      "slug": "googledrive",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googledrive.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Google Drive"
+    },
+    "com_google_gemini": {
+      "slug": "googlegemini",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlegemini.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Google Gemini"
+    },
+    "com_google_gmail": {
+      "slug": "gmail",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/gmail.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Gmail - Email by Google"
+    },
+    "com_google_googlemobile": {
+      "slug": "google",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/google.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Google"
+    },
+    "com_google_ios_youtube": {
+      "slug": "youtube",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/youtube.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "YouTube"
+    },
+    "com_google_ios_youtubemusic": {
+      "slug": "youtubemusic",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/youtubemusic.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "YouTube Music"
+    },
+    "com_google_maps": {
+      "slug": "googlemaps",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlemaps.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Google Maps"
+    },
+    "com_google_photos": {
+      "slug": "googlephotos",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlephotos.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Google Photos: Backup & Edit"
+    },
+    "com_google_sheets": {
+      "slug": "googlesheets",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlesheets.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Google Sheets"
+    },
+    "com_google_tachyon": {
+      "slug": "googlemeet",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googlemeet.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Google Meet"
+    },
+    "com_google_translate": {
+      "slug": "googletranslate",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/googletranslate.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "product",
+      "name": "Google Translate"
+    },
+    "com_groupme_iphone-app": {
+      "slug": "groupme",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/groupme.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "GroupMe"
+    },
+    "com_hammerandchisel_discord": {
+      "slug": "discord",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/discord.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Discord - Talk, Play, Hang Out"
+    },
+    "com_huawei_iosclone": {
+      "slug": "huawei",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/huawei.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "华为手机克隆"
+    },
+    "com_huawei_iossporthealth": {
+      "slug": "huawei",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/huawei.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "华为运动健康"
+    },
+    "com_jiangjia_gif": {
+      "slug": "kuaishou",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/kuaishou.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "name-alias",
+      "name": "快手"
+    },
+    "com_kick_mobile": {
+      "slug": "kick",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/kick.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "KICK - Live Streaming"
+    },
+    "com_klarna_app": {
+      "slug": "klarna",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/klarna.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Klarna: Smarter everyday money"
+    },
+    "com_linkedin_linkedin": {
+      "slug": "linkedin",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/linkedin.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "LinkedIn: Community & Network"
+    },
+    "com_mcdonalds_gma": {
+      "slug": "mcdonalds",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/mcdonalds.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "McDonald's"
+    },
+    "com_mcdonalds_gma_cn": {
+      "slug": "mcdonalds",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/mcdonalds.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "麦当劳McDonald's - 到店取餐 麦咖啡 麦乐送"
+    },
+    "com_meituan_imeituan": {
+      "slug": "meituan",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/meituan.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "美团-问美团，都安排"
+    },
+    "com_microsoft_office_outlook": {
+      "slug": "microsoftoutlook",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/microsoftoutlook.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Microsoft Outlook"
+    },
+    "com_microsoft_office_word": {
+      "slug": "microsoftword",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/microsoftword.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Microsoft Word"
+    },
+    "com_microsoft_skype_teams": {
+      "slug": "microsoftteams",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/microsoftteams.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Microsoft Teams"
+    },
+    "com_netease_cloudmusic": {
+      "slug": "neteasecloudmusic",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/neteasecloudmusic.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "网易云音乐-数亿音乐畅听"
+    },
+    "com_netflix_netflix": {
+      "slug": "netflix",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/netflix.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Netflix"
+    },
+    "com_netflix_ssicapp": {
+      "slug": "netflix",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/netflix.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "name-alias",
+      "name": "Netflix Game Controller"
+    },
+    "com_openai_chat": {
+      "slug": "openai",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/openai.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "ChatGPT"
+    },
+    "com_reddit_reddit": {
+      "slug": "reddit",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/reddit.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Reddit"
+    },
+    "com_roblox_robloxmobile": {
+      "slug": "roblox",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/roblox.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Roblox"
+    },
+    "com_roku_ios_roku": {
+      "slug": "roku",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/roku.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Roku Remote (Official)"
+    },
+    "com_samsung_oneconnect4ios": {
+      "slug": "smartthings",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/smartthings.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "SmartThings"
+    },
+    "com_seatgeek_seatgeek": {
+      "slug": "seatgeek",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/seatgeek.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "SeatGeek - Buy Event Tickets"
+    },
+    "com_sina_weibo": {
+      "slug": "sinaweibo",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/sinaweibo.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "微博"
+    },
+    "com_southwest_iphoneprod": {
+      "slug": "southwestairlines",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/southwestairlines.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Southwest Airlines: Travel App"
+    },
+    "com_spotify_client": {
+      "slug": "spotify",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/spotify.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Spotify: Music and Podcasts"
+    },
+    "com_squareup_cash": {
+      "slug": "cashapp",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/cashapp.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Cash App"
+    },
+    "com_ss_iphone_ugc_tiktok_pro": {
+      "slug": "tiktok",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/tiktok.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "TikTok Pro - Events"
+    },
+    "com_starbucks_mystarbucks": {
+      "slug": "starbucks",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/starbucks.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "Starbucks"
+    },
+    "com_strava_stravaride": {
+      "slug": "strava",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/strava.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Strava: Run, Bike, Walk"
+    },
+    "com_substack_substack": {
+      "slug": "substack",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/substack.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Substack"
+    },
+    "com_taobao_taobao4iphone": {
+      "slug": "taobao",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/taobao.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "淘宝-万能的淘宝！"
+    },
+    "com_tencent_apps_valorant": {
+      "slug": "valorant",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/valorant.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "掌上无畏契约"
+    },
+    "com_tencent_mqq": {
+      "slug": "tencentqq",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/tencentqq.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "QQ"
+    },
+    "com_tencent_xin": {
+      "slug": "wechat",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/wechat.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "微信"
+    },
+    "com_ticketmaster_ios_ticketmasterapp": {
+      "slug": "ticketmaster",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ticketmaster.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Ticketmaster－Buy, Sell Tickets"
+    },
+    "com_toyopagroup_picaboo": {
+      "slug": "snapchat",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/snapchat.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Snapchat"
+    },
+    "com_ubercab_uberclient": {
+      "slug": "uber",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/uber.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Uber - Rides, Eats, Hotels"
+    },
+    "com_ubercab_ubereats": {
+      "slug": "ubereats",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ubereats.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Uber Eats: Food & Groceries"
+    },
+    "com_united_unitedcustomerfacingiphone": {
+      "slug": "unitedairlines",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/unitedairlines.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "United Airlines"
+    },
+    "com_valvesoftware_steam": {
+      "slug": "steam",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/steam.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "Steam Mobile"
+    },
+    "com_vivo_easyshare": {
+      "slug": "vivo",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/vivo.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "vivo互传"
+    },
+    "com_walmart_electronics": {
+      "slug": "walmart",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/walmart.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Walmart: Shopping & Savings"
+    },
+    "com_xiaomi_mihome": {
+      "slug": "xiaomi",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/xiaomi.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "米家"
+    },
+    "com_xiaomi_miwatch_pro": {
+      "slug": "xiaomi",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/xiaomi.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "小米运动健康"
+    },
+    "com_yelp_yelpiphone": {
+      "slug": "yelp",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/yelp.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Yelp: Food, Services & Reviews"
+    },
+    "com_yourcompany_ppclient": {
+      "slug": "paypal",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/paypal.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "PayPal - Pay, Send, Save"
+    },
+    "com_zhiliaoapp_musically": {
+      "slug": "tiktok",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/tiktok.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "TikTok - Videos, Shop & LIVE"
+    },
+    "com_zimride_instant": {
+      "slug": "lyft",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/lyft.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Lyft"
+    },
+    "doordash_doordashconsumer": {
+      "slug": "doordash",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/doordash.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "DoorDash: Food, Grocery, More"
+    },
+    "net_kortina_labs_venmo": {
+      "slug": "venmo",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/venmo.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Venmo"
+    },
+    "net_whatsapp_whatsapp": {
+      "slug": "whatsapp",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/whatsapp.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "WhatsApp Messenger"
+    },
+    "net_whatsapp_whatsappsmb": {
+      "slug": "whatsapp",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/whatsapp.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "WhatsApp Business"
+    },
+    "org_whispersystems_signal": {
+      "slug": "signal",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/signal.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "Signal - Private Messenger"
+    },
+    "ph_telegra_telegraph": {
+      "slug": "telegram",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/telegram.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Telegram Messenger"
+    },
+    "pinterest": {
+      "slug": "pinterest",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/pinterest.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Pinterest"
+    },
+    "tv_danmaku_bilianime": {
+      "slug": "bilibili",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/bilibili.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "哔哩哔哩-弹幕番剧直播高清视频"
+    },
+    "tv_twitch": {
+      "slug": "twitch",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/twitch.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "id",
+      "name": "Twitch: Live Streaming"
+    },
+    "us_zoom_videomeetings": {
+      "slug": "zoom",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/zoom.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "bundle",
+      "name": "Zoom Workplace"
+    },
+    "com_etsy_etsyforios": {
+      "slug": "etsy",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/etsy.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Etsy: Shop from Real People"
+    },
+    "com_ring": {
+      "slug": "ring",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/ring.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Ring - Always Home"
+    },
+    "com_target_target": {
+      "slug": "target",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/target.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "Target: Shop. Style. Save."
+    },
+    "com_yum_kfc_brand": {
+      "slug": "kfc",
+      "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/kfc.svg",
+      "provider": "simple-icons",
+      "license": "CC0-1.0",
+      "match": "si-title",
+      "name": "肯德基KFC（官方版）"
+    }
+  }
+}
