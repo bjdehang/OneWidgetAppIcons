@@ -1,5 +1,6 @@
 """Naming, mapping, download resume, and catalog checks for official icons."""
 
+import csv
 import io
 import json
 import subprocess
@@ -409,20 +410,37 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("SHA-256", str(caught.exception))
 
     def test_live_catalog_ids_platforms_and_validate(self):
-        apps = json.loads((ROOT / "metadata" / "apps.json").read_text(encoding="utf-8"))["apps"]
-        self.assertEqual(len(apps), 2000)
-        ids = [app["id"] for app in apps]
-        self.assertEqual(len(set(ids)), 2000)
-        one = next(app for app in apps if app["legacyId"] == "app-1527355884")
-        self.assertEqual(one["id"], "app_imone_onewidget")
-        self.assertEqual(one["platforms"]["android"]["packageName"], "tech.onenice.onewidget")
-        self.assertEqual(one["platforms"]["harmony"]["bundleName"], "tech.onenice.onewidget")
-        self.assertIsNone(one["platforms"]["huawei"]["appGalleryId"])
-        entries = [map_entry(app, None) for app in apps]
-        with self.assertRaises(MissingMappingError):
-            lookup(entries, "huawei", "tech.onenice.onewidget", ROOT)
-        with self.assertRaises(MissingImageError):
-            lookup(entries, "android", "tech.onenice.onewidget", ROOT)
+        apps_doc = json.loads((ROOT / "metadata" / "apps.json").read_text(encoding="utf-8"))
+        games_doc = json.loads((ROOT / "metadata" / "games.json").read_text(encoding="utf-8"))
+        apps = apps_doc["apps"]
+        games = games_doc["apps"]
+        self.assertEqual(set(apps[0]), set(games[0]))
+        self.assertLess(len(apps), 2000)
+        self.assertGreater(len(games), 0)
+        self.assertEqual(apps_doc["chart"]["requestedDepth"], 500)
+        self.assertEqual(games_doc["chart"]["requestedDepth"], 200)
+        for entry in apps + games:
+            self.assertIn(entry["kind"], {"game", "application"})
+            self.assertTrue(entry["cnRank"] or entry["usRank"])
+        with (ROOT / "metadata" / "apps.csv").open(encoding="utf-8", newline="") as handle:
+            app_header = next(csv.reader(handle))
+        with (ROOT / "metadata" / "games.csv").open(encoding="utf-8", newline="") as handle:
+            game_header = next(csv.reader(handle))
+        self.assertEqual(app_header, game_header)
+        self.assertIn("cnRank", app_header)
+        self.assertIn("usRank", app_header)
+        self.assertIn("kind", app_header)
+        preview = (ROOT / "preview.html").read_text(encoding="utf-8")
+        self.assertIn('id="show-apps"', preview)
+        self.assertIn('id="show-games"', preview)
+        overrides = json.loads((ROOT / "metadata" / "platform-overrides.json").read_text(encoding="utf-8"))
+        one_override = overrides["apps"]["app_imone_onewidget"]
+        self.assertEqual(one_override["android"]["packageName"], "tech.onenice.onewidget")
+        self.assertEqual(one_override["harmony"]["bundleName"], "tech.onenice.onewidget")
+        one = next((app for app in apps + games if app["id"] == "app_imone_onewidget"), None)
+        if one is not None:
+            self.assertEqual(one["platforms"]["android"]["packageName"], "tech.onenice.onewidget")
+            self.assertIsNone(one["platforms"]["huawei"]["appGalleryId"])
         catalog.validate()
 
 

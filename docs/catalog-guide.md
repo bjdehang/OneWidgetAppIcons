@@ -3,8 +3,11 @@
 ## 目录
 
 ```text
-metadata/apps.json              统一应用目录和各平台标识
-metadata/apps.csv               同序、便于表格查看的应用列表
+metadata/apps.json              中区、美区免费应用总榜
+metadata/games.json             中区、美区免费游戏榜，记录字段与应用表相同
+metadata/apps.csv               应用表
+metadata/games.csv              游戏表，列与 apps.csv 相同
+preview.html                    列表预览页，顶部切换应用或游戏，并显示图标
 metadata/platform-map.json      平台 ID → 统一 ID → 图标相对路径
 metadata/official-icons.json    官方图标来源、尺寸、格式和 SHA-256
 metadata/platform-overrides.json 已核实的跨平台 ID 与来源
@@ -29,7 +32,7 @@ docs/                           使用说明和研究报告
 styles/flat/app_imone_onewidget.png
 ```
 
-当前 `flat` 只是计划中的绘制风格，尚未发布任何 PNG。应用目录中的 2000 项表示这 2000 款应用被收录。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。缺图时使用端内默认图。
+当前 `flat` 只是计划中的绘制风格，尚未发布任何 PNG。应用表和游戏表的条目数以各自 JSON 里的 `selection.count` 为准。原图是否已经下载，以 `metadata/official-icons.json` 的 `status` 和其中的记录为准。绘制风格只使用 `metadata/assets.json` 中登记且文件存在的项。缺图时使用端内默认图。
 
 ## 平台标识
 
@@ -43,8 +46,10 @@ styles/flat/app_imone_onewidget.png
 - `platforms.android.packageName`：Android 包名；`null` 表示尚未核实。
 - `platforms.harmony.bundleName`：HarmonyOS bundle name；`null` 表示尚未核实。
 - `platforms.huawei.appGalleryId`：华为 AppGallery ID；`null` 表示尚未核实。它和 HarmonyOS bundle name 不是同一个字段。
-- `charts`：上榜地区与当时名次，供排序和人工审查。它不是永久热度排名。
-- `authorApp`：是否属于 OneWidget 所在的 Apple 开发者账号。作者应用即使未进入采样榜单也固定收录。
+- `kind`：`game` 或 `application`。总榜里既有游戏也有应用，这个字段把两者分开。游戏榜里的条目同样带这个字段。
+- `cnRank`、`usRank`：该表对应的中国区、美国区总榜序号。应用表用免费应用总榜，游戏表用免费游戏榜。没有出现在该区这张榜上时为 `null`，CSV 里留空。
+- `charts`：和上面两个名次相同的 `{country, rank}` 列表，只含 `cn` 和 `us`。
+- `authorApp`：是否属于 OneWidget 所在的 Apple 开发者账号。只有当前榜单里的作者应用会带上这个标记。
 
 Android 包名、HarmonyOS bundle name 和华为 AppGallery ID 必须分别核实后写入 `metadata/platform-overrides.json`，再进入应用目录。不能从 Apple bundle ID 推导，也不能互相复制。跨平台同品牌但产品不同的情况要人工确认再映射到同一个统一 ID。OneWidget 已核实的 Android `applicationId` 和 HarmonyOS `bundleName` 均为 `tech.onenice.onewidget`，证据列在 `metadata/platform-overrides.json`。华为 ID 尚未核实，保持 `null`。
 
@@ -78,10 +83,11 @@ python3 scripts/catalog.py validate
 python3 scripts/official_icons.py verify
 ```
 
-刷新榜单：
+更新中美榜：
 
 ```sh
-python3 scripts/catalog.py refresh
+python3 scripts/catalog.py charts
+python3 scripts/official_icons.py download
 ```
 
-刷新会生成新的日期快照并重建 `metadata/apps.json`；脚本从 Apple 开发者账号再次查询作者应用，保留已入选应用的人工跨平台标识，并将已发布图标的应用固定在候选中。若非作者应用完全退出当前榜单，脚本会停止并要求人工处理，避免静默丢失映射。刷新后仍应审核与上一版的差异。
+`charts` 读取苹果 viewTop 免费榜（榜单 id 27）。应用表请求中国区和美国区各自前 500 名；这个公开接口目前每个地区大约只返回 200 个名次，脚本会全部收下，不会把缺少的名次补成 500。游戏表取两边免费游戏榜前 200 名。两张表按统一 ID 去重，字段相同。已核实的跨平台标识仍从 `metadata/platform-overrides.json` 合并。预览页是仓库根目录的 `preview.html`。

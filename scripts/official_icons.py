@@ -49,10 +49,11 @@ ARTWORK_NOTE = (
     "not grant usage rights."
 )
 CSV_HEADER = (
-    "id", "legacyId", "name", "developer", "appleAppStoreId", "appleBundleId",
+    "id", "legacyId", "name", "developer", "kind",
+    "appleAppStoreId", "appleBundleId",
     "androidPackageName", "harmonyBundleName", "huaweiAppGalleryId",
-    "marketCount", "authorApp", "officialIconPath", "iconWidth", "iconHeight",
-    "iconFormat", "iconSha256",
+    "marketCount", "authorApp", "cnRank", "usRank",
+    "officialIconPath", "iconWidth", "iconHeight", "iconFormat", "iconSha256",
 )
 
 
@@ -208,6 +209,28 @@ def load_apps(root):
     return json.loads((root / "metadata" / "apps.json").read_text(encoding="utf-8"))["apps"]
 
 
+def load_games(root):
+    path = root / "metadata" / "games.json"
+    if not path.is_file():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))["apps"]
+
+
+def union_entries(apps, games):
+    """One icon record per unified ID. Games already listed as apps are not repeated."""
+    merged = []
+    seen = {}
+    for app in list(apps) + list(games or []):
+        previous = seen.get(app["id"])
+        if previous is None:
+            seen[app["id"]] = app
+            merged.append(app)
+            continue
+        if previous["platforms"]["apple"] != app["platforms"]["apple"]:
+            raise ValueError(f"Apps and games disagree on Apple identity for {app['id']}")
+    return merged
+
+
 def load_official_icons(root):
     path = root / "metadata" / "official-icons.json"
     if not path.exists():
@@ -219,32 +242,49 @@ def _blank(value):
     return "" if value is None else value
 
 
-def write_apps_csv(root, apps, icons_by_id):
-    path = root / "metadata" / "apps.csv"
+def _rank_cell(app, key):
+    value = app.get(key)
+    return "" if value is None else str(value)
+
+
+def list_csv_row(app, icon):
+    platforms = app["platforms"]
+    return (
+        app["id"],
+        app["legacyId"],
+        app["name"],
+        app["developer"],
+        app.get("kind", ""),
+        platforms["apple"]["appStoreId"],
+        platforms["apple"]["bundleId"],
+        _blank(platforms["android"]["packageName"]),
+        _blank(platforms["harmony"]["bundleName"]),
+        _blank(platforms["huawei"]["appGalleryId"]),
+        len(app["charts"]),
+        app["authorApp"],
+        _rank_cell(app, "cnRank"),
+        _rank_cell(app, "usRank"),
+        icon.get("path", ""),
+        icon.get("width", ""),
+        icon.get("height", ""),
+        icon.get("format", ""),
+        icon.get("sha256", ""),
+    )
+
+
+def write_list_csv(path, apps, icons_by_id):
+    path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(CSV_HEADER)
         for app in apps:
-            icon = icons_by_id.get(app["id"], {})
-            platforms = app["platforms"]
-            writer.writerow((
-                app["id"],
-                app["legacyId"],
-                app["name"],
-                app["developer"],
-                platforms["apple"]["appStoreId"],
-                platforms["apple"]["bundleId"],
-                _blank(platforms["android"]["packageName"]),
-                _blank(platforms["harmony"]["bundleName"]),
-                _blank(platforms["huawei"]["appGalleryId"]),
-                len(app["charts"]),
-                app["authorApp"],
-                icon.get("path", ""),
-                icon.get("width", ""),
-                icon.get("height", ""),
-                icon.get("format", ""),
-                icon.get("sha256", ""),
-            ))
+            writer.writerow(list_csv_row(app, icons_by_id.get(app["id"], {})))
+
+
+def write_apps_csv(root, apps, icons_by_id, games=None):
+    write_list_csv(root / "metadata" / "apps.csv", apps, icons_by_id)
+    if games is not None:
+        write_list_csv(root / "metadata" / "games.csv", games, icons_by_id)
 
 
 def map_entry(app, icon):
@@ -262,9 +302,10 @@ def map_entry(app, icon):
     }
 
 
-def write_maps(root, apps, icons, failures, status, now):
+def write_maps(root, apps, icons, failures, status, now, games=None):
     icons_by_id = {item["id"]: item for item in icons}
-    entries = [map_entry(app, icons_by_id.get(app["id"])) for app in apps]
+    listed = union_entries(apps, games)
+    entries = [map_entry(app, icons_by_id.get(app["id"])) for app in listed]
     assert_unique_platform_ids(entries)
     write_json(root / "metadata" / "platform-map.json", {
         "schemaVersion": 1,
@@ -277,14 +318,14 @@ def write_maps(root, apps, icons, failures, status, now):
         "schemaVersion": 1,
         "status": status,
         "updatedAt": now,
-        "expectedCount": len(apps),
+        "expectedCount": len(listed),
         "imageCount": len(icons),
         "failureCount": len(failures),
         "artworkNote": ARTWORK_NOTE,
         "icons": icons,
         "failures": failures,
     })
-    write_apps_csv(root, apps, icons_by_id)
+    write_apps_csv(root, apps, icons_by_id, games=games)
 
 
 def rekey_overrides(root, legacy_to_new):
@@ -345,8 +386,11 @@ def migrate_catalog(root, now=None):
             "charts": before["charts"],
             "authorApp": before["authorApp"],
         }
-        for key in ("name", "developer", "genre", "charts", "authorApp"):
-            if before[key] != app[key]:
+        for optional in ("kind", "cnRank", "usRank"):
+            if optional in before:
+                app[optional] = before[optional]
+        for key in ("name", "developer", "genre", "charts", "authorApp", "kind", "cnRank", "usRank"):
+            if key in before and before[key] != app[key]:
                 raise ValueError(f"Catalog field changed during migration: {key}")
         if before["platforms"]["apple"] != app["platforms"]["apple"]:
             raise ValueError("Apple identity changed during migration")
@@ -362,12 +406,14 @@ def migrate_catalog(root, now=None):
     original["apps"] = migrated
     write_json(catalog_path, original)
     rekey_overrides(root, {app["legacyId"]: app["id"] for app in migrated})
-    icons, failures = _icons_still_valid(root, migrated)
+    games = load_games(root)
+    listed = union_entries(migrated, games)
+    icons, failures = _icons_still_valid(root, listed)
     timestamp = now or utc_now()
-    status = manifest_status(migrated, icons, failures)
+    status = manifest_status(listed, icons, failures)
     if status != "complete":
         status = "incomplete"
-    write_maps(root, migrated, icons, failures, status=status, now=timestamp)
+    write_maps(root, migrated, icons, failures, status=status, now=timestamp, games=games)
     return migrated
 
 
@@ -756,6 +802,8 @@ def verify(root, require_complete=None):
     """Check IDs, mapping rows, icon bytes, and paths against each other."""
     catalog = json.loads((root / "metadata" / "apps.json").read_text(encoding="utf-8"))
     apps = catalog["apps"]
+    games = load_games(root)
+    listed = union_entries(apps, games)
     official_path = root / "metadata" / "official-icons.json"
     map_path = root / "metadata" / "platform-map.json"
     if not official_path.is_file() or not map_path.is_file():
@@ -772,7 +820,7 @@ def verify(root, require_complete=None):
     seen_legacy = set()
     seen_store = set()
     seen_bundle = set()
-    for app in apps:
+    for app in listed:
         apple = app["platforms"]["apple"]
         expected_id = unified_id_from_bundle(apple["bundleId"])
         expected_legacy = legacy_id(apple["appStoreId"])
@@ -802,7 +850,7 @@ def verify(root, require_complete=None):
             if recorded != value:
                 raise ValueError(f"Unverified {platform} id on {app['id']}: {value}")
 
-    one = next((app for app in apps if app["legacyId"] == "app-1527355884"), None)
+    one = next((app for app in listed if app["legacyId"] == "app-1527355884"), None)
     if one is not None:
         if one["id"] != "app_imone_onewidget":
             raise ValueError("OneWidget unified ID is not app_imone_onewidget")
@@ -816,8 +864,8 @@ def verify(root, require_complete=None):
             raise ValueError("OneWidget Huawei ID must stay empty until it is verified")
 
     entries = mapping["entries"]
-    if [entry["id"] for entry in entries] != [app["id"] for app in apps]:
-        raise ValueError("Platform map is not the same app sequence as apps.json")
+    if [entry["id"] for entry in entries] != [app["id"] for app in listed]:
+        raise ValueError("Platform map is not the same sequence as the apps and games lists")
     assert_unique_platform_ids(entries)
     icons = official["icons"]
     failures = official["failures"]
@@ -834,7 +882,7 @@ def verify(root, require_complete=None):
         if not failure.get("reason") or not failure.get("detail"):
             raise ValueError(f"Failure record is missing a reason: {failure['id']}")
 
-    for app, entry in zip(apps, entries):
+    for app, entry in zip(listed, entries):
         platforms = app["platforms"]
         expected = {
             "id": app["id"],
@@ -873,7 +921,7 @@ def verify(root, require_complete=None):
         if width != icon["width"] or height != icon["height"]:
             raise ValueError(f"Image dimension mismatch: {path}")
         if icon["id"] not in seen_ids or icon["bundleId"] != next(
-            app["platforms"]["apple"]["bundleId"] for app in apps if app["id"] == icon["id"]
+            app["platforms"]["apple"]["bundleId"] for app in listed if app["id"] == icon["id"]
         ):
             raise ValueError(f"Icon identity does not match the catalog: {icon['id']}")
         if not icon.get("sourceUrl") or not icon.get("country") or not icon.get("updatedAt"):
@@ -888,14 +936,54 @@ def verify(root, require_complete=None):
             if relative not in recorded_paths:
                 raise ValueError(f"Unregistered image: {relative}")
 
-    with (root / "metadata" / "apps.csv").open(encoding="utf-8", newline="") as handle:
-        rows = list(csv.DictReader(handle))
+    _check_list_csv(root / "metadata" / "apps.csv", apps, icons_by_id, "apps.json")
+    if games is not None:
+        _check_list_csv(root / "metadata" / "games.csv", games, icons_by_id, "games.json")
+
+    if official.get("imageCount") != len(icons) or official.get("failureCount") != len(failures):
+        raise ValueError("Official icon counts do not match the records")
+    if official.get("expectedCount") != len(listed):
+        raise ValueError("Official icon expected count does not match the catalog")
+    status = manifest_status(listed, icons, failures)
+    if require_complete and status != "complete":
+        raise ValueError(
+            f"Official icons are incomplete: {len(icons)} images, {len(failures)} failures, "
+            f"{len(listed)} apps"
+        )
+    if official.get("status") == "complete" and status != "complete":
+        raise ValueError("Manifest is marked complete but some apps are unresolved")
+    if _has_license_key(official) or _has_license_key(mapping):
+        raise ValueError("Icon metadata must not invent a license claim")
+    game_count = 0 if games is None else len(games)
+    print(
+        f"Verified {len(apps)} apps, {game_count} games, {len(icons)} official icons, "
+        f"{len(failures)} failures, status {official.get('status')}"
+    )
+    return {
+        "apps": len(apps),
+        "games": game_count,
+        "icons": len(icons),
+        "failures": len(failures),
+        "status": official.get("status"),
+    }
+
+
+def _check_list_csv(path, apps, icons_by_id, label):
+    with path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != CSV_HEADER:
+            raise ValueError(f"CSV header mismatch in {path.name}: {reader.fieldnames}")
+        rows = list(reader)
     if [row["id"] for row in rows] != [app["id"] for app in apps]:
-        raise ValueError("CSV application list differs from apps.json")
+        raise ValueError(f"CSV list differs from {label}")
     for row, app in zip(rows, apps):
         icon = icons_by_id.get(app["id"], {})
-        if row["legacyId"] != app["legacyId"]:
-            raise ValueError(f"CSV legacy ID mismatch: {app['id']}")
+        if row["legacyId"] != app["legacyId"] or row["name"] != app["name"]:
+            raise ValueError(f"CSV identity mismatch: {app['id']}")
+        if row["kind"] != app.get("kind", ""):
+            raise ValueError(f"CSV kind mismatch: {app['id']}")
+        if row["cnRank"] != _rank_cell(app, "cnRank") or row["usRank"] != _rank_cell(app, "usRank"):
+            raise ValueError(f"CSV rank mismatch: {app['id']}")
         if row["officialIconPath"] != icon.get("path", ""):
             raise ValueError(f"CSV icon path mismatch: {app['id']}")
         if icon and (
@@ -905,26 +993,6 @@ def verify(root, require_complete=None):
             or row["iconHeight"] != str(icon["height"])
         ):
             raise ValueError(f"CSV icon metadata mismatch: {app['id']}")
-
-    if official.get("imageCount") != len(icons) or official.get("failureCount") != len(failures):
-        raise ValueError("Official icon counts do not match the records")
-    if official.get("expectedCount") != len(apps):
-        raise ValueError("Official icon expected count does not match the catalog")
-    status = manifest_status(apps, icons, failures)
-    if require_complete and status != "complete":
-        raise ValueError(
-            f"Official icons are incomplete: {len(icons)} images, {len(failures)} failures, "
-            f"{len(apps)} apps"
-        )
-    if official.get("status") == "complete" and status != "complete":
-        raise ValueError("Manifest is marked complete but some apps are unresolved")
-    if _has_license_key(official) or _has_license_key(mapping):
-        raise ValueError("Icon metadata must not invent a license claim")
-    print(
-        f"Verified {len(apps)} apps, {len(icons)} official icons, {len(failures)} failures, "
-        f"status {official.get('status')}"
-    )
-    return {"apps": len(apps), "icons": len(icons), "failures": len(failures), "status": official.get("status")}
 
 
 def _has_license_key(value):
@@ -977,12 +1045,32 @@ def command_migrate(root):
     print(f"Migrated {len(apps)} apps; official icons are incomplete")
 
 
+def prune_original_icons(root, keep_ids):
+    """Delete original icons whose unified ID is no longer on either list."""
+    icon_dir = original_icon_dir(root)
+    if not icon_dir.is_dir():
+        return []
+    removed = []
+    for file_path in sorted(icon_dir.iterdir()):
+        if not file_path.is_file() or file_path.name.startswith("."):
+            continue
+        if file_path.stem not in keep_ids:
+            file_path.unlink()
+            removed.append(file_path.name)
+    return removed
+
+
 def command_download(root, workers, rounds, limit, retry_permanent):
     apps = load_apps(root)
-    if any("legacyId" not in app for app in apps):
+    games = load_games(root)
+    listed = union_entries(apps, games)
+    if any("legacyId" not in app for app in listed):
         raise ValueError("Catalog IDs have not been migrated")
+    removed = prune_original_icons(root, {app["id"] for app in listed})
+    if removed:
+        print(f"Removed {len(removed)} original icons that are no longer listed", file=sys.stderr, flush=True)
     checkpoint_path = default_checkpoint_path(root)
-    selected = apps[:limit] if limit else apps
+    selected = listed[:limit] if limit else listed
 
     def log(message):
         print(message, file=sys.stderr, flush=True)
@@ -998,9 +1086,9 @@ def command_download(root, workers, rounds, limit, retry_permanent):
             retry_permanent=retry_permanent,
             log=log,
         )
-        icons, failures = records_to_manifest(apps, records)
-        status = manifest_status(apps, icons, failures)
-        write_maps(root, apps, icons, failures, status=status, now=utc_now())
+        icons, failures = records_to_manifest(listed, records)
+        status = manifest_status(listed, icons, failures)
+        write_maps(root, apps, icons, failures, status=status, now=utc_now(), games=games)
         transient = [item for item in failures if item.get("reason") not in PERMANENT_REASONS]
         print(
             f"Round {round_index + 1}: {len(icons)} images, {len(failures)} failures, status {status}",
@@ -1008,6 +1096,9 @@ def command_download(root, workers, rounds, limit, retry_permanent):
         )
         if status == "complete" or not transient:
             break
+    if (root / "metadata" / "games.json").is_file():
+        from preview_html import write_preview
+        write_preview(root)
     summary = verify(root, require_complete=False)
     return 0 if summary["status"] == "complete" else 1
 
