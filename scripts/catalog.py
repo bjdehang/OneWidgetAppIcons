@@ -240,6 +240,9 @@ def validate():
     preview = (ROOT / "preview.html").read_text(encoding="utf-8")
     if 'id="show-apps"' not in preview or 'id="show-games"' not in preview:
         raise ValueError("Preview page is missing the apps and games switch")
+    for style in styles.get("styles", []):
+        if f'id="style-{style["id"]}"' not in preview:
+            raise ValueError(f"Preview page is missing the {style['id']} style switch")
 
     if styles.get("schemaVersion") != 2:
         raise ValueError("Style table must use schemaVersion 2")

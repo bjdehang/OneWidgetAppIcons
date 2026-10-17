@@ -90,4 +90,4 @@ python3 scripts/catalog.py charts
 python3 scripts/official_icons.py download
 ```
 
-`charts` 读取苹果 viewTop 免费榜（榜单 id 27）。应用表请求中国区和美国区各自前 500 名；这个公开接口目前每个地区大约只返回 200 个名次，脚本会全部收下，不会把缺少的名次补成 500。游戏表取两边免费游戏榜前 200 名。两张表按统一 ID 去重，字段相同。已核实的跨平台标识仍从 `metadata/platform-overrides.json` 合并。预览页是仓库根目录的 `preview.html`。
+`charts` 读取苹果 viewTop 免费榜（榜单 id 27）。应用表请求中国区和美国区各自前 500 名；这个公开接口目前每个地区大约只返回 200 个名次，脚本会全部收下，不会把缺少的名次补成 500。游戏表取两边免费游戏榜前 200 名。两张表按统一 ID 去重，字段相同。已核实的跨平台标识仍从 `metadata/platform-overrides.json` 合并。预览页是仓库根目录的 `preview.html`，顶部可以切换应用或游戏，也可以切换图标风格。原版用 `styles/original/` 的官方图；其他风格只显示 `metadata/assets.json` 里已经发布的图。

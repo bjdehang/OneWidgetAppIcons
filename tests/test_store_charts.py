@@ -176,10 +176,19 @@ class PreviewTests(unittest.TestCase):
             {**document, "apps": [app]},
             {**document, "chart": {**document["chart"], "requestedDepth": 200}, "apps": [game]},
             icons,
+            styles=[
+                {"id": "original", "name": "Standard (原版)"},
+                {"id": "clay", "name": "Claymorphism (黏土)"},
+            ],
+            styled_icons={"clay": {app["id"]: f"styles/clay/{app['id']}.png"}},
         )
         self.assertIn('id="show-apps"', html)
         self.assertIn('id="show-games"', html)
+        self.assertIn('id="style-original"', html)
+        self.assertIn('id="style-clay"', html)
+        self.assertIn("图标风格", html)
         self.assertIn(f"styles/original/{app['id']}.jpg", html)
+        self.assertIn(f"styles/clay/{app['id']}.png", html)
         self.assertNotIn("</script><script>", html)
         self.assertIn("\\u003c/script>", html)
         self.assertEqual(unified_id_from_bundle("com.example.App"), app["id"])
