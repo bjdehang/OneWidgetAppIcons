@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Collect the Smartisan OS icon library still served by icon.smartisan.com.
 
-Images land in ``smartisan/icons/``. Names, Android package names, and any
-Apple App Store match land in ``smartisan/catalog.json``. An entry stays in
-the catalog when Apple cannot be matched; it keeps the package name and
-whatever display name was found.
+Images land in ``styles/smartisan/<unified id>.png``. Names, Android package
+names, and any Apple App Store match land in ``metadata/smartisan.json``.
+An entry stays in the catalog when Apple cannot be matched; it keeps the
+package name and whatever display name was found. Its file name then uses the
+Android package with the same unified-ID rule.
 """
 
 import argparse
@@ -24,9 +25,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree import ElementTree
 
+from unified_id import unified_id_from_bundle
+
 ROOT = Path(__file__).resolve().parents[1]
-ICON_ROOT = ROOT / "smartisan"
-ICON_DIR = ICON_ROOT / "icons"
+STYLE_DIR = ROOT / "styles" / "smartisan"
+CATALOG_JSON = ROOT / "metadata" / "smartisan.json"
+CATALOG_APPS_CSV = ROOT / "metadata" / "smartisan-apps.csv"
+CATALOG_GAMES_CSV = ROOT / "metadata" / "smartisan-games.csv"
 CACHE = ROOT / ".cache" / "smartisan"
 CATEGORY_URL = (
     "https://raw.githubusercontent.com/Sunbelife/get_smartisan_icon_pack/"
@@ -183,6 +188,8 @@ EXTRA_PACKAGES = (
 )
 
 CSV_FIELDS = (
+    "id",
+    "idSource",
     "androidPackage",
     "name",
     "nameSource",
@@ -427,7 +434,7 @@ def build_entry(hit, yyb, apple, catalog_index, game_cats):
         "kind": kind,
         "smartisanCategoryId": hit.get("smartisanCategoryId"),
         "yybCategory": (yyb or {}).get("category"),
-        "image": f"smartisan/icons/{hit['filename']}",
+        "image": f".cache/smartisan/icons/{hit['filename']}",
         "width": hit["width"],
         "height": hit["height"],
         "md5": hit["md5"],
@@ -441,6 +448,141 @@ def build_entry(hit, yyb, apple, catalog_index, game_cats):
         "unifiedId": linked["id"] if linked else None,
         "inCatalog": linked is not None,
     }
+
+
+def style_icon_identity(entry):
+    """Return the unified-ID filename stem and whether it came from Apple."""
+    bundle = entry.get("appleBundleId")
+    if bundle:
+        return unified_id_from_bundle(bundle), "apple"
+    return unified_id_from_bundle(entry["androidPackage"]), "android"
+
+
+def assign_style_ids(entries):
+    """Name each icon with the unified-ID rule and point rows at one shared file.
+
+    An Android-only row does not keep a filename that is already an Apple
+    unified ID for a different row, unless its package is that Apple bundle.
+    """
+    for entry in entries:
+        file_id, source = style_icon_identity(entry)
+        entry["id"] = file_id
+        entry["idSource"] = source
+    grouped = {}
+    for entry in entries:
+        grouped.setdefault(entry["id"], []).append(entry)
+    for file_id, group in list(grouped.items()):
+        owners = [item for item in group if item["idSource"] == "apple"]
+        if not owners:
+            continue
+        owner_bundles = {item["appleBundleId"].lower() for item in owners}
+        for entry in group:
+            if entry["idSource"] == "apple":
+                continue
+            if entry["androidPackage"].lower() in owner_bundles:
+                entry["idSource"] = "apple"
+                continue
+            entry["id"] = f"{file_id}_android"
+            entry["idSource"] = "android"
+    grouped = {}
+    for entry in entries:
+        grouped.setdefault(entry["id"], []).append(entry)
+    for file_id, group in grouped.items():
+        for entry in group:
+            entry["image"] = f"styles/smartisan/{file_id}.png"
+            if entry["idSource"] != "apple":
+                continue
+            previous = entry.get("unifiedId")
+            if previous and previous != file_id:
+                raise ValueError(
+                    f"{entry['androidPackage']} catalog id {previous} does not match {file_id}"
+                )
+            entry["unifiedId"] = file_id
+    return grouped
+
+
+def _icon_donor(group):
+    """Pick the one file kept when several packages share a unified ID."""
+    def rank(entry):
+        bundle = (entry.get("appleBundleId") or "").lower()
+        package = entry["androidPackage"].lower()
+        return (
+            0 if bundle and package == bundle else 1,
+            0 if entry.get("inCatalog") else 1,
+            0 if entry.get("name") else 1,
+            len(package),
+            package,
+        )
+    return min(group, key=rank)
+
+
+def place_style_files(entries, root):
+    """Move icon files into ``styles/smartisan`` under their unified IDs."""
+    for entry in entries:
+        entry["_sourceImage"] = entry.get("image")
+    grouped = assign_style_ids(entries)
+    destination_dir = root / "styles" / "smartisan"
+    destination_dir.mkdir(parents=True, exist_ok=True)
+    total = len(grouped)
+    for index, (file_id, group) in enumerate(grouped.items(), start=1):
+        donor = _icon_donor(group)
+        destination = destination_dir / f"{file_id}.png"
+        source = root / donor["_sourceImage"]
+        if source.resolve() != destination.resolve():
+            if not source.is_file():
+                if not destination.is_file():
+                    raise FileNotFoundError(f"Missing icon for {donor['androidPackage']}: {source}")
+            elif destination.exists():
+                raise FileExistsError(f"Style icon already exists: {destination}")
+            else:
+                _move_file(source, destination, root)
+        for entry in group:
+            if entry is not donor:
+                for field in ("width", "height", "md5", "sha256", "sourceUrl"):
+                    entry[field] = donor[field]
+            extra = entry.get("_sourceImage")
+            if not extra or extra == donor["_sourceImage"]:
+                continue
+            extra_path = root / extra
+            if extra_path.is_file() and extra_path.resolve() != destination.resolve():
+                _remove_file(extra_path, root)
+        if total >= 200 and (index % 200 == 0 or index == total):
+            print(f"placed {index}/{total}", flush=True)
+    for entry in entries:
+        entry.pop("_sourceImage", None)
+        entry.pop("_dropSource", None)
+        entry.pop("_keepSource", None)
+    return grouped
+
+
+def _move_file(source, destination, root):
+    import shutil
+    import subprocess
+    tracked = subprocess.run(
+        ["git", "ls-files", "--error-unmatch", "--", str(source.relative_to(root))],
+        cwd=root, capture_output=True, text=True,
+    ).returncode == 0
+    if tracked:
+        subprocess.run(
+            ["git", "mv", str(source.relative_to(root)), str(destination.relative_to(root))],
+            cwd=root, check=True,
+        )
+    else:
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(source, destination)
+
+
+def _remove_file(path, root):
+    import subprocess
+    relative = str(path.relative_to(root))
+    tracked = subprocess.run(
+        ["git", "ls-files", "--error-unmatch", "--", relative],
+        cwd=root, capture_output=True, text=True,
+    ).returncode == 0
+    if tracked:
+        subprocess.run(["git", "rm", "-f", "--", relative], cwd=root, check=True)
+    else:
+        path.unlink()
 
 
 def write_catalog(entries, captured_at):
@@ -460,13 +602,13 @@ def write_catalog(entries, captured_at):
         "source": "https://icon.smartisan.com/drawable/{package}/icon_provided_by_smartisan.png",
         "nameSource": "https://sj.qq.com/appdetail/{package}",
         "note": (
-            "这些图是锤子官方图标接口仍在提供的 Smartisan OS 图标，不是 "
-            "styles/smartisan/ 里的重绘结果。name 优先用应用宝上的名字，"
-            "应用宝没有时再用酷安仍在收录的名字。appleStatus 为 matched 时已经用 "
-            "iTunes Lookup 核对过 bundle ID；store_id_only 只有应用宝给出的 "
-            "App Store 数字 ID；unmatched 还没有对上苹果应用，保留 Android 包名和已知名字，供以后核对。"
-            "没有名字的旧包只保留包名。kind 在应用宝或酷安没有标明时，按同一锤子分类里"
-            "已经标明的应用或游戏补上。"
+            "图片在 styles/smartisan/<id>.png，还没有重绘。id 按统一 ID 规则生成："
+            "idSource 为 apple 时来自苹果 bundle ID，为 android 时还没有苹果 bundle ID，"
+            "先用 Android 包名按同一规则命名。name 优先用应用宝，其次酷安。"
+            "appleStatus 为 matched 时已经用 iTunes Lookup 核对过 bundle ID；"
+            "store_id_only 只有应用宝给出的 App Store 数字 ID；"
+            "unmatched 还没有对上苹果应用，保留 Android 包名和已知名字。"
+            "同一个统一 ID 有多张来源图时只保留一张，其余条目指向这张图，宽高和校验和也改成这张图的。"
         ),
         "counts": {
             "icons": len(entries),
@@ -481,19 +623,23 @@ def write_catalog(entries, captured_at):
         },
         "icons": entries,
     }
-    ICON_ROOT.mkdir(parents=True, exist_ok=True)
-    (ICON_ROOT / "catalog.json").write_text(
+    CATALOG_JSON.parent.mkdir(parents=True, exist_ok=True)
+    (CATALOG_JSON).write_text(
         json.dumps(document, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    for kind, filename in (("application", "apps.csv"), ("game", "games.csv")):
+    for kind, path in (
+        ("application", CATALOG_APPS_CSV),
+        ("game", CATALOG_GAMES_CSV),
+    ):
         rows = [item for item in entries if item["kind"] == kind]
-        _write_csv(ICON_ROOT / filename, rows)
+        _write_csv(path, rows)
+    unknown_path = CATALOG_JSON.with_name("smartisan-unknown.csv")
     unknown = [item for item in entries if item["kind"] == "unknown"]
     if unknown:
-        _write_csv(ICON_ROOT / "unknown.csv", unknown)
-    elif (ICON_ROOT / "unknown.csv").exists():
-        (ICON_ROOT / "unknown.csv").unlink()
+        _write_csv(unknown_path, unknown)
+    elif unknown_path.exists():
+        unknown_path.unlink()
     return document
 
 
@@ -548,7 +694,9 @@ def download_icon(info):
     if digest != info["md5"]:
         raise ValueError(f"MD5 mismatch for {info['package']}: {digest} != {info['md5']}")
     width, height = png_size(payload)
-    path = ICON_DIR / info["filename"]
+    DOWNLOAD_DIR = CACHE / "icons"
+    DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    path = DOWNLOAD_DIR / info["filename"]
     path.write_bytes(payload)
     info["width"] = width
     info["height"] = height
@@ -722,7 +870,7 @@ def _run_pool(items, worker, workers, label):
 def collect(root):
     """Probe the icon server, download hits, and write the smartisan catalog."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    ICON_DIR.mkdir(parents=True, exist_ok=True)
+    (CACHE / "icons").mkdir(parents=True, exist_ok=True)
     print("Loading package index", flush=True)
     categories = json.loads(_fetch(CATEGORY_URL, timeout=60).decode("utf-8"))
     packages = dict(categories)
@@ -826,6 +974,7 @@ def collect(root):
         entries.append(build_entry(info, yyb, apple, catalog_index, game_cats))
     apply_known_names(entries)
     apply_category_kinds(entries)
+    place_style_files(entries, root)
     captured_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     document = write_catalog(entries, captured_at)
     error_log = {
@@ -848,7 +997,7 @@ def collect(root):
 
 def fill_names():
     """Fill icons that 应用宝 did not name, using Coolapk when the app is still listed."""
-    document = json.loads((ICON_ROOT / "catalog.json").read_text(encoding="utf-8"))
+    document = json.loads(CATALOG_JSON.read_text(encoding="utf-8"))
     missing = [entry for entry in document["icons"] if not entry.get("name")]
     print(f"Coolapk lookup for {len(missing)} unnamed icons", flush=True)
     device_code = base64.b64encode(

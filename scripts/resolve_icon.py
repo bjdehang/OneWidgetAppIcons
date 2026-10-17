@@ -68,7 +68,10 @@ def main():
             }, ensure_ascii=False))
             return 2
         style_extension = extensions[0]
-        assets = json.loads((root / "metadata/assets.json").read_text(encoding="utf-8"))["assets"]
+        if style.get("characteristics", {}).get("dimensions") == "source":
+            assets = None
+        else:
+            assets = json.loads((root / "metadata/assets.json").read_text(encoding="utf-8"))["assets"]
     try:
         result = lookup(
             entries, args.platform, args.identifier, root,

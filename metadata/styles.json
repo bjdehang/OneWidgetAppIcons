@@ -88,15 +88,15 @@
     {
       "id": "smartisan",
       "name": "Smartisan (锤子)",
-      "status": "planned",
-      "definition": "按锤子科技 Smartisan OS 图标库的画法重新绘制：大圆角色块底板、高饱和纯色、居中的简洁图形。这是绘制风格，不是把锤子系统图标文件拷进仓库。",
+      "status": "published",
+      "definition": "锤子科技 Smartisan OS 图标库。文件名使用统一 ID：已核对苹果 bundle ID 的，把 bundle ID 小写并把点换成下划线；还没有苹果 bundle ID 的，先用 Android 包名按同一规则命名，核对后再改名。当前文件是图标服务器给出的原尺寸，尚未重绘成 1024。",
       "extensions": [".png"],
       "characteristics": {
         "media": "raster",
-        "transparency": "opaque",
-        "dimensions": "1024x1024",
+        "transparency": "as-delivered",
+        "dimensions": "source",
         "mask": "none",
-        "summary": "只存不透明的 .png。圆角画在图形里，不另做系统遮罩。调性是清晰、饱满的系统图标。尺寸 1024×1024。尚未发布图片。"
+        "summary": "存放锤子图标服务器返回的 PNG，尺寸和透明通道保持原文件，不放大。圆角画在图形里。以后重绘的 1024 图再另按绘制风格登记。"
       }
     },
     {

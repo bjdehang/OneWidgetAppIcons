@@ -13,6 +13,9 @@ from collect_smartisan_icons import (  # noqa: E402
     apply_category_kinds,
     apply_known_names,
     game_categories,
+    assign_style_ids,
+    place_style_files,
+    style_icon_identity,
     icon_filename,
     parse_coolapk_detail,
     parse_info_xml,
@@ -137,6 +140,120 @@ class SmartisanIconTests(unittest.TestCase):
         self.assertEqual(record["kind"], "game")
         self.assertIsNone(parse_coolapk_detail({"status": -2, "message": "应用已下架"}, "com.durex"))
         self.assertIsNone(parse_coolapk_detail(listed, "com.other.app"))
+
+    def test_style_icon_identity_uses_the_apple_bundle(self):
+        apple = style_icon_identity({
+            "androidPackage": "com.tencent.mm",
+            "appleBundleId": "com.tencent.xin",
+        })
+        self.assertEqual(apple, ("com_tencent_xin", "apple"))
+        android = style_icon_identity({"androidPackage": "com.example.oldgame", "appleBundleId": None})
+        self.assertEqual(android, ("com_example_oldgame", "android"))
+
+    def test_assign_style_ids_shares_one_file_when_packages_match_one_apple_bundle(self):
+        entries = [
+            {
+                "androidPackage": "com.tencent.mm",
+                "appleBundleId": "com.tencent.xin",
+                "name": "微信",
+                "inCatalog": True,
+                "unifiedId": "com_tencent_xin",
+                "image": "smartisan/icons/com.tencent.mm.png",
+            },
+            {
+                "androidPackage": "com.unionpay",
+                "appleBundleId": "com.unionpay.chsp",
+                "name": "云闪付",
+                "inCatalog": True,
+                "unifiedId": "com_unionpay_chsp",
+                "image": "smartisan/icons/com.unionpay.png",
+            },
+            {
+                "androidPackage": "com.unionpay.chsp",
+                "appleBundleId": None,
+                "name": "云闪付",
+                "inCatalog": False,
+                "unifiedId": None,
+                "image": "smartisan/icons/com.unionpay.chsp.png",
+            },
+            {
+                "androidPackage": "com.foo bar",
+                "appleBundleId": None,
+                "name": None,
+                "inCatalog": False,
+                "unifiedId": None,
+                "image": "smartisan/icons/com.foo bar.png",
+            },
+            {
+                "androidPackage": "com.other",
+                "appleBundleId": "com.foo.bar",
+                "name": "Foo",
+                "inCatalog": False,
+                "unifiedId": None,
+                "image": "smartisan/icons/com.other.png",
+            },
+        ]
+        assign_style_ids(entries)
+        self.assertEqual(entries[0]["id"], "com_tencent_xin")
+        self.assertEqual(entries[0]["image"], "styles/smartisan/com_tencent_xin.png")
+        self.assertEqual(entries[1]["id"], "com_unionpay_chsp")
+        self.assertEqual(entries[2]["id"], "com_unionpay_chsp")
+        self.assertEqual(entries[2]["idSource"], "apple")
+        self.assertEqual(entries[1]["image"], entries[2]["image"])
+        self.assertEqual(entries[3]["id"], "com_foo_bar_android")
+        self.assertEqual(entries[3]["idSource"], "android")
+        self.assertEqual(entries[4]["id"], "com_foo_bar")
+        self.assertEqual(entries[4]["image"], "styles/smartisan/com_foo_bar.png")
+
+    def test_place_style_files_keeps_one_png_per_unified_id(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source_dir = root / "smartisan" / "icons"
+            source_dir.mkdir(parents=True)
+            (source_dir / "com.tencent.mm.png").write_bytes(b"wechat")
+            (source_dir / "com.unionpay.png").write_bytes(b"old-unionpay")
+            (source_dir / "com.unionpay.chsp.png").write_bytes(b"kept-unionpay")
+            entries = [
+                {
+                    "androidPackage": "com.tencent.mm",
+                    "appleBundleId": "com.tencent.xin",
+                    "name": "微信",
+                    "inCatalog": True,
+                    "unifiedId": "com_tencent_xin",
+                    "image": "smartisan/icons/com.tencent.mm.png",
+                    "width": 1, "height": 1, "md5": "a", "sha256": "a",
+                    "sourceUrl": "https://example.test/mm",
+                },
+                {
+                    "androidPackage": "com.unionpay",
+                    "appleBundleId": "com.unionpay.chsp",
+                    "name": "云闪付",
+                    "inCatalog": True,
+                    "unifiedId": "com_unionpay_chsp",
+                    "image": "smartisan/icons/com.unionpay.png",
+                    "width": 1, "height": 1, "md5": "b", "sha256": "b",
+                    "sourceUrl": "https://example.test/unionpay",
+                },
+                {
+                    "androidPackage": "com.unionpay.chsp",
+                    "appleBundleId": "com.unionpay.chsp",
+                    "name": "云闪付",
+                    "inCatalog": False,
+                    "unifiedId": None,
+                    "image": "smartisan/icons/com.unionpay.chsp.png",
+                    "width": 2, "height": 2, "md5": "c", "sha256": "c",
+                    "sourceUrl": "https://example.test/chsp",
+                },
+            ]
+            place_style_files(entries, root)
+            self.assertEqual((root / "styles/smartisan/com_tencent_xin.png").read_bytes(), b"wechat")
+            self.assertFalse((source_dir / "com.tencent.mm.png").exists())
+            self.assertEqual((root / "styles/smartisan/com_unionpay_chsp.png").read_bytes(), b"kept-unionpay")
+            self.assertFalse((source_dir / "com.unionpay.png").exists())
+            self.assertEqual(entries[1]["md5"], "c")
+            self.assertEqual(entries[1]["sourceUrl"], "https://example.test/chsp")
+            self.assertEqual(entries[1]["image"], "styles/smartisan/com_unionpay_chsp.png")
 
     def test_apply_known_names_does_not_replace_a_store_name(self):
         entries = [{

@@ -5,5 +5,5 @@ mono,Monochrome (单色),planned,.png,单色图标。材质是纯色透明玻璃
 skeuo,Skeuomorphic (拟物),planned,.png,拟物图标。材质是玻璃、金属和皮革，做成可以辨认的真实零件。,raster,alpha,1024x1024,none,只存带透明通道的 .png，以便表现玻璃。调性是精致、专业、复古。尺寸 1024×1024，不预裁圆角。尚未发布图片。
 clay,Claymorphism (黏土),planned,.png,黏土图标。材质是彩色橡皮泥或哑光陶瓷，表面不反光。,raster,alpha,1024x1024,none,只存带透明通道的 .png。调性是可爱、治愈、解压。尺寸 1024×1024，不预裁圆角。尚未发布图片。
 plush,Plush/Fluffy (毛绒),planned,.png,毛绒图标。材质是毛绒玩具或 Jellycat 那样的织物，能看出纤维和柔软的体积。,raster,alpha,1024x1024,none,只存带透明通道的 .png。调性是温暖、治愈。尺寸 1024×1024，不预裁圆角。尚未发布图片。
-smartisan,Smartisan (锤子),planned,.png,按锤子科技 Smartisan OS 图标库的画法重新绘制：大圆角色块底板、高饱和纯色、居中的简洁图形。这是绘制风格，不是把锤子系统图标文件拷进仓库。,raster,opaque,1024x1024,none,只存不透明的 .png。圆角画在图形里，不另做系统遮罩。调性是清晰、饱满的系统图标。尺寸 1024×1024。尚未发布图片。
+smartisan,Smartisan (锤子),published,.png,锤子科技 Smartisan OS 图标库。文件名使用统一 ID：已核对苹果 bundle ID 的，把 bundle ID 小写并把点换成下划线；还没有苹果 bundle ID 的，先用 Android 包名按同一规则命名，核对后再改名。当前文件是图标服务器给出的原尺寸，尚未重绘成 1024。,raster,as-delivered,source,none,存放锤子图标服务器返回的 PNG，尺寸和透明通道保持原文件，不放大。圆角画在图形里。以后重绘的 1024 图再另按绘制风格登记。
 flat,Flat,planned,.png,按扁平色块重新绘制的方形图标，不是商店原图的拷贝。,raster,opaque,1024x1024,none,只存 .png。尺寸固定为 1024×1024，不预裁系统圆角，不带透明图层。尚未发布图片。
