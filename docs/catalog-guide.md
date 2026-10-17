@@ -28,6 +28,8 @@ docs/                           使用说明和研究报告
 
 每个风格在 `metadata/styles.json` 和 `metadata/styles.csv` 里占一行。这一行记录文件后缀、风格定义，以及媒介、透明、尺寸和圆角这些特点。`original` 是官方原版，后缀是 `.jpg` 和 `.png`，扩展名跟随商店返回的真实格式，不要求透明图层。绘制风格目前都是计划中的 1024×1024 PNG，不预裁系统圆角：`mono`、`3d`、`skeuo`、`clay`、`plush` 带透明通道；`smartisan` 和 `flat` 不透明。`smartisan` 按锤子科技图标库的画法重绘，不存放锤子系统里的原文件。路径由风格、统一 ID 和该风格登记的后缀拼出：
 
+收集到的锤子官方图标库单独放在 `smartisan/`，不放进 `styles/smartisan/`。`smartisan/icons/` 是 `icon.smartisan.com` 仍在提供的原图，`smartisan/catalog.json` 记下 Android 包名、应用宝上的名字，以及能对上的 Apple App Store ID 和 bundle ID。对不上苹果的条目仍保留包名和已知名字，`appleStatus` 为 `unmatched`，留待以后核对。应用和游戏分别另存为 `smartisan/apps.csv` 与 `smartisan/games.csv`。
+
 ```text
 styles/flat/app_imone_onewidget.png
 ```
